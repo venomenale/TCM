@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TCM Japanimation — Votre boutique de cartes à collectionner et de figurines à Liège. Pokémon, Yu-Gi-Oh!, One Piece, Lorcana, Dragon Ball et bien plus.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TCM Japanimation | Boutique TCG & Figurines à Liège">
+  <meta property="og:description" content="Cartes, displays, figurines et goodies de l'univers nippon. En stock à Liège.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_BE">
+
+  <!-- Preconnect performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <title>TCM Japanimation | Boutique TCG & Figurines à Liège</title>
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+
+  <!-- RGPD Banner (injecté via rgpd.js) -->
+  <div id="rgpd-banner" class="rgpd-banner" role="dialog" aria-label="Consentement cookies" hidden>
+    <div class="rgpd-banner__inner">
+      <p class="rgpd-banner__text">
+        Nous utilisons uniquement des cookies strictement nécessaires au fonctionnement du site (pas de tracking, pas de pub).
+        <a href="mentions-legales.html#rgpd">En savoir plus</a>
+      </p>
+      <div class="rgpd-banner__actions">
+        <button id="rgpd-accept" class="btn btn--primary btn--sm">Accepter</button>
+        <button id="rgpd-refuse" class="btn btn--ghost btn--sm">Refuser</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== HEADER ====== -->
+  <header class="site-header" id="site-header">
+    <div class="container header__inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="header__logo" aria-label="TCM Japanimation — Accueil">
+        <span class="logo__icon" aria-hidden="true">⛩</span>
+        <span class="logo__text">TCM <em>Japanimation</em></span>
+      </a>
+
+      <!-- Store status badge -->
+      <div class="store-status" id="store-status" aria-live="polite">
+        <span class="store-status__dot" id="status-dot"></span>
+        <span class="store-status__label" id="status-label">Chargement…</span>
+      </div>
+
+      <!-- Desktop nav -->
+      <nav class="header__nav" id="main-nav" aria-label="Navigation principale">
+        <ul class="nav__list" role="list">
+          <li class="nav__item nav__item--dropdown">
+            <button class="nav__link nav__link--parent" aria-expanded="false" aria-controls="menu-tcg">
+              Cartes TCG <span class="nav__chevron" aria-hidden="true"></span>
+            </button>
+            <ul class="nav__dropdown" id="menu-tcg" role="list">
+              <li><a href="catalogue.html?licence=pokemon" class="nav__dropdown-link"><span class="licence-icon">🔵</span> Pokémon</a></li>
+              <li><a href="catalogue.html?licence=yugioh" class="nav__dropdown-link"><span class="licence-icon">⚡</span> Yu-Gi-Oh!</a></li>
+              <li><a href="catalogue.html?licence=onepiece" class="nav__dropdown-link"><span class="licence-icon">⚓</span> One Piece</a></li>
+              <li><a href="catalogue.html?licence=lorcana" class="nav__dropdown-link"><span class="licence-icon">✨</span> Lorcana</a></li>
+              <li><a href="catalogue.html?licence=dragonball" class="nav__dropdown-link"><span class="licence-icon">🐉</span> Dragon Ball</a></li>
+              <li><a href="catalogue.html?licence=magicthegathering" class="nav__dropdown-link"><span class="licence-icon">🔮</span> Magic: The Gathering</a></li>
+              <li><a href="catalogue.html?type=cartes" class="nav__dropdown-link nav__dropdown-link--all">Voir toutes les cartes →</a></li>
+            </ul>
+          </li>
+          <li class="nav__item nav__item--dropdown">
+            <button class="nav__link nav__link--parent" aria-expanded="false" aria-controls="menu-figurines">
+              Figurines <span class="nav__chevron" aria-hidden="true"></span>
+            </button>
+            <ul class="nav__dropdown" id="menu-figurines" role="list">
+              <li><a href="catalogue.html?type=figurines&licence=dragonball" class="nav__dropdown-link"><span class="licence-icon">🐉</span> Dragon Ball</a></li>
+              <li><a href="catalogue.html?type=figurines&licence=naruto" class="nav__dropdown-link"><span class="licence-icon">🍥</span> Naruto</a></li>
+              <li><a href="catalogue.html?type=figurines&licence=onepiece" class="nav__dropdown-link"><span class="licence-icon">⚓</span> One Piece</a></li>
+              <li><a href="catalogue.html?type=figurines" class="nav__dropdown-link nav__dropdown-link--all">Voir toutes les figurines →</a></li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="catalogue.html?type=goodies" class="nav__link">Goodies</a>
+          </li>
+          <li class="nav__item">
+            <a href="catalogue.html?disponibilite=precommande" class="nav__link nav__link--badge">
+              Précommandes <span class="badge badge--accent">New</span>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#boutique" class="nav__link">La Boutique</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Search + Mobile toggle -->
+      <div class="header__actions">
+        <button class="btn-icon" id="search-toggle" aria-label="Ouvrir la recherche" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+        </button>
+        <button class="btn-icon nav__burger" id="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search bar (slide-down) -->
+    <div class="search-bar" id="search-bar" hidden>
+      <div class="container">
+        <form class="search-bar__form" action="catalogue.html" method="get" role="search">
+          <label for="global-search" class="sr-only">Rechercher un produit</label>
+          <input
+            type="search"
+            id="global-search"
+            name="q"
+            class="search-bar__input"
+            placeholder="Rechercher une carte, une figurine, une licence…"
+            autocomplete="off"
+            maxlength="100"
+            pattern="[a-zA-Z0-9 àâäéèêëîïôùûüç'\-!:?]{1,100}"
+          >
+          <button type="submit" class="btn btn--primary">Rechercher</button>
+          <button type="button" id="search-close" class="btn-icon" aria-label="Fermer la recherche">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M18 6 6 18M6 6l12 12"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== MAIN CONTENT ====== -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Boutique physique à Liège</p>
+          <h1 class="hero__title" id="hero-title">
+            L'univers nippon<br>
+            <em>à portée de main</em>
+          </h1>
+          <p class="hero__sub">Cartes TCG, figurines, displays et goodies issus des plus grandes licences japonaises. En stock ou en précommande.</p>
+          <div class="hero__ctas">
+            <a href="catalogue.html" class="btn btn--primary btn--lg">Explorer le catalogue</a>
+            <a href="#boutique" class="btn btn--ghost btn--lg">Infos boutique</a>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <!-- SVG décoratif ou image hero à insérer -->
+          <div class="hero__orb hero__orb--1"></div>
+          <div class="hero__orb hero__orb--2"></div>
+          <div class="hero__orb hero__orb--3"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LICENCE WALL -->
+    <section class="licence-wall" aria-labelledby="licences-title">
+      <div class="container">
+        <h2 class="section-title" id="licences-title">Nos licences</h2>
+        <p class="section-sub">Cliquez sur une licence pour accéder directement à ses produits.</p>
+        <ul class="licence-grid" role="list">
+          <li class="licence-card">
+            <a href="catalogue.html?licence=pokemon" class="licence-card__link">
+              <span class="licence-card__icon" aria-hidden="true">🔵</span>
+              <span class="licence-card__name">Pokémon</span>
+              <span class="licence-card__types">Cartes · Displays · Accessoires</span>
+            </a>
+          </li>
+          <li class="licence-card">
+            <a href="catalogue.html?licence=yugioh" class="licence-card__link">
+              <span class="licence-card__icon" aria-hidden="true">⚡</span>
+              <span class="licence-card__name">Yu-Gi-Oh!</span>
+              <span class="licence-card__types">Cartes · Structure Decks · Tins</span>
+            </a>
+          </li>
+          <li class="licence-card">
+            <a href="catalogue.html?licence=onepiece" class="licence-card__link">
+              <span class="licence-card__icon" aria-hidden="true">⚓</span>
+              <span class="licence-card__name">One Piece</span>
+              <span class="licence-card__types">Cartes · Displays · Figurines</span>
+            </a>
+          </li>
+          <li class="licence-card">
+            <a href="catalogue.html?licence=lorcana" class="licence-card__link">
+              <span class="licence-card__icon" aria-hidden="true">✨</span>
+              <span class="licence-card__name">Lorcana</span>
+              <span class="licence-card__types">Cartes · Illumineer's Trove</span>
+            </a>
+          </li>
+          <li class="licence-card">
+            <a href="catalogue.html?licence=dragonball" class="licence-card__link">
+              <span class="licence-card__icon" aria-hidden="true">🐉</span>
+              <span class="licence-card__name">Dragon Ball</span>
+              <span class="licence-card__types">Cartes · Figurines · Goodies</span>
+            </a>
+          </li>
+          <li class="licence-card">
+            <a href="catalogue.html?licence=naruto" class="licence-card__link">
+              <span class="licence-card__icon" aria-hidden="true">🍥</span>
+              <span class="licence-card__name">Naruto</span>
+              <span class="licence-card__types">Figurines · Goodies</span>
+            </a>
+          </li>
+          <li class="licence-card">
+            <a href="catalogue.html?licence=magicthegathering" class="licence-card__link">
+              <span class="licence-card__icon" aria-hidden="true">🔮</span>
+              <span class="licence-card__name">Magic: TG</span>
+              <span class="licence-card__types">Cartes · Displays · Decks</span>
+            </a>
+          </li>
+          <li class="licence-card licence-card--more">
+            <a href="catalogue.html" class="licence-card__link">
+              <span class="licence-card__icon" aria-hidden="true">＋</span>
+              <span class="licence-card__name">Et bien plus…</span>
+              <span class="licence-card__types">Voir tout le catalogue</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- INFOS BOUTIQUE -->
+    <section class="boutique-info" id="boutique" aria-labelledby="boutique-title">
+      <div class="container boutique-info__grid">
+        <div class="boutique-info__content">
+          <h2 class="section-title" id="boutique-title">Nous trouver</h2>
+          <address class="boutique-address">
+            <p><strong>TCM Japanimation</strong></p>
+            <p>📍 [Adresse à compléter], Liège, Belgique</p>
+            <p>📞 <a href="tel:+32XXXXXXXXX">+32 X XX XX XX XX</a></p>
+            <p>✉️ <a href="mailto:contact@tcm-japanimation.be">contact@tcm-japanimation.be</a></p>
+          </address>
+          <div class="opening-hours">
+            <h3 class="opening-hours__title">Horaires d'ouverture</h3>
+            <ul class="opening-hours__list" role="list">
+              <li><span>Lundi</span><span>Fermé</span></li>
+              <li><span>Mardi – Vendredi</span><span>10h – 18h30</span></li>
+              <li><span>Samedi</span><span>10h – 18h</span></li>
+              <li><span>Dimanche</span><span>Fermé</span></li>
+            </ul>
+          </div>
+          <div class="store-status-full" id="store-status-main" aria-live="polite">
+            <!-- Injecté par main.js -->
+          </div>
+        </div>
+        <div class="boutique-info__map" aria-label="Localisation de la boutique">
+          <!-- Iframe Google Maps à ajouter avec l'adresse réelle -->
+          <div class="map-placeholder">
+            <p>📍 Carte interactive</p>
+            <p class="map-placeholder__hint">(à intégrer avec l'adresse définitive)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer" aria-label="Pied de page">
+    <div class="container footer__inner">
+
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="TCM Japanimation — Accueil">
+          <span aria-hidden="true">⛩</span> TCM <em>Japanimation</em>
+        </a>
+        <p class="footer__tagline">Votre boutique spécialisée TCG &amp; pop culture à Liège.</p>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook TCM Japanimation">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram TCM Japanimation">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navigation secondaire">
+        <div class="footer__nav-col">
+          <h3 class="footer__nav-title">Catalogue</h3>
+          <ul role="list">
+            <li><a href="catalogue.html?type=cartes">Cartes TCG</a></li>
+            <li><a href="catalogue.html?type=figurines">Figurines</a></li>
+            <li><a href="catalogue.html?type=goodies">Goodies</a></li>
+            <li><a href="catalogue.html?disponibilite=precommande">Précommandes</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav-col">
+          <h3 class="footer__nav-title">Licences phares</h3>
+          <ul role="list">
+            <li><a href="catalogue.html?licence=pokemon">Pokémon</a></li>
+            <li><a href="catalogue.html?licence=yugioh">Yu-Gi-Oh!</a></li>
+            <li><a href="catalogue.html?licence=onepiece">One Piece</a></li>
+            <li><a href="catalogue.html?licence=dragonball">Dragon Ball</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav-col">
+          <h3 class="footer__nav-title">Informations</h3>
+          <ul role="list">
+            <li><a href="#boutique">La boutique</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li><a href="mentions-legales.html#rgpd">Politique de confidentialité</a></li>
+            <li><a href="mentions-legales.html#cookies">Gestion des cookies</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__legal">
+          &copy; <span id="footer-year"></span> TCM Japanimation — BCE : <span class="bce-placeholder">[N° BCE à compléter]</span> — Siège social : [Adresse], Liège, Belgique
+        </p>
+        <p class="footer__legal-links">
+          <a href="mentions-legales.html">Mentions légales</a> &middot;
+          <a href="mentions-legales.html#rgpd">RGPD</a> &middot;
+          <a href="mentions-legales.html#cookies">Cookies</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/nav.js"></script>
+  <script type="module" src="assets/js/rgpd.js"></script>
+
+</body>
+</html>

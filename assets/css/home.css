@@ -1,0 +1,303 @@
+/* =============================================================
+   TCM Japanimation — Page d'accueil
+   ============================================================= */
+
+/* ---- HERO ---- */
+.hero {
+  position: relative;
+  min-height: calc(100dvh - var(--header-h));
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-block: var(--space-16);
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 50%, rgba(230,57,70,0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 80% at 20% 80%, rgba(244,208,63,0.06) 0%, transparent 70%);
+  z-index: var(--z-below);
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: center;
+  position: relative;
+  z-index: var(--z-base);
+}
+
+@media (min-width: 768px) {
+  .hero__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+}
+
+.hero__eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-primary);
+  border-radius: 1px;
+}
+
+.hero__title {
+  font-size: clamp(var(--text-3xl), 6vw, var(--text-5xl));
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: var(--color-text);
+  margin-bottom: var(--space-6);
+}
+
+.hero__title em {
+  font-style: normal;
+  color: var(--color-primary);
+}
+
+.hero__sub {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  max-width: 520px;
+  line-height: 1.7;
+  margin-bottom: var(--space-8);
+}
+
+.hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+/* Hero orbs décoratifs */
+.hero__visual {
+  position: relative;
+  height: 400px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hero__visual { display: block; }
+}
+
+.hero__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: float 6s ease-in-out infinite;
+}
+
+.hero__orb--1 {
+  width: 300px; height: 300px;
+  background: rgba(230,57,70,0.25);
+  top: 10%; left: 20%;
+  animation-delay: 0s;
+}
+.hero__orb--2 {
+  width: 200px; height: 200px;
+  background: rgba(244,208,63,0.15);
+  top: 40%; left: 50%;
+  animation-delay: 2s;
+}
+.hero__orb--3 {
+  width: 150px; height: 150px;
+  background: rgba(100,50,200,0.15);
+  top: 60%; left: 10%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%       { transform: translateY(-20px) scale(1.05); }
+}
+
+/* ---- LICENCE WALL ---- */
+.licence-wall {
+  padding-block: var(--space-24);
+  background: var(--color-surface);
+  position: relative;
+}
+
+.licence-wall::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent, var(--color-surface) 5%, var(--color-surface) 95%, transparent);
+  pointer-events: none;
+}
+
+.licence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .licence-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.licence-card {
+  position: relative;
+}
+
+.licence-card__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-6) var(--space-4);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  text-align: center;
+  transition:
+    background var(--transition-base),
+    border-color var(--transition-base),
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.licence-card__link:hover {
+  background: var(--color-bg);
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow-primary);
+}
+
+.licence-card__link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.licence-card__icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: var(--space-1);
+}
+
+.licence-card__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+}
+
+.licence-card__types {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.licence-card--more .licence-card__link {
+  border-style: dashed;
+  border-color: var(--color-surface-2);
+}
+
+.licence-card--more .licence-card__link:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-glow-accent);
+}
+
+/* ---- BOUTIQUE INFO ---- */
+.boutique-info {
+  padding-block: var(--space-24);
+}
+
+.boutique-info__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  .boutique-info__grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.boutique-address {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+}
+
+.boutique-address strong { color: var(--color-text); font-family: var(--font-display); font-size: var(--text-xl); }
+.boutique-address a { color: var(--color-primary); transition: opacity var(--transition-fast); }
+.boutique-address a:hover { opacity: 0.8; }
+
+.opening-hours__title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+.opening-hours__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: var(--space-4);
+}
+
+.opening-hours__list li {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.opening-hours__list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.map-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  height: 320px;
+  background: var(--color-surface);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  color: var(--color-text-muted);
+  font-size: var(--text-2xl);
+  text-align: center;
+}
+
+.map-placeholder__hint {
+  font-size: var(--text-sm);
+  color: var(--color-surface-2);
+}
