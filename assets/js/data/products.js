@@ -1,90 +1,172 @@
-/**
- * TCM Japanimation — Données catalogue (mock)
- * Sera remplacé par un appel API ou un CMS headless.
- *
- * Structure d'un produit :
- * {
- *   id:           string (unique)
- *   nom:          string
- *   licence:      string   (pokemon | yugioh | onepiece | lorcana | dragonball | naruto | magicthegathering | ...)
- *   type:         string   (cartes | display | figurine | goodie | accessoire)
- *   disponibilite:string   (en-stock | precommande | rupture)
- *   prix:         number   (EUR)
- *   image:        string   (chemin relatif ou URL)
- *   rarete:       string?  (commune | peu-commune | rare | ultra-rare | secret-rare) — TCG seulement
- *   etat:         string?  (neuf | excellent | bon | usage) — cartes à l'unité
- *   description:  string
- *   tags:         string[]
- * }
- */
+// TCM Japanimation — Données catalogue (globales, sans module)
+// Accessible via window.TCM_LICENCES, window.TCM_TYPES, window.TCM_PRODUCTS
 
-export const PRODUCTS = [
+window.TCM_LICENCES = [
+  { id: 'pokemon',           label: 'Pokémon',    icon: '🔵' },
+  { id: 'yugioh',            label: 'Yu-Gi-Oh!',  icon: '⚡' },
+  { id: 'onepiece',          label: 'One Piece',  icon: '⚓' },
+  { id: 'lorcana',           label: 'Lorcana',    icon: '✨' },
+  { id: 'dragonball',        label: 'Dragon Ball',icon: '🐉' },
+  { id: 'naruto',            label: 'Naruto',     icon: '🍥' },
+  { id: 'magicthegathering', label: 'Magic: TG',  icon: '🔮' },
+];
+
+window.TCM_TYPES = [
+  { id: 'cartes',     label: 'Cartes & Boosters' },
+  { id: 'display',    label: 'Displays' },
+  { id: 'figurine',   label: 'Figurines' },
+  { id: 'goodie',     label: 'Goodies' },
+  { id: 'accessoire', label: 'Accessoires' },
+];
+
+window.TCM_DISPONIBILITES = [
+  { id: 'en-stock',    label: 'En stock',    cls: 'badge--green' },
+  { id: 'precommande', label: 'Précommande', cls: 'badge--accent' },
+];
+
+window.TCM_PRODUCTS = [
   {
-    id: 'pok-ev-display-01',
-    nom: 'Display Pokémon Écarlate & Violet — Évolutions à Paldea',
-    licence: 'pokemon',
-    type: 'display',
-    disponibilite: 'en-stock',
-    prix: 149.99,
-    image: 'assets/img/products/placeholder.webp',
-    description: 'Boîte de 36 boosters de l\'extension Évolutions à Paldea.',
-    tags: ['display', 'booster', 'ecarlate-violet'],
+    id: 'pok-display-paldea',
+    nom: 'Display Évolutions à Paldea — Écarlate & Violet',
+    licence: 'pokemon', type: 'display', disponibilite: 'en-stock', prix: 149.99,
+    nouveau: true,
+    description: 'Boîte de 36 boosters. Découvrez les Tera Pokémon et variantes Illustrateur Rare. Chaque booster contient 10 cartes dont une holographique garantie.',
+    tags: ['display','paldea','ecarlate-violet','booster'],
+  },
+  {
+    id: 'pok-booster-mascarade',
+    nom: 'Booster Mascarade Crépusculaire',
+    licence: 'pokemon', type: 'cartes', disponibilite: 'en-stock', prix: 4.50,
+    nouveau: false,
+    description: 'Booster unitaire 10 cartes. Au moins une carte holographique garantie par booster.',
+    tags: ['booster','mascarade'],
+  },
+  {
+    id: 'pok-etb-mascarade',
+    nom: 'Elite Trainer Box — Mascarade Crépusculaire',
+    licence: 'pokemon', type: 'accessoire', disponibilite: 'precommande', prix: 59.99,
+    nouveau: true,
+    description: '9 boosters + sleeves officielles + dés + marqueurs PV + badge Dresseur. La boîte de collection ultime.',
+    tags: ['etb','elite-trainer-box','mascarade'],
+  },
+  {
+    id: 'pok-goodie-mug',
+    nom: 'Mug Pokémon — Pikachu Lightning',
+    licence: 'pokemon', type: 'goodie', disponibilite: 'en-stock', prix: 14.99,
+    nouveau: false,
+    description: 'Mug céramique 350 ml motif Pikachu. Résistant lave-vaisselle. Idéal pour les sessions de jeu matinales.',
+    tags: ['mug','pikachu','goodie'],
   },
   {
     id: 'ygo-tin-duelist-nexus',
-    nom: 'Yu-Gi-Oh! — Tin Mega-Pack Duelist Nexus',
-    licence: 'yugioh',
-    type: 'accessoire',
-    disponibilite: 'precommande',
-    prix: 34.99,
-    image: 'assets/img/products/placeholder.webp',
-    description: 'Tin collector avec 3 mega-packs et une carte exclusive.',
-    tags: ['tin', 'collector', 'duelist-nexus'],
+    nom: 'Tin Méga-Pack — Duelist Nexus',
+    licence: 'yugioh', type: 'accessoire', disponibilite: 'precommande', prix: 34.99,
+    nouveau: true,
+    description: '3 méga-packs + carte promo Ultra Rare exclusive + carte collector. Edition limitée.',
+    tags: ['tin','collector','duelist-nexus','mega-pack'],
+  },
+  {
+    id: 'ygo-structure-fire-kings',
+    nom: 'Structure Deck — Fire Kings (FR)',
+    licence: 'yugioh', type: 'cartes', disponibilite: 'en-stock', prix: 12.99,
+    nouveau: false,
+    description: 'Deck prêt à jouer 43 cartes autour des Fire Kings. Inclut de nouvelles cartes inédites et des rééditions.',
+    tags: ['structure-deck','fire-kings','fr'],
+  },
+  {
+    id: 'ygo-display-terminal',
+    nom: 'Display Battles of Legend — Terminal Revenge',
+    licence: 'yugioh', type: 'display', disponibilite: 'en-stock', prix: 99.99,
+    nouveau: false,
+    description: '24 boosters. Rééditions de cartes légendaires en Ultra Rare et Secret Rare. Idéal pour les decks compétitifs.',
+    tags: ['display','battles-of-legend','terminal-revenge'],
   },
   {
     id: 'op-display-op06',
-    nom: 'One Piece Card Game — Display OP-06 Twin Champions',
-    licence: 'onepiece',
-    type: 'display',
-    disponibilite: 'en-stock',
-    prix: 109.99,
-    image: 'assets/img/products/placeholder.webp',
-    description: 'Display de 24 boosters de l\'extension Twin Champions.',
-    tags: ['display', 'booster', 'op06'],
+    nom: 'One Piece TCG — Display OP-06 Twin Champions',
+    licence: 'onepiece', type: 'display', disponibilite: 'en-stock', prix: 109.99,
+    nouveau: true,
+    description: '24 boosters. Luffy & Zoro en vedette avec de nouvelles cartes SP et Secret Rare exclusives à ce set.',
+    tags: ['display','op06','twin-champions','luffy','zoro'],
   },
   {
-    id: 'fig-goku-masterlise',
-    nom: 'Figurine Goku Super Saiyan — MegaHouse Masterlise',
-    licence: 'dragonball',
-    type: 'figurine',
-    disponibilite: 'en-stock',
-    prix: 79.99,
-    image: 'assets/img/products/placeholder.webp',
-    description: 'Figurine Goku Super Saiyan Blue, gamme Masterlise Ichibansho.',
-    tags: ['figurine', 'goku', 'super-saiyan', 'megahouse'],
+    id: 'op-fig-luffy-gear5',
+    nom: 'Figurine Luffy Gear 5 — S.H.Figuarts',
+    licence: 'onepiece', type: 'figurine', disponibilite: 'en-stock', prix: 64.99,
+    nouveau: false,
+    description: 'Figurine articulée ~15 cm par Bandai S.H.Figuarts. Pièces interchangeables incluses. Finition premium.',
+    tags: ['figurine','luffy','gear-5','sh-figuarts','bandai'],
   },
-];
-
-export const LICENCES = [
-  { id: 'pokemon',         label: 'Pokémon',            icon: '🔵' },
-  { id: 'yugioh',          label: 'Yu-Gi-Oh!',          icon: '⚡' },
-  { id: 'onepiece',        label: 'One Piece',           icon: '⚓' },
-  { id: 'lorcana',         label: 'Lorcana',             icon: '✨' },
-  { id: 'dragonball',      label: 'Dragon Ball',         icon: '🐉' },
-  { id: 'naruto',          label: 'Naruto',              icon: '🍥' },
-  { id: 'magicthegathering', label: 'Magic: TG',         icon: '🔮' },
-];
-
-export const TYPES = [
-  { id: 'cartes',      label: 'Cartes à l\'unité' },
-  { id: 'display',     label: 'Displays' },
-  { id: 'figurine',    label: 'Figurines' },
-  { id: 'goodie',      label: 'Goodies' },
-  { id: 'accessoire',  label: 'Accessoires' },
-];
-
-export const DISPONIBILITES = [
-  { id: 'en-stock',    label: 'En stock' },
-  { id: 'precommande', label: 'Précommande' },
-  { id: 'rupture',     label: 'Rupture' },
+  {
+    id: 'db-fig-goku-masterlise',
+    nom: 'Figurine Goku SSJ Blue — Masterlise Ichibansho',
+    licence: 'dragonball', type: 'figurine', disponibilite: 'en-stock', prix: 79.99,
+    nouveau: false,
+    description: 'Gamme Masterlise Ichibansho par MegaHouse. Hauteur 23 cm. Socle lumineux inclus. Finition exceptionnelle.',
+    tags: ['figurine','goku','super-saiyan-blue','megahouse','masterlise'],
+  },
+  {
+    id: 'db-fig-vegeta-ssb',
+    nom: 'Figurine Vegeta SSJ Blue — Ichibansho',
+    licence: 'dragonball', type: 'figurine', disponibilite: 'precommande', prix: 69.99,
+    nouveau: true,
+    description: 'Figurine Vegeta SSJ Blue par Bandai Ichibansho. ~21 cm. Livraison prévue Q3 2026. Réservez dès maintenant !',
+    tags: ['figurine','vegeta','super-saiyan-blue','ichibansho'],
+  },
+  {
+    id: 'db-goodie-keyring',
+    nom: 'Porte-clés — Les 7 Boules de Cristal',
+    licence: 'dragonball', type: 'goodie', disponibilite: 'en-stock', prix: 9.99,
+    nouveau: false,
+    description: 'Set de 7 porte-clés en résine représentant chacune des 7 Boules de Cristal. Taille réelle.',
+    tags: ['porte-cles','boules-de-cristal','goodie'],
+  },
+  {
+    id: 'nar-fig-naruto-sage',
+    nom: 'Figurine Naruto — Mode Hermite',
+    licence: 'naruto', type: 'figurine', disponibilite: 'en-stock', prix: 34.99,
+    nouveau: false,
+    description: 'Figurine Naruto en Mode Hermite par Banpresto. Hauteur 18 cm. Marquages oculaires Sage très détaillés.',
+    tags: ['figurine','naruto','mode-hermite','banpresto'],
+  },
+  {
+    id: 'nar-fig-sasuke',
+    nom: 'Figurine Sasuke — Rinnegan Activé',
+    licence: 'naruto', type: 'figurine', disponibilite: 'en-stock', prix: 34.99,
+    nouveau: false,
+    description: 'Figurine Sasuke Uchiha Rinnegan par Banpresto. Hauteur 17 cm. Édition Shippuden finale.',
+    tags: ['figurine','sasuke','rinnegan','banpresto','shippuden'],
+  },
+  {
+    id: 'lor-display-inklands',
+    nom: 'Lorcana — Display Into the Inklands (CH3)',
+    licence: 'lorcana', type: 'display', disponibilite: 'en-stock', prix: 129.99,
+    nouveau: false,
+    description: '24 boosters du Chapitre 3. Stitch & les Gardes Royales. Chaque booster contient 12 cartes.',
+    tags: ['display','inklands','chapitre-3','stitch'],
+  },
+  {
+    id: 'lor-booster-inklands',
+    nom: 'Booster Lorcana — Into the Inklands',
+    licence: 'lorcana', type: 'cartes', disponibilite: 'en-stock', prix: 5.50,
+    nouveau: false,
+    description: 'Booster unitaire 12 cartes. Rareté enchanted ou légendaire garantie par boîte de 24.',
+    tags: ['booster','inklands'],
+  },
+  {
+    id: 'mtg-display-bloomburrow',
+    nom: 'Magic: TG — Display Bloomburrow (EN)',
+    licence: 'magicthegathering', type: 'display', disponibilite: 'en-stock', prix: 139.99,
+    nouveau: false,
+    description: '36 boosters Draft. Monde anthropomorphique peuplé d'animaux héroïques. Extension acclamée par la communauté.',
+    tags: ['display','bloomburrow','draft'],
+  },
+  {
+    id: 'mtg-commander-bloomburrow',
+    nom: 'Magic: TG — Commander Deck Bloomburrow (FR)',
+    licence: 'magicthegathering', type: 'cartes', disponibilite: 'precommande', prix: 44.99,
+    nouveau: true,
+    description: 'Commander Deck pré-construit 100 cartes dont des inédites exclusives au format Commander. Version française.',
+    tags: ['commander','bloomburrow','fr'],
+  },
 ];
