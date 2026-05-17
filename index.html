@@ -3,45 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TCM Japanimation — Votre boutique de cartes à collectionner et de figurines à Liège. Pokémon, Yu-Gi-Oh!, One Piece, Lorcana, Dragon Ball et bien plus. Rue de la Cathédrale 73, 4000 Liège.">
+  <meta name="description" content="TCM Japanimation — Votre boutique de cartes à collectionner et de figurines à Liège. Pokémon, Yu-Gi-Oh!, One Piece, Lorcana, Dragon Ball. Rue de la Cathédrale 73, 4000 Liège.">
   <meta name="robots" content="index, follow">
-
-  <!-- Open Graph -->
   <meta property="og:title" content="TCM Japanimation | Boutique TCG & Figurines à Liège">
   <meta property="og:description" content="Cartes, displays, figurines et goodies de l'univers nippon. En stock à Liège — Rue de la Cathédrale 73.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_BE">
-
-  <!-- Schema.org LocalBusiness (SEO local) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Store",
-    "name": "TCM Japanimation",
-    "description": "Boutique spécialisée en cartes à collectionner (TCG) et figurines de l'univers nippon à Liège.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rue de la Cathédrale 73",
-      "addressLocality": "Liège",
-      "postalCode": "4000",
-      "addressCountry": "BE"
-    },
-    "telephone": "+3242222888",
-    "email": "tcm10mai02@hotmail.com",
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "18:30" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "18:00" }
-    ]
-  }
+  {"@context":"https://schema.org","@type":"Store","name":"TCM Japanimation","description":"Boutique spécialisée TCG et figurines nippon à Liège.","address":{"@type":"PostalAddress","streetAddress":"Rue de la Cathédrale 73","addressLocality":"Liège","postalCode":"4000","addressCountry":"BE"},"telephone":"+3242222888","email":"tcm10mai02@hotmail.com","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"18:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"18:00"}]}
   </script>
-
-  <!-- Preconnect performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
   <title>TCM Japanimation | Boutique TCG & Figurines à Liège</title>
-
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/header.css">
   <link rel="stylesheet" href="assets/css/footer.css">
@@ -49,13 +23,9 @@
 </head>
 <body>
 
-  <!-- RGPD Banner -->
   <div id="rgpd-banner" class="rgpd-banner" role="dialog" aria-label="Consentement cookies" hidden>
     <div class="rgpd-banner__inner">
-      <p class="rgpd-banner__text">
-        Nous utilisons uniquement des cookies strictement nécessaires au fonctionnement du site (pas de tracking, pas de pub).
-        <a href="mentions-legales.html#rgpd">En savoir plus</a>
-      </p>
+      <p class="rgpd-banner__text">Cookies strictement nécessaires uniquement (pas de tracking). <a href="mentions-legales.html#rgpd">En savoir plus</a></p>
       <div class="rgpd-banner__actions">
         <button id="rgpd-accept" class="btn btn--primary btn--sm">Accepter</button>
         <button id="rgpd-refuse" class="btn btn--ghost btn--sm">Refuser</button>
@@ -63,26 +33,20 @@
     </div>
   </div>
 
-  <!-- ====== HEADER ====== -->
   <header class="site-header" id="site-header">
     <div class="container header__inner">
-
       <a href="index.html" class="header__logo" aria-label="TCM Japanimation — Accueil">
         <span class="logo__icon" aria-hidden="true">⛩</span>
         <span class="logo__text">TCM <em>Japanimation</em></span>
       </a>
-
       <div class="store-status" id="store-status" aria-live="polite">
         <span class="store-status__dot" id="status-dot"></span>
         <span class="store-status__label" id="status-label">Chargement…</span>
       </div>
-
       <nav class="header__nav" id="main-nav" aria-label="Navigation principale">
         <ul class="nav__list" role="list">
           <li class="nav__item nav__item--dropdown">
-            <button class="nav__link nav__link--parent" aria-expanded="false" aria-controls="menu-tcg">
-              Cartes TCG <span class="nav__chevron" aria-hidden="true"></span>
-            </button>
+            <button class="nav__link nav__link--parent" aria-expanded="false" aria-controls="menu-tcg">Cartes TCG <span class="nav__chevron" aria-hidden="true"></span></button>
             <ul class="nav__dropdown" id="menu-tcg" role="list">
               <li><a href="catalogue.html?licence=pokemon" class="nav__dropdown-link"><span class="licence-icon">🔵</span> Pokémon</a></li>
               <li><a href="catalogue.html?licence=yugioh" class="nav__dropdown-link"><span class="licence-icon">⚡</span> Yu-Gi-Oh!</a></li>
@@ -94,70 +58,42 @@
             </ul>
           </li>
           <li class="nav__item nav__item--dropdown">
-            <button class="nav__link nav__link--parent" aria-expanded="false" aria-controls="menu-figurines">
-              Figurines <span class="nav__chevron" aria-hidden="true"></span>
-            </button>
-            <ul class="nav__dropdown" id="menu-figurines" role="list">
-              <li><a href="catalogue.html?type=figurines&licence=dragonball" class="nav__dropdown-link"><span class="licence-icon">🐉</span> Dragon Ball</a></li>
-              <li><a href="catalogue.html?type=figurines&licence=naruto" class="nav__dropdown-link"><span class="licence-icon">🍥</span> Naruto</a></li>
-              <li><a href="catalogue.html?type=figurines&licence=onepiece" class="nav__dropdown-link"><span class="licence-icon">⚓</span> One Piece</a></li>
-              <li><a href="catalogue.html?type=figurines" class="nav__dropdown-link nav__dropdown-link--all">Voir toutes les figurines →</a></li>
+            <button class="nav__link nav__link--parent" aria-expanded="false" aria-controls="menu-fig">Figurines <span class="nav__chevron" aria-hidden="true"></span></button>
+            <ul class="nav__dropdown" id="menu-fig" role="list">
+              <li><a href="catalogue.html?type=figurine&licence=dragonball" class="nav__dropdown-link"><span class="licence-icon">🐉</span> Dragon Ball</a></li>
+              <li><a href="catalogue.html?type=figurine&licence=naruto" class="nav__dropdown-link"><span class="licence-icon">🍥</span> Naruto</a></li>
+              <li><a href="catalogue.html?type=figurine&licence=onepiece" class="nav__dropdown-link"><span class="licence-icon">⚓</span> One Piece</a></li>
+              <li><a href="catalogue.html?type=figurine" class="nav__dropdown-link nav__dropdown-link--all">Voir toutes les figurines →</a></li>
             </ul>
           </li>
-          <li class="nav__item">
-            <a href="catalogue.html?type=goodies" class="nav__link">Goodies</a>
-          </li>
-          <li class="nav__item">
-            <a href="catalogue.html?disponibilite=precommande" class="nav__link nav__link--badge">
-              Précommandes <span class="badge badge--accent">New</span>
-            </a>
-          </li>
-          <li class="nav__item">
-            <a href="#boutique" class="nav__link">La Boutique</a>
-          </li>
+          <li class="nav__item"><a href="catalogue.html?type=goodie" class="nav__link">Goodies</a></li>
+          <li class="nav__item"><a href="catalogue.html?disponibilite=precommande" class="nav__link nav__link--badge">Précommandes <span class="badge badge--accent">New</span></a></li>
+          <li class="nav__item"><a href="#boutique" class="nav__link">La Boutique</a></li>
         </ul>
       </nav>
-
       <div class="header__actions">
         <button class="btn-icon" id="search-toggle" aria-label="Ouvrir la recherche" aria-expanded="false">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
-          </svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
         </button>
         <button class="btn-icon nav__burger" id="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
-          <span class="burger__line"></span>
-          <span class="burger__line"></span>
-          <span class="burger__line"></span>
+          <span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span>
         </button>
       </div>
     </div>
-
     <div class="search-bar" id="search-bar" hidden>
       <div class="container">
         <form class="search-bar__form" action="catalogue.html" method="get" role="search">
-          <label for="global-search" class="sr-only">Rechercher un produit</label>
-          <input
-            type="search"
-            id="global-search"
-            name="q"
-            class="search-bar__input"
-            placeholder="Rechercher une carte, une figurine, une licence…"
-            autocomplete="off"
-            maxlength="100"
-            pattern="[a-zA-Z0-9 àâäéèêëîïôùûüç'\-!:?]{1,100}"
-          >
+          <label for="global-search" class="sr-only">Rechercher</label>
+          <input type="search" id="global-search" name="q" class="search-bar__input" placeholder="Rechercher une carte, une figurine, une licence…" autocomplete="off" maxlength="100">
           <button type="submit" class="btn btn--primary">Rechercher</button>
-          <button type="button" id="search-close" class="btn-icon" aria-label="Fermer la recherche">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M18 6 6 18M6 6l12 12"/>
-            </svg>
+          <button type="button" id="search-close" class="btn-icon" aria-label="Fermer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
           </button>
         </form>
       </div>
     </div>
   </header>
 
-  <!-- ====== MAIN CONTENT ====== -->
   <main id="main-content">
 
     <!-- HERO -->
@@ -165,12 +101,11 @@
       <div class="hero__bg" aria-hidden="true"></div>
       <div class="container hero__inner">
         <div class="hero__content">
-          <p class="hero__eyebrow">Boutique physique à Liège — Rue de la Cathédrale 73</p>
+          <p class="hero__eyebrow">Boutique physique — Rue de la Cathédrale 73, 4000 Liège</p>
           <h1 class="hero__title" id="hero-title">
-            L'univers nippon<br>
-            <em>à portée de main</em>
+            L’univers nippon<br><em>à portée de main</em>
           </h1>
-          <p class="hero__sub">Cartes TCG, figurines, displays et goodies issus des plus grandes licences japonaises. En stock ou en précommande, directement en boutique à Liège.</p>
+          <p class="hero__sub">Cartes TCG, figurines, displays et goodies issus des plus grandes licences japonaises. En stock ou en précommande, directement en boutique.</p>
           <div class="hero__ctas">
             <a href="catalogue.html" class="btn btn--primary btn--lg">Explorer le catalogue</a>
             <a href="#boutique" class="btn btn--ghost btn--lg">Infos boutique</a>
@@ -190,63 +125,80 @@
         <h2 class="section-title" id="licences-title">Nos licences</h2>
         <p class="section-sub">Cliquez sur une licence pour accéder directement à ses produits.</p>
         <ul class="licence-grid" role="list">
-          <li class="licence-card">
-            <a href="catalogue.html?licence=pokemon" class="licence-card__link">
-              <span class="licence-card__icon" aria-hidden="true">🔵</span>
-              <span class="licence-card__name">Pokémon</span>
-              <span class="licence-card__types">Cartes · Displays · Accessoires</span>
-            </a>
-          </li>
-          <li class="licence-card">
-            <a href="catalogue.html?licence=yugioh" class="licence-card__link">
-              <span class="licence-card__icon" aria-hidden="true">⚡</span>
-              <span class="licence-card__name">Yu-Gi-Oh!</span>
-              <span class="licence-card__types">Cartes · Structure Decks · Tins</span>
-            </a>
-          </li>
-          <li class="licence-card">
-            <a href="catalogue.html?licence=onepiece" class="licence-card__link">
-              <span class="licence-card__icon" aria-hidden="true">⚓</span>
-              <span class="licence-card__name">One Piece</span>
-              <span class="licence-card__types">Cartes · Displays · Figurines</span>
-            </a>
-          </li>
-          <li class="licence-card">
-            <a href="catalogue.html?licence=lorcana" class="licence-card__link">
-              <span class="licence-card__icon" aria-hidden="true">✨</span>
-              <span class="licence-card__name">Lorcana</span>
-              <span class="licence-card__types">Cartes · Illumineer's Trove</span>
-            </a>
-          </li>
-          <li class="licence-card">
-            <a href="catalogue.html?licence=dragonball" class="licence-card__link">
-              <span class="licence-card__icon" aria-hidden="true">🐉</span>
-              <span class="licence-card__name">Dragon Ball</span>
-              <span class="licence-card__types">Cartes · Figurines · Goodies</span>
-            </a>
-          </li>
-          <li class="licence-card">
-            <a href="catalogue.html?licence=naruto" class="licence-card__link">
-              <span class="licence-card__icon" aria-hidden="true">🍥</span>
-              <span class="licence-card__name">Naruto</span>
-              <span class="licence-card__types">Figurines · Goodies</span>
-            </a>
-          </li>
-          <li class="licence-card">
-            <a href="catalogue.html?licence=magicthegathering" class="licence-card__link">
-              <span class="licence-card__icon" aria-hidden="true">🔮</span>
-              <span class="licence-card__name">Magic: TG</span>
-              <span class="licence-card__types">Cartes · Displays · Decks</span>
-            </a>
-          </li>
-          <li class="licence-card licence-card--more">
-            <a href="catalogue.html" class="licence-card__link">
-              <span class="licence-card__icon" aria-hidden="true">＋</span>
-              <span class="licence-card__name">Et bien plus…</span>
-              <span class="licence-card__types">Voir tout le catalogue</span>
-            </a>
-          </li>
+          <li class="licence-card"><a href="catalogue.html?licence=pokemon" class="licence-card__link"><span class="licence-card__icon" aria-hidden="true">🔵</span><span class="licence-card__name">Pokémon</span><span class="licence-card__types">Cartes · Displays · Accessoires</span></a></li>
+          <li class="licence-card"><a href="catalogue.html?licence=yugioh" class="licence-card__link"><span class="licence-card__icon" aria-hidden="true">⚡</span><span class="licence-card__name">Yu-Gi-Oh!</span><span class="licence-card__types">Cartes · Structure Decks · Tins</span></a></li>
+          <li class="licence-card"><a href="catalogue.html?licence=onepiece" class="licence-card__link"><span class="licence-card__icon" aria-hidden="true">⚓</span><span class="licence-card__name">One Piece</span><span class="licence-card__types">Cartes · Displays · Figurines</span></a></li>
+          <li class="licence-card"><a href="catalogue.html?licence=lorcana" class="licence-card__link"><span class="licence-card__icon" aria-hidden="true">✨</span><span class="licence-card__name">Lorcana</span><span class="licence-card__types">Cartes · Illumineer’s Trove</span></a></li>
+          <li class="licence-card"><a href="catalogue.html?licence=dragonball" class="licence-card__link"><span class="licence-card__icon" aria-hidden="true">🐉</span><span class="licence-card__name">Dragon Ball</span><span class="licence-card__types">Cartes · Figurines · Goodies</span></a></li>
+          <li class="licence-card"><a href="catalogue.html?licence=naruto" class="licence-card__link"><span class="licence-card__icon" aria-hidden="true">🍥</span><span class="licence-card__name">Naruto</span><span class="licence-card__types">Figurines · Goodies</span></a></li>
+          <li class="licence-card"><a href="catalogue.html?licence=magicthegathering" class="licence-card__link"><span class="licence-card__icon" aria-hidden="true">🔮</span><span class="licence-card__name">Magic: TG</span><span class="licence-card__types">Cartes · Displays · Decks</span></a></li>
+          <li class="licence-card licence-card--more"><a href="catalogue.html" class="licence-card__link"><span class="licence-card__icon" aria-hidden="true">＋</span><span class="licence-card__name">Et bien plus…</span><span class="licence-card__types">Voir tout le catalogue</span></a></li>
         </ul>
+      </div>
+    </section>
+
+    <!-- NOUVEAUTÉS -->
+    <section class="social-section" aria-labelledby="social-title">
+      <div class="container">
+        <h2 class="section-title" id="social-title">Nouveautés &amp; Annonces</h2>
+        <p class="section-sub">Suivez nos dernières arrivées et annonces exceptionnelles sur Facebook.</p>
+        <div class="social-posts">
+          <div class="social-post">
+            <div class="social-post__header">
+              <span class="social-post__avatar" aria-hidden="true">⛩</span>
+              <div>
+                <p class="social-post__name">TCM Japanimation</p>
+                <p class="social-post__date">Liège · Rue de la Cathédrale 73</p>
+              </div>
+            </div>
+            <div class="social-post__visual social-post__visual--pokemon" aria-hidden="true">
+              <span>🔵</span>
+              <span class="social-post__badge">Nouveauté</span>
+            </div>
+            <p class="social-post__text"><strong>🔥 Arrivée en boutique !</strong> Le display Pokémon Évolutions à Paldea est disponible. Venez vite avant rupture !</p>
+            <a href="produit.html?id=pok-display-paldea" class="social-post__cta">Voir le produit →</a>
+          </div>
+          <div class="social-post">
+            <div class="social-post__header">
+              <span class="social-post__avatar" aria-hidden="true">⛩</span>
+              <div>
+                <p class="social-post__name">TCM Japanimation</p>
+                <p class="social-post__date">Liège · Rue de la Cathédrale 73</p>
+              </div>
+            </div>
+            <div class="social-post__visual social-post__visual--dragonball" aria-hidden="true">
+              <span>🐉</span>
+              <span class="social-post__badge social-post__badge--accent">Précommande</span>
+            </div>
+            <p class="social-post__text"><strong>⚡ Précommande ouverte !</strong> La figurine Vegeta SSJ Blue Ichibansho est disponible à la réservation. Livraison Q3 2026.</p>
+            <a href="produit.html?id=db-fig-vegeta-ssb" class="social-post__cta">Réserver →</a>
+          </div>
+          <div class="social-post">
+            <div class="social-post__header">
+              <span class="social-post__avatar" aria-hidden="true">⛩</span>
+              <div>
+                <p class="social-post__name">TCM Japanimation</p>
+                <p class="social-post__date">Liège · Rue de la Cathédrale 73</p>
+              </div>
+            </div>
+            <div class="social-post__visual social-post__visual--announcement" aria-hidden="true">
+              <span>🌟</span>
+              <span class="social-post__badge">Annonce</span>
+            </div>
+            <p class="social-post__text"><strong>📲 Retrouvez-nous aussi sur Facebook !</strong> Horaires exceptionnels, nouveaux produits, concours… Suivez notre page pour ne rien rater !</p>
+            <a href="https://www.facebook.com/TCMYugiohJapananimation" target="_blank" rel="noopener noreferrer" class="social-post__cta">Voir la page →</a>
+          </div>
+        </div>
+        <div class="social-section__cta">
+          <a href="https://www.facebook.com/TCMYugiohJapananimation" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            Suivre sur Facebook
+          </a>
+          <a href="https://wa.me/3242222888" class="btn btn--ghost btn--lg" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            Contacter via WhatsApp
+          </a>
+        </div>
       </div>
     </section>
 
@@ -261,7 +213,6 @@
             <p>📞 <a href="tel:+3242222888">04 222 28 88</a></p>
             <p>✉️ <a href="mailto:tcm10mai02@hotmail.com">tcm10mai02@hotmail.com</a></p>
           </address>
-
           <div class="boutique-ctas">
             <a href="https://wa.me/3242222888" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
@@ -269,12 +220,11 @@
             </a>
             <a href="https://www.facebook.com/TCMYugiohJapananimation" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-              Notre page Facebook
+              Nous suivre
             </a>
           </div>
-
           <div class="opening-hours">
-            <h3 class="opening-hours__title">Horaires d'ouverture</h3>
+            <h3 class="opening-hours__title">Horaires d’ouverture</h3>
             <ul class="opening-hours__list" role="list">
               <li><span>Lundi</span><span class="closed">Fermé</span></li>
               <li><span>Mardi – Vendredi</span><span>10h – 18h30</span></li>
@@ -283,29 +233,19 @@
             </ul>
             <p class="opening-hours__note">⚠️ Horaires susceptibles d’être modifiés les jours fériés — consultez notre <a href="https://www.facebook.com/TCMYugiohJapananimation" target="_blank" rel="noopener noreferrer">page Facebook</a> pour les annonces exceptionnelles.</p>
           </div>
-
           <div class="store-status-full" id="store-status-main" aria-live="polite"></div>
         </div>
-
-        <div class="boutique-info__map" aria-label="Localisation de la boutique">
+        <div class="boutique-info__map">
           <iframe
             title="TCM Japanimation — Rue de la Cathédrale 73, 4000 Liège"
             src="https://maps.google.com/maps?q=Rue+de+la+Cath%C3%A9drale+73%2C+4000+Li%C3%A8ge%2C+Belgique&output=embed&hl=fr&z=16"
-            width="100%"
-            height="360"
-            style="border:0; border-radius: var(--radius-lg); display: block;"
-            allowfullscreen
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            width="100%" height="360"
+            style="border:0;border-radius:var(--radius-lg);display:block;"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
-          <a
-            href="https://maps.google.com/?q=Rue+de+la+Cath%C3%A9drale+73,+4000+Li%C3%A8ge"
-            class="map-directions-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://maps.google.com/?q=Rue+de+la+Cath%C3%A9drale+73,+4000+Li%C3%A8ge" class="map-directions-link" target="_blank" rel="noopener noreferrer">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
-            Obtenir l'itinéraire
+            Obtenir l’itinéraire
           </a>
         </div>
       </div>
@@ -313,14 +253,10 @@
 
   </main>
 
-  <!-- ====== FOOTER ====== -->
   <footer class="site-footer" aria-label="Pied de page">
     <div class="container footer__inner">
-
       <div class="footer__brand">
-        <a href="index.html" class="footer__logo" aria-label="TCM Japanimation — Accueil">
-          <span aria-hidden="true">⛩</span> TCM <em>Japanimation</em>
-        </a>
+        <a href="index.html" class="footer__logo" aria-label="TCM Japanimation — Accueil">⛩ TCM <em>Japanimation</em></a>
         <p class="footer__tagline">Votre boutique spécialisée TCG &amp; pop culture à Liège.<br>Rue de la Cathédrale 73, 4000 Liège.</p>
         <div class="footer__social">
           <a href="https://www.facebook.com/TCMYugiohJapananimation" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook TCM Japanimation">
@@ -331,14 +267,13 @@
           </a>
         </div>
       </div>
-
       <nav class="footer__nav" aria-label="Navigation secondaire">
         <div class="footer__nav-col">
           <h3 class="footer__nav-title">Catalogue</h3>
           <ul role="list">
             <li><a href="catalogue.html?type=cartes">Cartes TCG</a></li>
-            <li><a href="catalogue.html?type=figurines">Figurines</a></li>
-            <li><a href="catalogue.html?type=goodies">Goodies</a></li>
+            <li><a href="catalogue.html?type=figurine">Figurines</a></li>
+            <li><a href="catalogue.html?type=goodie">Goodies</a></li>
             <li><a href="catalogue.html?disponibilite=precommande">Précommandes</a></li>
           </ul>
         </div>
@@ -361,26 +296,17 @@
           </ul>
         </div>
       </nav>
-
     </div>
-
     <div class="footer__bottom">
       <div class="container footer__bottom-inner">
-        <p class="footer__legal">
-          &copy; <span id="footer-year"></span> TCM Japanimation — Nhung TRIEU — BCE : <span class="bce-todo">[N° BCE à compléter]</span> — Rue de la Cathédrale 73, 4000 Liège
-        </p>
-        <p class="footer__legal-links">
-          <a href="mentions-legales.html">Mentions légales</a> &middot;
-          <a href="mentions-legales.html#rgpd">RGPD</a> &middot;
-          <a href="mentions-legales.html#cookies">Cookies</a>
-        </p>
+        <p class="footer__legal">&copy; <span id="footer-year"></span> TCM Japanimation — Nhung TRIEU — BCE : [N° à compléter] — Rue de la Cathédrale 73, 4000 Liège</p>
+        <p class="footer__legal-links"><a href="mentions-legales.html">Mentions légales</a> &middot; <a href="mentions-legales.html#rgpd">RGPD</a> &middot; <a href="mentions-legales.html#cookies">Cookies</a></p>
       </div>
     </div>
   </footer>
 
-  <script type="module" src="assets/js/main.js"></script>
-  <script type="module" src="assets/js/nav.js"></script>
-  <script type="module" src="assets/js/rgpd.js"></script>
-
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/rgpd.js"></script>
 </body>
 </html>
