@@ -3,14 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TCM Japanimation — Votre boutique de cartes à collectionner et de figurines à Liège. Pokémon, Yu-Gi-Oh!, One Piece, Lorcana, Dragon Ball et bien plus.">
+  <meta name="description" content="TCM Japanimation — Votre boutique de cartes à collectionner et de figurines à Liège. Pokémon, Yu-Gi-Oh!, One Piece, Lorcana, Dragon Ball et bien plus. Rue de la Cathédrale 73, 4000 Liège.">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
   <meta property="og:title" content="TCM Japanimation | Boutique TCG & Figurines à Liège">
-  <meta property="og:description" content="Cartes, displays, figurines et goodies de l'univers nippon. En stock à Liège.">
+  <meta property="og:description" content="Cartes, displays, figurines et goodies de l'univers nippon. En stock à Liège — Rue de la Cathédrale 73.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_BE">
+
+  <!-- Schema.org LocalBusiness (SEO local) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "TCM Japanimation",
+    "description": "Boutique spécialisée en cartes à collectionner (TCG) et figurines de l'univers nippon à Liège.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rue de la Cathédrale 73",
+      "addressLocality": "Liège",
+      "postalCode": "4000",
+      "addressCountry": "BE"
+    },
+    "telephone": "+3242222888",
+    "email": "tcm10mai02@hotmail.com",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "10:00", "closes": "18:30" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "18:00" }
+    ]
+  }
+  </script>
 
   <!-- Preconnect performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +49,7 @@
 </head>
 <body>
 
-  <!-- RGPD Banner (injecté via rgpd.js) -->
+  <!-- RGPD Banner -->
   <div id="rgpd-banner" class="rgpd-banner" role="dialog" aria-label="Consentement cookies" hidden>
     <div class="rgpd-banner__inner">
       <p class="rgpd-banner__text">
@@ -44,19 +67,16 @@
   <header class="site-header" id="site-header">
     <div class="container header__inner">
 
-      <!-- Logo -->
       <a href="index.html" class="header__logo" aria-label="TCM Japanimation — Accueil">
         <span class="logo__icon" aria-hidden="true">⛩</span>
         <span class="logo__text">TCM <em>Japanimation</em></span>
       </a>
 
-      <!-- Store status badge -->
       <div class="store-status" id="store-status" aria-live="polite">
         <span class="store-status__dot" id="status-dot"></span>
         <span class="store-status__label" id="status-label">Chargement…</span>
       </div>
 
-      <!-- Desktop nav -->
       <nav class="header__nav" id="main-nav" aria-label="Navigation principale">
         <ul class="nav__list" role="list">
           <li class="nav__item nav__item--dropdown">
@@ -98,7 +118,6 @@
         </ul>
       </nav>
 
-      <!-- Search + Mobile toggle -->
       <div class="header__actions">
         <button class="btn-icon" id="search-toggle" aria-label="Ouvrir la recherche" aria-expanded="false">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -113,7 +132,6 @@
       </div>
     </div>
 
-    <!-- Search bar (slide-down) -->
     <div class="search-bar" id="search-bar" hidden>
       <div class="container">
         <form class="search-bar__form" action="catalogue.html" method="get" role="search">
@@ -147,19 +165,18 @@
       <div class="hero__bg" aria-hidden="true"></div>
       <div class="container hero__inner">
         <div class="hero__content">
-          <p class="hero__eyebrow">Boutique physique à Liège</p>
+          <p class="hero__eyebrow">Boutique physique à Liège — Rue de la Cathédrale 73</p>
           <h1 class="hero__title" id="hero-title">
             L'univers nippon<br>
             <em>à portée de main</em>
           </h1>
-          <p class="hero__sub">Cartes TCG, figurines, displays et goodies issus des plus grandes licences japonaises. En stock ou en précommande.</p>
+          <p class="hero__sub">Cartes TCG, figurines, displays et goodies issus des plus grandes licences japonaises. En stock ou en précommande, directement en boutique à Liège.</p>
           <div class="hero__ctas">
             <a href="catalogue.html" class="btn btn--primary btn--lg">Explorer le catalogue</a>
             <a href="#boutique" class="btn btn--ghost btn--lg">Infos boutique</a>
           </div>
         </div>
         <div class="hero__visual" aria-hidden="true">
-          <!-- SVG décoratif ou image hero à insérer -->
           <div class="hero__orb hero__orb--1"></div>
           <div class="hero__orb hero__orb--2"></div>
           <div class="hero__orb hero__orb--3"></div>
@@ -240,29 +257,56 @@
           <h2 class="section-title" id="boutique-title">Nous trouver</h2>
           <address class="boutique-address">
             <p><strong>TCM Japanimation</strong></p>
-            <p>📍 [Adresse à compléter], Liège, Belgique</p>
-            <p>📞 <a href="tel:+32XXXXXXXXX">+32 X XX XX XX XX</a></p>
-            <p>✉️ <a href="mailto:contact@tcm-japanimation.be">contact@tcm-japanimation.be</a></p>
+            <p>📍 <a href="https://maps.google.com/?q=Rue+de+la+Cath%C3%A9drale+73,+4000+Li%C3%A8ge" target="_blank" rel="noopener noreferrer">Rue de la Cathédrale 73, 4000 Liège</a></p>
+            <p>📞 <a href="tel:+3242222888">04 222 28 88</a></p>
+            <p>✉️ <a href="mailto:tcm10mai02@hotmail.com">tcm10mai02@hotmail.com</a></p>
           </address>
+
+          <div class="boutique-ctas">
+            <a href="https://wa.me/3242222888" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
+            <a href="https://www.facebook.com/TCMYugiohJapananimation" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              Notre page Facebook
+            </a>
+          </div>
+
           <div class="opening-hours">
             <h3 class="opening-hours__title">Horaires d'ouverture</h3>
             <ul class="opening-hours__list" role="list">
-              <li><span>Lundi</span><span>Fermé</span></li>
+              <li><span>Lundi</span><span class="closed">Fermé</span></li>
               <li><span>Mardi – Vendredi</span><span>10h – 18h30</span></li>
               <li><span>Samedi</span><span>10h – 18h</span></li>
-              <li><span>Dimanche</span><span>Fermé</span></li>
+              <li><span>Dimanche</span><span class="closed">Fermé</span></li>
             </ul>
+            <p class="opening-hours__note">⚠️ Horaires susceptibles d’être modifiés les jours fériés — consultez notre <a href="https://www.facebook.com/TCMYugiohJapananimation" target="_blank" rel="noopener noreferrer">page Facebook</a> pour les annonces exceptionnelles.</p>
           </div>
-          <div class="store-status-full" id="store-status-main" aria-live="polite">
-            <!-- Injecté par main.js -->
-          </div>
+
+          <div class="store-status-full" id="store-status-main" aria-live="polite"></div>
         </div>
+
         <div class="boutique-info__map" aria-label="Localisation de la boutique">
-          <!-- Iframe Google Maps à ajouter avec l'adresse réelle -->
-          <div class="map-placeholder">
-            <p>📍 Carte interactive</p>
-            <p class="map-placeholder__hint">(à intégrer avec l'adresse définitive)</p>
-          </div>
+          <iframe
+            title="TCM Japanimation — Rue de la Cathédrale 73, 4000 Liège"
+            src="https://maps.google.com/maps?q=Rue+de+la+Cath%C3%A9drale+73%2C+4000+Li%C3%A8ge%2C+Belgique&output=embed&hl=fr&z=16"
+            width="100%"
+            height="360"
+            style="border:0; border-radius: var(--radius-lg); display: block;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <a
+            href="https://maps.google.com/?q=Rue+de+la+Cath%C3%A9drale+73,+4000+Li%C3%A8ge"
+            class="map-directions-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            Obtenir l'itinéraire
+          </a>
         </div>
       </div>
     </section>
@@ -277,13 +321,13 @@
         <a href="index.html" class="footer__logo" aria-label="TCM Japanimation — Accueil">
           <span aria-hidden="true">⛩</span> TCM <em>Japanimation</em>
         </a>
-        <p class="footer__tagline">Votre boutique spécialisée TCG &amp; pop culture à Liège.</p>
+        <p class="footer__tagline">Votre boutique spécialisée TCG &amp; pop culture à Liège.<br>Rue de la Cathédrale 73, 4000 Liège.</p>
         <div class="footer__social">
-          <a href="https://www.facebook.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook TCM Japanimation">
+          <a href="https://www.facebook.com/TCMYugiohJapananimation" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook TCM Japanimation">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
-          <a href="https://www.instagram.com/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram TCM Japanimation">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          <a href="https://wa.me/3242222888" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp TCM Japanimation">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
           </a>
         </div>
       </div>
@@ -312,8 +356,8 @@
           <ul role="list">
             <li><a href="#boutique">La boutique</a></li>
             <li><a href="mentions-legales.html">Mentions légales</a></li>
-            <li><a href="mentions-legales.html#rgpd">Politique de confidentialité</a></li>
-            <li><a href="mentions-legales.html#cookies">Gestion des cookies</a></li>
+            <li><a href="mentions-legales.html#rgpd">Confidentialité</a></li>
+            <li><a href="mentions-legales.html#cookies">Cookies</a></li>
           </ul>
         </div>
       </nav>
@@ -323,7 +367,7 @@
     <div class="footer__bottom">
       <div class="container footer__bottom-inner">
         <p class="footer__legal">
-          &copy; <span id="footer-year"></span> TCM Japanimation — BCE : <span class="bce-placeholder">[N° BCE à compléter]</span> — Siège social : [Adresse], Liège, Belgique
+          &copy; <span id="footer-year"></span> TCM Japanimation — Nhung TRIEU — BCE : <span class="bce-todo">[N° BCE à compléter]</span> — Rue de la Cathédrale 73, 4000 Liège
         </p>
         <p class="footer__legal-links">
           <a href="mentions-legales.html">Mentions légales</a> &middot;
@@ -334,7 +378,6 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script type="module" src="assets/js/main.js"></script>
   <script type="module" src="assets/js/nav.js"></script>
   <script type="module" src="assets/js/rgpd.js"></script>
