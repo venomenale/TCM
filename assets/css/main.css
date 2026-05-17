@@ -4,21 +4,23 @@
    ============================================================= */
 
 :root {
-  --color-bg:          #070711;
-  --color-surface:     #0F0F22;
-  --color-surface-2:   #18183A;
-  --color-border:      rgba(255,255,255,0.07);
+  --color-bg:          #050510;
+  --color-surface:     #0C0C1E;
+  --color-surface-2:   #16163A;
+  --color-border:      rgba(255,255,255,0.08);
 
   --color-primary:     #FF1744;
   --color-primary-hov: #D50000;
-  --color-accent:      #FFD600;
-  --color-accent-hov:  #FFC400;
-  --color-neon:        #00E5FF;
-  --color-purple:      #7C4DFF;
+  --color-accent:      #FFE000;
+  --color-accent-hov:  #FFD000;
+  --color-neon:        #00FFCC;
+  --color-purple:      #AA00FF;
+  --color-vivid-pink:  #FF2D6B;
+  --color-electric:    #00B4FF;
 
-  --color-text:        #F0F0FF;
+  --color-text:        #F2F2FF;
   --color-text-muted:  #8888BB;
-  --color-text-inv:    #070711;
+  --color-text-inv:    #050510;
 
   --font-display: 'Rajdhani', 'Segoe UI', sans-serif;
   --font-body:    'Inter', system-ui, sans-serif;
@@ -52,12 +54,12 @@
   --radius-lg: 20px;
   --radius-xl: 32px;
 
-  --shadow-sm:  0 1px 3px rgba(0,0,0,0.5);
-  --shadow-md:  0 4px 20px rgba(0,0,0,0.6);
-  --shadow-glow-primary: 0 0 28px rgba(255,23,68,0.5);
-  --shadow-glow-accent:  0 0 28px rgba(255,214,0,0.45);
-  --shadow-glow-neon:    0 0 28px rgba(0,229,255,0.45);
-  --shadow-glow-purple:  0 0 28px rgba(124,77,255,0.45);
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.55);
+  --shadow-md:  0 4px 20px rgba(0,0,0,0.65);
+  --shadow-glow-primary: 0 0 32px rgba(255,23,68,0.55);
+  --shadow-glow-accent:  0 0 32px rgba(255,224,0,0.5);
+  --shadow-glow-neon:    0 0 32px rgba(0,255,204,0.45);
+  --shadow-glow-purple:  0 0 32px rgba(170,0,255,0.45);
 
   /* Licence glow colours */
   --glow-pokemon:           rgba(255,203,5,0.6);
@@ -136,19 +138,33 @@ address { font-style: normal; }
   letter-spacing: 0.04em; cursor: pointer;
   border: 2px solid transparent;
   transition: background var(--transition-fast), color var(--transition-fast),
-              border-color var(--transition-fast), box-shadow var(--transition-fast);
+              border-color var(--transition-fast), box-shadow var(--transition-fast),
+              transform var(--transition-fast);
   text-decoration: none; white-space: nowrap;
 }
 .btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+.btn:active { transform: scale(.97); }
 
-.btn--primary { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
-.btn--primary:hover { background: var(--color-primary-hov); border-color: var(--color-primary-hov); box-shadow: var(--shadow-glow-primary); }
+.btn--primary {
+  background: linear-gradient(135deg, #FF1744 0%, #FF5722 100%);
+  color: #fff; border-color: transparent;
+}
+.btn--primary:hover {
+  background: linear-gradient(135deg, #D50000 0%, #E64A19 100%);
+  box-shadow: var(--shadow-glow-primary);
+}
 
 .btn--ghost { background: transparent; color: var(--color-text); border-color: var(--color-border); }
 .btn--ghost:hover { border-color: var(--color-primary); color: var(--color-primary); }
 
-.btn--accent { background: var(--color-accent); color: var(--color-text-inv); border-color: var(--color-accent); }
-.btn--accent:hover { background: var(--color-accent-hov); box-shadow: var(--shadow-glow-accent); }
+.btn--accent {
+  background: linear-gradient(135deg, var(--color-accent) 0%, #FFB300 100%);
+  color: var(--color-text-inv); border-color: transparent;
+}
+.btn--accent:hover {
+  background: linear-gradient(135deg, var(--color-accent-hov) 0%, #FF8F00 100%);
+  box-shadow: var(--shadow-glow-accent);
+}
 
 .btn--sm  { padding: 0.4rem 0.875rem; font-size: var(--text-sm); }
 .btn--lg  { padding: 0.875rem 2rem;   font-size: var(--text-lg); }
@@ -176,9 +192,19 @@ address { font-style: normal; }
 
 /* Section titles */
 .section-title {
-  font-size: var(--text-3xl);
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl));
   color: var(--color-text);
   margin-bottom: var(--space-3);
+  position: relative;
+  padding-bottom: 14px;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 52px; height: 3px;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  border-radius: 2px;
 }
 .section-sub {
   color: var(--color-text-muted);
