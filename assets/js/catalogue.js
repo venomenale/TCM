@@ -4,10 +4,9 @@
   var filters = { licence: '', type: '', disponibilite: '', q: '', sort: '' };
   var gridEl, countEl, activeFiltersBar, filterForm, sortSelect, sidebarEl;
 
-  /* ---- Init ---- */
   function init() {
-    gridEl          = document.getElementById('products-grid');
-    countEl         = document.getElementById('products-count');
+    gridEl           = document.getElementById('products-grid');
+    countEl          = document.getElementById('products-count');
     activeFiltersBar = document.getElementById('active-filters-bar');
     filterForm       = document.getElementById('filter-form');
     sortSelect       = document.getElementById('sort-select');
@@ -27,19 +26,16 @@
 
     filterForm.addEventListener('change', onFilterChange);
     sortSelect && sortSelect.addEventListener('change', onSortChange);
-    document.getElementById('filter-clear-btn') && document.getElementById('filter-clear-btn').addEventListener('click', clearFilters);
+    var clearBtn = document.getElementById('filter-clear-btn');
+    clearBtn && clearBtn.addEventListener('click', clearFilters);
 
-    // Mobile drawer
     var mobileBtn = document.getElementById('mobile-filter-btn');
     var backdrop  = document.getElementById('filter-backdrop');
-    var closeBtn  = document.getElementById('filter-drawer-close');
     var applyBtn  = document.getElementById('drawer-apply-btn');
-    mobileBtn  && mobileBtn.addEventListener('click',  openDrawer);
-    backdrop   && backdrop.addEventListener('click',   closeDrawer);
-    closeBtn   && closeBtn.addEventListener('click',   closeDrawer);
-    applyBtn   && applyBtn.addEventListener('click',   closeDrawer);
+    mobileBtn && mobileBtn.addEventListener('click',  openDrawer);
+    backdrop  && backdrop.addEventListener('click',   closeDrawer);
+    applyBtn  && applyBtn.addEventListener('click',   closeDrawer);
 
-    // Catalogue search
     var srch = document.getElementById('catalogue-search');
     if (srch) {
       srch.value = filters.q;
@@ -52,7 +48,6 @@
     }
   }
 
-  /* ---- Build filter pills ---- */
   function buildFilterUI() {
     function pills(arr, name) {
       return arr.map(function (item) {
@@ -72,12 +67,10 @@
     if (sortSelect) sortSelect.value = filters.sort;
   }
 
-  /* ---- Events ---- */
   function onFilterChange(e) {
     var cb = e.target;
     if (cb.type !== 'checkbox') return;
     if (cb.checked) {
-      // Single-select per group
       filterForm.querySelectorAll('input[name="' + cb.name + '"]').forEach(function (o) {
         if (o !== cb) o.checked = false;
       });
@@ -107,7 +100,6 @@
     updateMobileBadge();
   }
 
-  /* ---- Core filter / sort / render ---- */
   function applyAndRender() {
     var results = sort(filter(window.TCM_PRODUCTS || [], filters), filters.sort);
     renderGrid(results);
@@ -157,16 +149,18 @@
     var lic   = licInfo(p.licence);
     var avail = availBadge(p.disponibilite);
     var price = formatPrice(p.prix);
+    var ptyp  = productTypeLabel(p);
     return [
       '<article class="product-card" role="listitem">',
         '<a href="produit.html?id=' + enc(p.id) + '" class="product-card__link">',
           '<div class="product-card__visual" data-licence="' + p.licence + '">',
             '<span class="product-card__icon" aria-hidden="true">' + lic.icon + '</span>',
+            '<span class="product-card__ptyp" aria-hidden="true">' + ptyp + '</span>',
             avail,
-            p.nouveau ? '<span class="product-card__new badge badge--primary">Nouveau</span>' : '',
+            p.nouveau ? '<span class="product-card__new">★ NOUVEAU</span>' : '',
           '</div>',
           '<div class="product-card__body">',
-            '<span class="product-card__lic-tag">' + lic.icon + ' ' + esc(lic.label) + '</span>',
+            '<span class="product-card__lic-tag">' + lic.icon + ' ' + esc(lic.label) + '</span>',
             '<h3 class="product-card__name">' + esc(p.nom) + '</h3>',
             '<div class="product-card__footer">',
               '<span class="product-card__price">' + price + '</span>',
@@ -176,6 +170,20 @@
         '</a>',
       '</article>',
     ].join('');
+  }
+
+  function productTypeLabel(p) {
+    var n = p.nom.toLowerCase();
+    if (n.indexOf('display') !== -1)          return '📦 Display 36×';
+    if (n.indexOf('elite trainer') !== -1)    return '🎁 Elite Box';
+    if (n.indexOf('tin') !== -1)              return '🥫 Tin';
+    if (n.indexOf('starter') !== -1)          return '🃏 Starter Deck';
+    if (n.indexOf('commander') !== -1)        return '🃏 Commander';
+    if (n.indexOf('structure') !== -1)        return '🃏 Structure Deck';
+    if (n.indexOf('booster unitaire') !== -1) return '🃏 Booster';
+    if (p.type === 'figurine')                return '🎭 Figurine';
+    if (p.type === 'goodie')                  return '⭐ Goodie';
+    return '📦';
   }
 
   function availBadge(d) {
@@ -195,11 +203,11 @@
     if (filters.licence)       tags.push({ key: 'licence',       label: licInfo(filters.licence).label });
     if (filters.type)          tags.push({ key: 'type',          label: typeInfo(filters.type).label });
     if (filters.disponibilite) tags.push({ key: 'disponibilite', label: dispoInfo(filters.disponibilite).label });
-    if (filters.q)             tags.push({ key: 'q',             label: '« ' + filters.q + ' »' });
+    if (filters.q)             tags.push({ key: 'q',             label: '« ' + filters.q + ' »' });
     if (!tags.length) { activeFiltersBar.hidden = true; return; }
     activeFiltersBar.hidden = false;
     activeFiltersBar.innerHTML =
-      '<span class="af-label">Filtres :</span>' +
+      '<span class="af-label">Filtres :</span>' +
       tags.map(function (t) {
         return '<button class="af-tag" data-key="' + t.key + '">' + esc(t.label) + ' ×</button>';
       }).join('') +
@@ -217,16 +225,17 @@
     ac && ac.addEventListener('click', clearFilters);
   }
 
-  /* ---- URL + mobile badge ---- */
   function updateURL() {
-    var p = new URLSearchParams();
-    if (filters.licence)       p.set('licence',       filters.licence);
-    if (filters.type)          p.set('type',          filters.type);
-    if (filters.disponibilite) p.set('disponibilite', filters.disponibilite);
-    if (filters.q)             p.set('q',             filters.q);
-    if (filters.sort)          p.set('sort',          filters.sort);
-    var s = p.toString();
-    history.replaceState({}, '', s ? '?' + s : window.location.pathname);
+    try {
+      var p = new URLSearchParams();
+      if (filters.licence)       p.set('licence',       filters.licence);
+      if (filters.type)          p.set('type',          filters.type);
+      if (filters.disponibilite) p.set('disponibilite', filters.disponibilite);
+      if (filters.q)             p.set('q',             filters.q);
+      if (filters.sort)          p.set('sort',          filters.sort);
+      var s = p.toString();
+      history.replaceState({}, '', s ? '?' + s : window.location.pathname);
+    } catch (e) { /* file:// protocol — history API non supporté */ }
   }
 
   function updateMobileBadge() {
@@ -237,28 +246,29 @@
     b.hidden = n === 0;
   }
 
-  /* ---- Mobile drawer ---- */
   function openDrawer() {
     if (!sidebarEl) return;
     sidebarEl.classList.add('is-drawer-open');
-    document.getElementById('filter-backdrop') && (document.getElementById('filter-backdrop').hidden = false);
+    var bd = document.getElementById('filter-backdrop');
+    if (bd) bd.hidden = false;
     document.body.style.overflow = 'hidden';
   }
+
   function closeDrawer() {
     if (!sidebarEl) return;
     sidebarEl.classList.remove('is-drawer-open');
-    document.getElementById('filter-backdrop') && (document.getElementById('filter-backdrop').hidden = true);
+    var bd = document.getElementById('filter-backdrop');
+    if (bd) bd.hidden = true;
     document.body.style.overflow = '';
   }
 
-  /* ---- Helpers ---- */
   function licInfo(id)  { return find(window.TCM_LICENCES || [],       id) || { label: id, icon: '📦' }; }
   function typeInfo(id) { return find(window.TCM_TYPES    || [],       id) || { label: id }; }
   function dispoInfo(id){ return find(window.TCM_DISPONIBILITES || [], id) || { label: id }; }
   function find(arr, id){ return arr.filter(function(x){ return x.id === id; })[0]; }
   function enc(s)  { return encodeURIComponent(s); }
   function esc(s)  { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-  function formatPrice(n) { return n.toFixed(2).replace('.',',') + ' €'; }
+  function formatPrice(n) { return n.toFixed(2).replace('.',',') + ' €'; }
   function setInner(id, html) { var el = document.getElementById(id); if (el) el.innerHTML = html; }
   function debounce(fn, ms) { var t; return function(){ clearTimeout(t); t = setTimeout(fn, ms); }; }
 
