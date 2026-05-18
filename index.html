@@ -96,45 +96,97 @@
 
   <main id="main-content">
 
-    <!-- HERO — Lugia PNG transparent plein écran + Pikachu mascotte -->
+    <!-- ═══════════════════════ HERO ═══════════════════════ -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__bg" aria-hidden="true"></div>
-      <img src="assets/img/lugia.png" alt="" class="hero__bg-char" aria-hidden="true" draggable="false">
-      <img src="assets/img/pikachu.png" alt="" class="hero__bg-pika" aria-hidden="true" draggable="false">
+      <!-- Lugia — PNG transparent, glow bleu, droite -->
+      <img src="assets/img/lugia.png" alt="" class="hero__char hero__char--main" aria-hidden="true" draggable="false">
+      <!-- Pikachu — mascotte flottante -->
+      <img src="assets/img/pikachu.png" alt="" class="hero__char hero__char--pika" aria-hidden="true" draggable="false">
+
       <div class="container hero__inner">
         <div class="hero__content">
-          <p class="hero__eyebrow">🇧🇪 Boutique physique — Rue de la Cathédrale 73, Liège</p>
+          <div class="hero__badge">
+            <span class="hero__badge-dot" aria-hidden="true"></span>
+            🇧🇪 Boutique physique — Liège, Belgique
+          </div>
           <h1 class="hero__title" id="hero-title">
-            Cartes TCG &amp; Figurines<br><em>dans l'univers nippon</em>
+            L'univers manga<br><em>prend vie à Liège</em>
           </h1>
-          <p class="hero__sub">Pokémon, Yu-Gi-Oh!, One Piece, Dragon Ball… Displays, boosters, figurines collector et goodies — tout l'univers manga en boutique à Liège.</p>
+          <p class="hero__sub">
+            Pokémon · Yu-Gi-Oh! · One Piece · Dragon Ball<br>
+            Cartes rares, figurines collector &amp; goodies en boutique.
+          </p>
           <div class="hero__ctas">
             <a href="catalogue.html" class="btn btn--primary btn--lg">Explorer le catalogue</a>
-            <a href="#boutique" class="btn btn--ghost btn--lg">Infos boutique</a>
+            <a href="#boutique" class="btn btn--ghost btn--lg">La boutique</a>
           </div>
-        </div>
-        <div class="hero__visual" aria-hidden="true">
-          <div class="hero__orb hero__orb--1"></div>
-          <div class="hero__orb hero__orb--2"></div>
-          <div class="hero__orb hero__orb--3"></div>
-          <div class="hero__cards">
-            <span class="hero__card hero__card--1">⚡</span>
-            <span class="hero__card hero__card--2">🃏</span>
-            <span class="hero__card hero__card--3">🔮</span>
-            <span class="hero__card hero__card--4">⚓</span>
-            <span class="hero__card hero__card--5">🍃</span>
-            <span class="hero__card hero__card--6">✨</span>
+          <div class="hero__stats" aria-label="Chiffres clés">
+            <div class="hero__stat">
+              <span class="hero__stat-n">6+</span>
+              <span class="hero__stat-l">Licences</span>
+            </div>
+            <span class="hero__stat-sep" aria-hidden="true"></span>
+            <div class="hero__stat">
+              <span class="hero__stat-n">500+</span>
+              <span class="hero__stat-l">Produits</span>
+            </div>
+            <span class="hero__stat-sep" aria-hidden="true"></span>
+            <div class="hero__stat">
+              <span class="hero__stat-n">Liège</span>
+              <span class="hero__stat-l">Boutique physique</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- LICENCE WALL -->
+    <!-- ══════════════ FRANCHISE TICKER ══════════════ -->
+    <div class="franchise-ticker" aria-hidden="true">
+      <div class="franchise-ticker__track">
+        <span class="franchise-ticker__item"><span>⚡</span> Pokémon</span>
+        <span class="franchise-ticker__dot">✦</span>
+        <span class="franchise-ticker__item"><span>🃏</span> Yu-Gi-Oh!</span>
+        <span class="franchise-ticker__dot">✦</span>
+        <span class="franchise-ticker__item"><span>⚓</span> One Piece</span>
+        <span class="franchise-ticker__dot">✦</span>
+        <span class="franchise-ticker__item"><span>🔮</span> Dragon Ball</span>
+        <span class="franchise-ticker__dot">✦</span>
+        <span class="franchise-ticker__item"><span>🍃</span> Naruto</span>
+        <span class="franchise-ticker__dot">✦</span>
+        <span class="franchise-ticker__item"><span>✨</span> Lorcana</span>
+        <span class="franchise-ticker__dot">✦</span>
+        <span class="franchise-ticker__item"><span>🧙</span> Magic TG</span>
+        <span class="franchise-ticker__dot">✦</span>
+        <span class="franchise-ticker__item"><span>🗡️</span> Demon Slayer</span>
+        <span class="franchise-ticker__dot">✦</span>
+        <!-- Dupliqué pour boucle seamless -->
+        <span class="franchise-ticker__item"><span>⚡</span> Pokémon</span>
+        <span class="franchise-ticker__dot">✦</span>
+        <span class="franchise-ticker__item"><span>🃏</span> Yu-Gi-Oh!</span>
+        <span class="franchise-ticker__dot">✦</span>
+        <span class="franchise-ticker__item"><span>⚓</span> One Piece</span>
+        <span class="franchise-ticker__dot">✦</span>
+        <span class="franchise-ticker__item"><span>🔮</span> Dragon Ball</span>
+        <span class="franchise-ticker__dot">✦</span>
+        <span class="franchise-ticker__item"><span>🍃</span> Naruto</span>
+        <span class="franchise-ticker__dot">✦</span>
+        <span class="franchise-ticker__item"><span>✨</span> Lorcana</span>
+        <span class="franchise-ticker__dot">✦</span>
+        <span class="franchise-ticker__item"><span>🧙</span> Magic TG</span>
+        <span class="franchise-ticker__dot">✦</span>
+        <span class="franchise-ticker__item"><span>🗡️</span> Demon Slayer</span>
+        <span class="franchise-ticker__dot">✦</span>
+      </div>
+    </div>
+
+    <!-- ══════════════ LICENCE WALL ══════════════ -->
     <section class="licence-wall" aria-labelledby="licences-title">
       <div class="container">
         <h2 class="section-title" id="licences-title">Nos licences</h2>
         <p class="section-sub">Cliquez sur une licence pour accéder directement à ses produits.</p>
         <ul class="licence-grid" role="list">
+
           <li class="licence-card" data-licence="pokemon">
             <a href="catalogue.html?licence=pokemon" class="licence-card__link">
               <img src="assets/img/salameche.png" alt="" class="licence-card__char" loading="lazy" draggable="false">
@@ -143,6 +195,7 @@
               <span class="licence-card__types">Displays · Boosters · ETB</span>
             </a>
           </li>
+
           <li class="licence-card" data-licence="yugioh">
             <a href="catalogue.html?licence=yugioh" class="licence-card__link">
               <img src="assets/img/magicien.png" alt="" class="licence-card__char" loading="lazy" draggable="false">
@@ -151,6 +204,7 @@
               <span class="licence-card__types">Displays · Structure Decks · Tins</span>
             </a>
           </li>
+
           <li class="licence-card" data-licence="onepiece">
             <a href="catalogue.html?licence=onepiece" class="licence-card__link">
               <img src="assets/img/luffy.png" alt="" class="licence-card__char" loading="lazy" draggable="false">
@@ -159,6 +213,7 @@
               <span class="licence-card__types">Displays · Boosters · Figurines</span>
             </a>
           </li>
+
           <li class="licence-card" data-licence="lorcana">
             <a href="catalogue.html?licence=lorcana" class="licence-card__link">
               <span class="licence-card__icon" aria-hidden="true">✨</span>
@@ -166,6 +221,7 @@
               <span class="licence-card__types">Displays · Starters · Enchanted</span>
             </a>
           </li>
+
           <li class="licence-card" data-licence="dragonball">
             <a href="catalogue.html?licence=dragonball" class="licence-card__link">
               <img src="assets/img/vegeta.png" alt="" class="licence-card__char" loading="lazy" draggable="false">
@@ -174,6 +230,7 @@
               <span class="licence-card__types">Figurines · Goodies</span>
             </a>
           </li>
+
           <li class="licence-card" data-licence="naruto">
             <a href="catalogue.html?licence=naruto" class="licence-card__link">
               <span class="licence-card__icon" aria-hidden="true">🍃</span>
@@ -181,6 +238,7 @@
               <span class="licence-card__types">Figurines Banpresto · Goodies</span>
             </a>
           </li>
+
           <li class="licence-card" data-licence="magicthegathering">
             <a href="catalogue.html?licence=magicthegathering" class="licence-card__link">
               <span class="licence-card__icon" aria-hidden="true">🧙</span>
@@ -188,6 +246,7 @@
               <span class="licence-card__types">Displays · Commander · Draft</span>
             </a>
           </li>
+
           <li class="licence-card licence-card--more">
             <a href="catalogue.html" class="licence-card__link">
               <span class="licence-card__icon" aria-hidden="true">＋</span>
@@ -195,11 +254,12 @@
               <span class="licence-card__types">Voir tout le catalogue</span>
             </a>
           </li>
+
         </ul>
       </div>
     </section>
 
-    <!-- CHAR BANNER — Rengoku (feu) à gauche, Tanjiro (eau) à droite -->
+    <!-- ══════════════ CHAR BANNER ══════════════ -->
     <div class="char-banner" role="presentation">
       <div class="char-banner__bg" aria-hidden="true"></div>
       <img src="assets/img/rengoku.png" alt="" class="char-banner__img char-banner__img--left" loading="lazy" draggable="false" aria-hidden="true">
@@ -211,7 +271,7 @@
       <img src="assets/img/tanjiro.png" alt="" class="char-banner__img char-banner__img--right" loading="lazy" draggable="false" aria-hidden="true">
     </div>
 
-    <!-- NOUVEAUTÉS — 3 posts : Pokémon, Dragon Ball, Yu-Gi-Oh! -->
+    <!-- ══════════════ NOUVEAUTÉS ══════════════ -->
     <section class="social-section" aria-labelledby="social-title">
       <div class="container">
         <h2 class="section-title" id="social-title">Nouveautés &amp; Annonces</h2>
@@ -230,7 +290,7 @@
               <img src="assets/img/arceus.png" alt="" class="social-post__img" loading="lazy">
               <span class="social-post__badge">Nouveauté</span>
             </div>
-            <p class="social-post__text"><strong>⚡ Arrivée en boutique !</strong> Le display Pokémon Étincelles Déferlantes SV8 est disponible. Pikachu EX, Raichu EX et cartes Illustrateur Rare. Venez vite !</p>
+            <p class="social-post__text"><strong>⚡ Arrivée en boutique&nbsp;!</strong> Le display Pokémon Étincelles Déferlantes SV8 est disponible. Pikachu EX, Raichu EX et cartes Illustrateur Rare. Venez vite&nbsp;!</p>
             <a href="produit.html?id=pok-display-surging-sparks" class="social-post__cta">Voir le produit →</a>
           </div>
 
@@ -246,7 +306,7 @@
               <img src="assets/img/vegeta.png" alt="" class="social-post__img" loading="lazy">
               <span class="social-post__badge social-post__badge--accent">Précommande</span>
             </div>
-            <p class="social-post__text"><strong>🔥 Précommande ouverte !</strong> La figurine Gohan Beast Ichibansho est disponible à la réservation. Issue du film DBS : Super Hero. Livraison Q3 2026.</p>
+            <p class="social-post__text"><strong>🔥 Précommande ouverte&nbsp;!</strong> La figurine Gohan Beast Ichibansho est disponible à la réservation. Issue du film DBS&nbsp;: Super Hero. Livraison Q3 2026.</p>
             <a href="produit.html?id=db-fig-gohan-beast" class="social-post__cta">Réserver →</a>
           </div>
 
@@ -262,7 +322,7 @@
               <img src="assets/img/kaiba.png" alt="" class="social-post__img" loading="lazy">
               <span class="social-post__badge">Arrivage</span>
             </div>
-            <p class="social-post__text"><strong>🃏 Structure Deck Yu-Gi-Oh! !</strong> Le nouveau Structure Deck Cyber Dragon est en boutique. Idéal pour débuter ou renforcer son deck. Disponible dès maintenant !</p>
+            <p class="social-post__text"><strong>🃏 Structure Deck Yu-Gi-Oh!&nbsp;!</strong> Le nouveau Structure Deck Cyber Dragon est en boutique. Idéal pour débuter ou renforcer son deck. Disponible dès maintenant&nbsp;!</p>
             <a href="catalogue.html?licence=yugioh" class="social-post__cta">Voir Yu-Gi-Oh! →</a>
           </div>
 
@@ -280,7 +340,7 @@
       </div>
     </section>
 
-    <!-- INFOS BOUTIQUE -->
+    <!-- ══════════════ INFOS BOUTIQUE ══════════════ -->
     <section class="boutique-info" id="boutique" aria-labelledby="boutique-title">
       <div class="container boutique-info__grid">
         <div class="boutique-info__content">
@@ -317,8 +377,8 @@
           <iframe
             title="TCM Japanimation — Rue de la Cathédrale 73, 4000 Liège"
             src="https://maps.google.com/maps?q=Rue+de+la+Cath%C3%A9drale+73%2C+4000+Li%C3%A8ge%2C+Belgique&output=embed&hl=fr&z=16"
-            width="100%" height="360"
-            style="border:0;border-radius:var(--radius-lg);display:block;"
+            width="100%" height="380"
+            style="border:0;"
             allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
           <a href="https://maps.google.com/?q=Rue+de+la+Cath%C3%A9drale+73,+4000+Li%C3%A8ge" class="map-directions-link" target="_blank" rel="noopener noreferrer">
@@ -376,7 +436,7 @@
     </div>
     <div class="footer__bottom">
       <div class="container footer__bottom-inner">
-        <p class="footer__legal">&copy; <span id="footer-year"></span> TCM Japanimation — Nhung TRIEU — BCE : [N° à compléter] — Rue de la Cathédrale 73, 4000 Liège</p>
+        <p class="footer__legal">&copy; <span id="footer-year"></span> TCM Japanimation — Nhung TRIEU — BCE : [N° à compléter] — Rue de la Cathédrale 73, 4000 Liège</p>
         <p class="footer__legal-links"><a href="mentions-legales.html">Mentions légales</a> &middot; <a href="mentions-legales.html#rgpd">RGPD</a></p>
       </div>
     </div>
