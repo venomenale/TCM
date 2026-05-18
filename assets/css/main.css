@@ -197,6 +197,8 @@ address { font-style: normal; }
   margin-bottom: var(--space-3);
   position: relative;
   padding-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 .section-title::after {
   content: '';
