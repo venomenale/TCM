@@ -39,13 +39,16 @@
   --space-2:  0.5rem;
   --space-3:  0.75rem;
   --space-4:  1rem;
+  --space-5:  1.25rem;
   --space-6:  1.5rem;
   --space-8:  2rem;
+  --space-10: 2.5rem;
   --space-12: 3rem;
   --space-16: 4rem;
+  --space-20: 5rem;
   --space-24: 6rem;
 
-  --container-max: 1280px;
+  --container-max: 1400px;
   --container-pad: 1.5rem;
   --header-h:      70px;
 
@@ -61,7 +64,6 @@
   --shadow-glow-neon:    0 0 32px rgba(0,255,204,0.45);
   --shadow-glow-purple:  0 0 32px rgba(170,0,255,0.50);
 
-  /* Licence glow colours */
   --glow-pokemon:           rgba(255,203,5,0.65);
   --glow-yugioh:            rgba(200,150,12,0.65);
   --glow-onepiece:          rgba(220,38,38,0.65);
@@ -129,7 +131,6 @@ address { font-style: normal; }
 }
 .skip-link:focus { transform: translateY(0); }
 
-/* Buttons */
 .btn {
   display: inline-flex; align-items: center; gap: var(--space-2);
   padding: 0.625rem 1.25rem;
@@ -179,7 +180,6 @@ address { font-style: normal; }
 .btn-icon:hover { background: var(--color-surface-2); color: var(--color-primary); }
 .btn-icon:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
 
-/* Badges */
 .badge {
   display: inline-block; padding: .1em .5em;
   border-radius: 999px; font-size: var(--text-xs);
@@ -190,7 +190,6 @@ address { font-style: normal; }
 .badge--surface { background: var(--color-surface-2); color: var(--color-text-muted); }
 .badge--green   { background: #22c55e; color: #fff; }
 
-/* Section titles */
 .section-title {
   font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl));
   color: var(--color-text);
@@ -198,7 +197,7 @@ address { font-style: normal; }
   position: relative;
   padding-bottom: 14px;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 .section-title::after {
   content: '';
@@ -214,7 +213,6 @@ address { font-style: normal; }
   margin-bottom: var(--space-8);
 }
 
-/* Store status large */
 .store-status--large {
   display: inline-flex; align-items: center; gap: var(--space-3);
   padding: var(--space-3) var(--space-4);
@@ -224,7 +222,6 @@ address { font-style: normal; }
 .store-status--large .store-status__dot   { width: 10px; height: 10px; }
 .store-status--large .store-status__label { font-weight: 600; color: var(--color-text); }
 
-/* RGPD Banner */
 .rgpd-banner {
   position: fixed; bottom: var(--space-4); left: var(--space-4); right: var(--space-4);
   z-index: var(--z-toast);
