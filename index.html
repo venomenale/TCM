@@ -96,14 +96,14 @@
 
   <main id="main-content">
 
-    <!-- HERO — Lugia est un enfant direct de la section, position:absolute plein écran -->
+    <!-- HERO — Lugia PNG transparent plein écran + Pikachu mascotte -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__bg" aria-hidden="true"></div>
-      <img src="assets/img/Lugia.png" alt="" class="hero__bg-char" aria-hidden="true" draggable="false">
-      <img src="assets/img/Pikachu.png" alt="" class="hero__bg-pika" aria-hidden="true" draggable="false">
+      <img src="assets/img/lugia.png" alt="" class="hero__bg-char" aria-hidden="true" draggable="false">
+      <img src="assets/img/pikachu.png" alt="" class="hero__bg-pika" aria-hidden="true" draggable="false">
       <div class="container hero__inner">
         <div class="hero__content">
-          <p class="hero__eyebrow">🆾🇪 Boutique physique — Rue de la Cathédrale 73, Liège</p>
+          <p class="hero__eyebrow">🇧🇪 Boutique physique — Rue de la Cathédrale 73, Liège</p>
           <h1 class="hero__title" id="hero-title">
             Cartes TCG &amp; Figurines<br><em>dans l'univers nippon</em>
           </h1>
@@ -137,7 +137,7 @@
         <ul class="licence-grid" role="list">
           <li class="licence-card" data-licence="pokemon">
             <a href="catalogue.html?licence=pokemon" class="licence-card__link">
-              <img src="assets/img/Salameche.png" alt="" class="licence-card__char" draggable="false">
+              <img src="assets/img/salameche.png" alt="" class="licence-card__char" loading="lazy" draggable="false">
               <span class="licence-card__icon" aria-hidden="true">⚡</span>
               <span class="licence-card__name">Pokémon</span>
               <span class="licence-card__types">Displays · Boosters · ETB</span>
@@ -145,7 +145,7 @@
           </li>
           <li class="licence-card" data-licence="yugioh">
             <a href="catalogue.html?licence=yugioh" class="licence-card__link">
-              <img src="assets/img/Yugi.png" alt="" class="licence-card__char" draggable="false">
+              <img src="assets/img/yugi.png" alt="" class="licence-card__char" loading="lazy" draggable="false">
               <span class="licence-card__icon" aria-hidden="true">🃏</span>
               <span class="licence-card__name">Yu-Gi-Oh!</span>
               <span class="licence-card__types">Displays · Structure Decks · Tins</span>
@@ -153,7 +153,7 @@
           </li>
           <li class="licence-card" data-licence="onepiece">
             <a href="catalogue.html?licence=onepiece" class="licence-card__link">
-              <img src="assets/img/Luffy.png" alt="" class="licence-card__char" draggable="false">
+              <img src="assets/img/zoro.png" alt="" class="licence-card__char" loading="lazy" draggable="false">
               <span class="licence-card__icon" aria-hidden="true">⚓</span>
               <span class="licence-card__name">One Piece</span>
               <span class="licence-card__types">Displays · Boosters · Figurines</span>
@@ -168,7 +168,7 @@
           </li>
           <li class="licence-card" data-licence="dragonball">
             <a href="catalogue.html?licence=dragonball" class="licence-card__link">
-              <img src="assets/img/Vegeta.png" alt="" class="licence-card__char" draggable="false">
+              <img src="assets/img/vegeta.png" alt="" class="licence-card__char" loading="lazy" draggable="false">
               <span class="licence-card__icon" aria-hidden="true">🔮</span>
               <span class="licence-card__name">Dragon Ball</span>
               <span class="licence-card__types">Figurines · Goodies</span>
@@ -183,6 +183,7 @@
           </li>
           <li class="licence-card" data-licence="magicthegathering">
             <a href="catalogue.html?licence=magicthegathering" class="licence-card__link">
+              <img src="assets/img/magicien.png" alt="" class="licence-card__char" loading="lazy" draggable="false">
               <span class="licence-card__icon" aria-hidden="true">🧙</span>
               <span class="licence-card__name">Magic: TG</span>
               <span class="licence-card__types">Displays · Commander · Draft</span>
@@ -199,24 +200,25 @@
       </div>
     </section>
 
-    <!-- CHAR BANNER — Rengoku &amp; Tanjiro flanquent le CTA figurines -->
+    <!-- CHAR BANNER — Rengoku (feu) à gauche, Tanjiro (eau) à droite -->
     <div class="char-banner" role="presentation">
       <div class="char-banner__bg" aria-hidden="true"></div>
-      <img src="assets/img/Rengoku.png" alt="" class="char-banner__img char-banner__img--left" draggable="false" aria-hidden="true">
+      <img src="assets/img/rengoku.png" alt="" class="char-banner__img char-banner__img--left" loading="lazy" draggable="false" aria-hidden="true">
       <div class="char-banner__content">
         <p class="char-banner__eyebrow">Figurines collector &amp; Goodies</p>
         <h2 class="char-banner__title">Demon Slayer · Dragon Ball<br><em>One Piece &amp; bien plus</em></h2>
         <a href="catalogue.html?type=figurine" class="btn btn--accent btn--lg">Voir les figurines</a>
       </div>
-      <img src="assets/img/Tanjiro.png" alt="" class="char-banner__img char-banner__img--right" draggable="false" aria-hidden="true">
+      <img src="assets/img/tanjiro.png" alt="" class="char-banner__img char-banner__img--right" loading="lazy" draggable="false" aria-hidden="true">
     </div>
 
-    <!-- NOUVEAUTÉS -->
+    <!-- NOUVEAUTÉS — 3 posts : Pokémon, Dragon Ball, Yu-Gi-Oh! -->
     <section class="social-section" aria-labelledby="social-title">
       <div class="container">
         <h2 class="section-title" id="social-title">Nouveautés &amp; Annonces</h2>
         <p class="section-sub">Suivez nos dernières arrivées et annonces exceptionnelles sur Facebook.</p>
         <div class="social-posts">
+
           <div class="social-post">
             <div class="social-post__header">
               <span class="social-post__avatar" aria-hidden="true">⛩</span>
@@ -226,12 +228,13 @@
               </div>
             </div>
             <div class="social-post__visual social-post__visual--pokemon" aria-hidden="true">
-              <img src="assets/img/Arceus.png" alt="" class="social-post__img">
+              <img src="assets/img/arceus.png" alt="" class="social-post__img" loading="lazy">
               <span class="social-post__badge">Nouveauté</span>
             </div>
             <p class="social-post__text"><strong>⚡ Arrivée en boutique !</strong> Le display Pokémon Étincelles Déferlantes SV8 est disponible. Pikachu EX, Raichu EX et cartes Illustrateur Rare. Venez vite !</p>
             <a href="produit.html?id=pok-display-surging-sparks" class="social-post__cta">Voir le produit →</a>
           </div>
+
           <div class="social-post">
             <div class="social-post__header">
               <span class="social-post__avatar" aria-hidden="true">⛩</span>
@@ -241,12 +244,13 @@
               </div>
             </div>
             <div class="social-post__visual social-post__visual--dragonball" aria-hidden="true">
-              <img src="assets/img/Vegeta.png" alt="" class="social-post__img">
+              <img src="assets/img/vegeta.png" alt="" class="social-post__img" loading="lazy">
               <span class="social-post__badge social-post__badge--accent">Précommande</span>
             </div>
             <p class="social-post__text"><strong>🔥 Précommande ouverte !</strong> La figurine Gohan Beast Ichibansho est disponible à la réservation. Issue du film DBS : Super Hero. Livraison Q3 2026.</p>
             <a href="produit.html?id=db-fig-gohan-beast" class="social-post__cta">Réserver →</a>
           </div>
+
           <div class="social-post">
             <div class="social-post__header">
               <span class="social-post__avatar" aria-hidden="true">⛩</span>
@@ -255,13 +259,14 @@
                 <p class="social-post__date">Liège · Rue de la Cathédrale 73</p>
               </div>
             </div>
-            <div class="social-post__visual social-post__visual--announcement" aria-hidden="true">
-              <img src="assets/img/Exodia.png" alt="" class="social-post__img">
-              <span class="social-post__badge">Événement</span>
+            <div class="social-post__visual social-post__visual--yugioh" aria-hidden="true">
+              <img src="assets/img/kaiba.png" alt="" class="social-post__img" loading="lazy">
+              <span class="social-post__badge">Arrivage</span>
             </div>
-            <p class="social-post__text"><strong>🎴 Magic × Final Fantasy !</strong> La collaboration événement est arrivée en boutique. Cloud, Terra, Lightning en cartes Magic — stock limité, venez vite !</p>
-            <a href="produit.html?id=mtg-display-final-fantasy" class="social-post__cta">Voir le produit →</a>
+            <p class="social-post__text"><strong>🃏 Structure Deck Yu-Gi-Oh! !</strong> Le nouveau Structure Deck Cyber Dragon est en boutique. Idéal pour débuter ou renforcer son deck. Disponible dès maintenant !</p>
+            <a href="catalogue.html?licence=yugioh" class="social-post__cta">Voir Yu-Gi-Oh! →</a>
           </div>
+
         </div>
         <div class="social-section__cta">
           <a href="https://www.facebook.com/share/1Gh6BBLN89/?mibextid=wwXIfr" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">
