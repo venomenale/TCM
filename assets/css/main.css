@@ -4,23 +4,23 @@
    ============================================================= */
 
 :root {
-  --color-bg:          #050510;
-  --color-surface:     #0C0C1E;
-  --color-surface-2:   #16163A;
-  --color-border:      rgba(255,255,255,0.08);
+  --color-bg:          #07071C;
+  --color-surface:     #0E0E2E;
+  --color-surface-2:   #18183E;
+  --color-border:      rgba(255,255,255,0.10);
 
   --color-primary:     #FF1744;
   --color-primary-hov: #D50000;
-  --color-accent:      #FFE000;
-  --color-accent-hov:  #FFD000;
+  --color-accent:      #FFCB05;
+  --color-accent-hov:  #FFB300;
   --color-neon:        #00FFCC;
   --color-purple:      #AA00FF;
   --color-vivid-pink:  #FF2D6B;
-  --color-electric:    #00B4FF;
+  --color-electric:    #2979FF;
 
   --color-text:        #F2F2FF;
   --color-text-muted:  #8888BB;
-  --color-text-inv:    #050510;
+  --color-text-inv:    #07071C;
 
   --font-display: 'Rajdhani', 'Segoe UI', sans-serif;
   --font-body:    'Inter', system-ui, sans-serif;
@@ -56,19 +56,19 @@
 
   --shadow-sm:  0 1px 3px rgba(0,0,0,0.55);
   --shadow-md:  0 4px 20px rgba(0,0,0,0.65);
-  --shadow-glow-primary: 0 0 32px rgba(255,23,68,0.55);
-  --shadow-glow-accent:  0 0 32px rgba(255,224,0,0.5);
+  --shadow-glow-primary: 0 0 32px rgba(255,23,68,0.60);
+  --shadow-glow-accent:  0 0 32px rgba(255,203,5,0.60);
   --shadow-glow-neon:    0 0 32px rgba(0,255,204,0.45);
-  --shadow-glow-purple:  0 0 32px rgba(170,0,255,0.45);
+  --shadow-glow-purple:  0 0 32px rgba(170,0,255,0.50);
 
   /* Licence glow colours */
-  --glow-pokemon:           rgba(255,203,5,0.6);
-  --glow-yugioh:            rgba(200,150,12,0.6);
-  --glow-onepiece:          rgba(220,38,38,0.6);
-  --glow-dragonball:        rgba(249,115,22,0.65);
-  --glow-naruto:            rgba(234,88,12,0.6);
-  --glow-lorcana:           rgba(139,92,246,0.6);
-  --glow-magicthegathering: rgba(59,130,246,0.6);
+  --glow-pokemon:           rgba(255,203,5,0.65);
+  --glow-yugioh:            rgba(200,150,12,0.65);
+  --glow-onepiece:          rgba(220,38,38,0.65);
+  --glow-dragonball:        rgba(249,115,22,0.70);
+  --glow-naruto:            rgba(234,88,12,0.65);
+  --glow-lorcana:           rgba(139,92,246,0.65);
+  --glow-magicthegathering: rgba(59,130,246,0.65);
 
   --transition-fast: 150ms ease;
   --transition-base: 250ms ease;
@@ -158,11 +158,11 @@ address { font-style: normal; }
 .btn--ghost:hover { border-color: var(--color-primary); color: var(--color-primary); }
 
 .btn--accent {
-  background: linear-gradient(135deg, var(--color-accent) 0%, #FFB300 100%);
-  color: var(--color-text-inv); border-color: transparent;
+  background: linear-gradient(135deg, var(--color-accent) 0%, #FF8F00 100%);
+  color: #07071C; border-color: transparent;
 }
 .btn--accent:hover {
-  background: linear-gradient(135deg, var(--color-accent-hov) 0%, #FF8F00 100%);
+  background: linear-gradient(135deg, var(--color-accent-hov) 0%, #E65100 100%);
   box-shadow: var(--shadow-glow-accent);
 }
 

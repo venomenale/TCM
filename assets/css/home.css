@@ -11,14 +11,15 @@
   padding-block: var(--space-16);
 }
 
-/* Radial gradients background */
+/* Gradients vivids — zone droite bleue pour Lugia, centre-bas jaune pour Pikachu */
 .hero__bg {
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 90% 70% at 80% 35%, rgba(255,23,68,.28) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 80% at 15% 75%, rgba(255,224,0,.14) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 70% at 5%  5%,  rgba(170,0,255,.18) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 50% at 90% 90%, rgba(0,180,255,.10) 0%, transparent 55%);
+    radial-gradient(ellipse 72% 90% at 96% 52%, rgba(30,100,255,.65) 0%, transparent 54%),
+    radial-gradient(ellipse 42% 42% at 62% 92%, rgba(255,203,5,.55) 0%, transparent 50%),
+    radial-gradient(ellipse 65% 72% at 8% 28%,  rgba(255,23,68,.58) 0%, transparent 60%),
+    radial-gradient(ellipse 44% 56% at 3%  4%,  rgba(170,0,255,.45) 0%, transparent 58%),
+    radial-gradient(ellipse 36% 46% at 98% 96%, rgba(0,229,255,.26) 0%, transparent 50%);
   z-index: 0;
 }
 
@@ -39,8 +40,8 @@
   content: '';
   position: absolute; inset: 0;
   background-image:
-    repeating-linear-gradient(0deg,  rgba(255,255,255,.012) 0px, rgba(255,255,255,.012) 1px, transparent 1px, transparent 64px),
-    repeating-linear-gradient(90deg, rgba(255,255,255,.012) 0px, rgba(255,255,255,.012) 1px, transparent 1px, transparent 64px);
+    repeating-linear-gradient(0deg,  rgba(255,255,255,.014) 0px, rgba(255,255,255,.014) 1px, transparent 1px, transparent 64px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.014) 0px, rgba(255,255,255,.014) 1px, transparent 1px, transparent 64px);
   pointer-events: none;
 }
 
@@ -57,9 +58,10 @@
   user-select: none;
   -webkit-user-drag: none;
   z-index: 1;
+  mix-blend-mode: multiply;
   filter:
     drop-shadow(0 40px 100px rgba(0,0,0,.95))
-    drop-shadow(0 0 70px rgba(100,160,255,.25));
+    drop-shadow(0 0 70px rgba(100,160,255,.35));
   animation: hero-char-float 9s ease-in-out infinite;
 }
 
@@ -75,9 +77,10 @@
   user-select: none;
   -webkit-user-drag: none;
   z-index: 3;
+  mix-blend-mode: multiply;
   filter:
     drop-shadow(0 8px 30px rgba(0,0,0,.9))
-    drop-shadow(0 0 22px rgba(255,203,5,.6));
+    drop-shadow(0 0 22px rgba(255,203,5,.75));
   animation: hero-char-float 5s ease-in-out infinite reverse;
   animation-delay: 1.5s;
 }
@@ -89,10 +92,10 @@
   background: linear-gradient(
     90deg,
     var(--color-bg) 0%,
-    rgba(5,5,16,.97) 22%,
-    rgba(5,5,16,.80) 40%,
-    rgba(5,5,16,.30) 62%,
-    rgba(5,5,16,0)   78%
+    rgba(7,7,28,.97) 22%,
+    rgba(7,7,28,.80) 40%,
+    rgba(7,7,28,.30) 62%,
+    rgba(7,7,28,0)   78%
   );
   z-index: 2;
   pointer-events: none;
@@ -103,7 +106,7 @@
   .hero__bg-char { opacity: 0.22; right: -18%; height: 75%; }
   .hero__bg-pika { display: none; }
   .hero::after {
-    background: linear-gradient(180deg, rgba(5,5,16,.92) 0%, rgba(5,5,16,.80) 60%, rgba(5,5,16,.50) 100%);
+    background: linear-gradient(180deg, rgba(7,7,28,.92) 0%, rgba(7,7,28,.80) 60%, rgba(7,7,28,.50) 100%);
   }
 }
 
@@ -160,9 +163,9 @@
   filter: blur(55px);
   animation: float 7s ease-in-out infinite;
 }
-.hero__orb--1 { width:340px;height:340px; background:rgba(255,23,68,.30);   top:-5%;  left:10%; animation-delay:0s; }
-.hero__orb--2 { width:220px;height:220px; background:rgba(255,224,0,.20);    top:45%;  left:55%; animation-delay:2.5s; }
-.hero__orb--3 { width:180px;height:180px; background:rgba(170,0,255,.24);    top:60%;  left:5%;  animation-delay:5s; }
+.hero__orb--1 { width:340px;height:340px; background:rgba(255,23,68,.55);   top:-5%;  left:10%; animation-delay:0s; }
+.hero__orb--2 { width:220px;height:220px; background:rgba(255,203,5,.40);    top:45%;  left:55%; animation-delay:2.5s; }
+.hero__orb--3 { width:180px;height:180px; background:rgba(170,0,255,.48);    top:60%;  left:5%;  animation-delay:5s; }
 
 @keyframes float {
   0%,100% { transform: translateY(0) scale(1); }
@@ -194,8 +197,8 @@
 .licence-wall {
   padding-block: var(--space-24);
   background:
-    radial-gradient(ellipse 80% 60% at 10% 50%, rgba(255,203,5,.04) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 70% at 90% 50%, rgba(170,0,255,.05) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 60% at 10% 50%, rgba(255,203,5,.06) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 70% at 90% 50%, rgba(170,0,255,.07) 0%, transparent 55%),
     var(--color-surface);
 }
 
@@ -232,9 +235,10 @@
   pointer-events: none;
   user-select: none;
   -webkit-user-drag: none;
-  opacity: 0.15;
+  opacity: 0.18;
   transition: opacity .4s ease, transform .4s ease;
   z-index: 0;
+  mix-blend-mode: multiply;
   filter: drop-shadow(0 4px 16px rgba(0,0,0,.6));
 }
 .licence-card__link:hover .licence-card__char {
@@ -256,70 +260,70 @@
 
 /* Per-licence wall tile colours */
 .licence-card[data-licence="pokemon"] .licence-card__link {
-  border-color: rgba(255,203,5,.25); background: linear-gradient(135deg, #0F1640 0%, #121228 100%);
+  border-color: rgba(255,203,5,.30); background: linear-gradient(135deg, #14206A 0%, #0D1545 100%);
 }
 .licence-card[data-licence="pokemon"] .licence-card__link:hover {
-  border-color: #FFCB05; background: linear-gradient(135deg, #1A237E 0%, #0D0D25 100%);
-  box-shadow: 0 0 40px rgba(255,203,5,.55), 0 8px 40px rgba(0,0,0,.7);
+  border-color: #FFCB05; background: linear-gradient(135deg, #2E3F9E 0%, #1A237E 50%, #0D1045 100%);
+  box-shadow: 0 0 44px rgba(255,203,5,.65), 0 8px 40px rgba(0,0,0,.7);
 }
-.licence-card[data-licence="pokemon"] .licence-card__icon { filter: drop-shadow(0 0 10px rgba(255,203,5,.7)); }
+.licence-card[data-licence="pokemon"] .licence-card__icon { filter: drop-shadow(0 0 10px rgba(255,203,5,.8)); }
 
 .licence-card[data-licence="yugioh"] .licence-card__link {
-  border-color: rgba(200,150,12,.25); background: linear-gradient(135deg, #1A0035 0%, #121228 100%);
+  border-color: rgba(200,150,12,.30); background: linear-gradient(135deg, #220045 0%, #141228 100%);
 }
 .licence-card[data-licence="yugioh"] .licence-card__link:hover {
-  border-color: #C8960C; background: linear-gradient(135deg, #2D0060 0%, #120A20 100%);
-  box-shadow: 0 0 40px rgba(200,150,12,.55), 0 8px 40px rgba(0,0,0,.7);
+  border-color: #C8960C; background: linear-gradient(135deg, #5500AA 0%, #3D0080 50%, #1A0A30 100%);
+  box-shadow: 0 0 44px rgba(200,150,12,.65), 0 8px 40px rgba(0,0,0,.7);
 }
-.licence-card[data-licence="yugioh"] .licence-card__icon { filter: drop-shadow(0 0 10px rgba(200,150,12,.7)); }
+.licence-card[data-licence="yugioh"] .licence-card__icon { filter: drop-shadow(0 0 10px rgba(200,150,12,.8)); }
 
 .licence-card[data-licence="onepiece"] .licence-card__link {
-  border-color: rgba(220,38,38,.25); background: linear-gradient(135deg, #0D1830 0%, #121228 100%);
+  border-color: rgba(220,38,38,.30); background: linear-gradient(135deg, #0D1830 0%, #0A1228 100%);
 }
 .licence-card[data-licence="onepiece"] .licence-card__link:hover {
-  border-color: #DC2626; background: linear-gradient(135deg, #1A0A0A 0%, #0A1535 100%);
-  box-shadow: 0 0 40px rgba(220,38,38,.55), 0 8px 40px rgba(0,0,0,.7);
+  border-color: #DC2626; background: linear-gradient(135deg, #7B0000 0%, #220000 50%, #0A1535 100%);
+  box-shadow: 0 0 44px rgba(220,38,38,.65), 0 8px 40px rgba(0,0,0,.7);
 }
-.licence-card[data-licence="onepiece"] .licence-card__icon { filter: drop-shadow(0 0 10px rgba(220,38,38,.7)); }
+.licence-card[data-licence="onepiece"] .licence-card__icon { filter: drop-shadow(0 0 10px rgba(220,38,38,.8)); }
 
 .licence-card[data-licence="lorcana"] .licence-card__link {
-  border-color: rgba(139,92,246,.25); background: linear-gradient(135deg, #150A35 0%, #121228 100%);
+  border-color: rgba(139,92,246,.30); background: linear-gradient(135deg, #1A0A38 0%, #0E0D28 100%);
 }
 .licence-card[data-licence="lorcana"] .licence-card__link:hover {
-  border-color: #8B5CF6; background: linear-gradient(135deg, #1E0D45 0%, #0D0D25 100%);
-  box-shadow: 0 0 40px rgba(139,92,246,.55), 0 8px 40px rgba(0,0,0,.7);
+  border-color: #8B5CF6; background: linear-gradient(135deg, #3B1A6E 0%, #220D55 50%, #0D0D28 100%);
+  box-shadow: 0 0 44px rgba(139,92,246,.65), 0 8px 40px rgba(0,0,0,.7);
 }
-.licence-card[data-licence="lorcana"] .licence-card__icon { filter: drop-shadow(0 0 10px rgba(139,92,246,.7)); }
+.licence-card[data-licence="lorcana"] .licence-card__icon { filter: drop-shadow(0 0 10px rgba(139,92,246,.8)); }
 
 .licence-card[data-licence="dragonball"] .licence-card__link {
-  border-color: rgba(249,115,22,.25); background: linear-gradient(135deg, #1A0800 0%, #121228 100%);
+  border-color: rgba(249,115,22,.30); background: linear-gradient(135deg, #200800 0%, #130520 100%);
 }
 .licence-card[data-licence="dragonball"] .licence-card__link:hover {
-  border-color: #F97316; background: linear-gradient(135deg, #2D1000 0%, #1A0500 100%);
-  box-shadow: 0 0 40px rgba(249,115,22,.6), 0 8px 40px rgba(0,0,0,.7);
+  border-color: #F97316; background: linear-gradient(135deg, #8B2500 0%, #3D1000 50%, #1A0500 100%);
+  box-shadow: 0 0 48px rgba(249,115,22,.70), 0 8px 40px rgba(0,0,0,.7);
 }
-.licence-card[data-licence="dragonball"] .licence-card__icon { filter: drop-shadow(0 0 10px rgba(249,115,22,.8)); }
+.licence-card[data-licence="dragonball"] .licence-card__icon { filter: drop-shadow(0 0 10px rgba(249,115,22,.9)); }
 
 .licence-card[data-licence="naruto"] .licence-card__link {
-  border-color: rgba(234,88,12,.25); background: linear-gradient(135deg, #0D0D1A 0%, #0A0A18 100%);
+  border-color: rgba(234,88,12,.30); background: linear-gradient(135deg, #0D0D1A 0%, #0A0A18 100%);
 }
 .licence-card[data-licence="naruto"] .licence-card__link:hover {
-  border-color: #EA580C; background: linear-gradient(135deg, #1A1200 0%, #0D0D20 100%);
-  box-shadow: 0 0 40px rgba(234,88,12,.55), 0 8px 40px rgba(0,0,0,.7);
+  border-color: #EA580C; background: linear-gradient(135deg, #6B2200 0%, #1A1200 50%, #0D0D20 100%);
+  box-shadow: 0 0 44px rgba(234,88,12,.65), 0 8px 40px rgba(0,0,0,.7);
 }
-.licence-card[data-licence="naruto"] .licence-card__icon { filter: drop-shadow(0 0 10px rgba(234,88,12,.7)); }
+.licence-card[data-licence="naruto"] .licence-card__icon { filter: drop-shadow(0 0 10px rgba(234,88,12,.8)); }
 
 .licence-card[data-licence="magicthegathering"] .licence-card__link {
-  border-color: rgba(59,130,246,.25); background: linear-gradient(135deg, #050F05 0%, #0A0D1A 100%);
+  border-color: rgba(59,130,246,.30); background: linear-gradient(135deg, #051405 0%, #0A0D1A 100%);
 }
 .licence-card[data-licence="magicthegathering"] .licence-card__link:hover {
-  border-color: #3B82F6; background: linear-gradient(135deg, #071507 0%, #091525 100%);
-  box-shadow: 0 0 40px rgba(59,130,246,.55), 0 8px 40px rgba(0,0,0,.7);
+  border-color: #3B82F6; background: linear-gradient(135deg, #003888 0%, #001855 50%, #091525 100%);
+  box-shadow: 0 0 44px rgba(59,130,246,.65), 0 8px 40px rgba(0,0,0,.7);
 }
-.licence-card[data-licence="magicthegathering"] .licence-card__icon { filter: drop-shadow(0 0 10px rgba(59,130,246,.7)); }
+.licence-card[data-licence="magicthegathering"] .licence-card__icon { filter: drop-shadow(0 0 10px rgba(59,130,246,.8)); }
 
 .licence-card--more .licence-card__link { border-style: dashed; }
-.licence-card--more .licence-card__link:hover { border-color: var(--color-accent); box-shadow: 0 0 28px rgba(255,224,0,.4), 0 8px 32px rgba(0,0,0,.6); }
+.licence-card--more .licence-card__link:hover { border-color: var(--color-accent); box-shadow: 0 0 32px rgba(255,203,5,.50), 0 8px 32px rgba(0,0,0,.6); }
 
 /* ---- CHAR BANNER ---- */
 .char-banner {
@@ -329,16 +333,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #0C0025 0%, #1E0040 30%, #300015 65%, #1A0A00 100%);
-  border-top: 1px solid rgba(255,255,255,.07);
-  border-bottom: 1px solid rgba(255,255,255,.07);
+  background: linear-gradient(135deg, #1A0050 0%, #5500AA 25%, #AA0055 60%, #5C1800 100%);
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
   padding-block: var(--space-16);
 }
 .char-banner__bg {
   position: absolute; inset: 0;
   background: repeating-conic-gradient(
     from 0deg at 50% 130%,
-    rgba(255,255,255,.018) 0deg 0.5deg,
+    rgba(255,255,255,.022) 0deg 0.5deg,
     transparent 0.5deg 4deg
   );
   pointer-events: none;
@@ -365,7 +369,7 @@
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-/* Characters — full height, no max-height cap — pour un effet très grand */
+/* Characters — full height, no max-height cap */
 .char-banner__img {
   position: absolute;
   bottom: 0;
@@ -374,6 +378,7 @@
   pointer-events: none;
   user-select: none;
   -webkit-user-drag: none;
+  mix-blend-mode: multiply;
   filter: drop-shadow(0 16px 60px rgba(0,0,0,.8));
   z-index: 1;
 }
@@ -430,7 +435,7 @@
 .social-post__name { font-weight: 700; font-size: var(--text-sm); color: var(--color-text); }
 .social-post__date { font-size: var(--text-xs); color: var(--color-text-muted); }
 
-/* Visual — plus grand (3:2 au lieu de 16:9) + isolation pour le blend mode */
+/* Visual — isolation pour le blend mode */
 .social-post__visual {
   position: relative;
   aspect-ratio: 3/2;
@@ -438,11 +443,11 @@
   overflow: hidden;
   isolation: isolate;
 }
-.social-post__visual--pokemon    { background: linear-gradient(135deg, #CC0000 0%, #3B4CCA 50%, #FFCB05 100%); }
-.social-post__visual--dragonball { background: linear-gradient(135deg, #1A0500 0%, #CC4400 50%, #FFD600 100%); }
-.social-post__visual--announcement { background: linear-gradient(135deg, #1E0040 0%, #4A0080 50%, #FF1744 100%); }
+.social-post__visual--pokemon    { background: linear-gradient(135deg, #CC0000 0%, #2233CC 45%, #FFCB05 100%); }
+.social-post__visual--dragonball  { background: linear-gradient(135deg, #660000 0%, #CC4400 50%, #FFD600 100%); }
+.social-post__visual--announcement { background: linear-gradient(135deg, #2A006A 0%, #6600CC 50%, #FF1744 100%); }
 
-/* Personnage — mix-blend-mode:multiply élimine le fond blanc Canva sur les fonds colorés */
+/* mix-blend-mode:multiply élimine le fond blanc sur les fonds colorés */
 .social-post__img {
   position: absolute;
   bottom: 0;
