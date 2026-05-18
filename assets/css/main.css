@@ -4,9 +4,9 @@
    ============================================================= */
 
 :root {
-  --color-bg:          #07071C;
-  --color-surface:     #0E0E2E;
-  --color-surface-2:   #18183E;
+  --color-bg:          #0A0B14;
+  --color-surface:     #0D0D2A;
+  --color-surface-2:   #16163A;
   --color-border:      rgba(255,255,255,0.10);
 
   --color-primary:     #FF1744;
@@ -20,7 +20,7 @@
 
   --color-text:        #F2F2FF;
   --color-text-muted:  #8888BB;
-  --color-text-inv:    #07071C;
+  --color-text-inv:    #0A0B14;
 
   --font-display: 'Rajdhani', 'Segoe UI', sans-serif;
   --font-body:    'Inter', system-ui, sans-serif;
@@ -160,7 +160,7 @@ address { font-style: normal; }
 
 .btn--accent {
   background: linear-gradient(135deg, var(--color-accent) 0%, #FF8F00 100%);
-  color: #07071C; border-color: transparent;
+  color: #0A0B14; border-color: transparent;
 }
 .btn--accent:hover {
   background: linear-gradient(135deg, var(--color-accent-hov) 0%, #E65100 100%);

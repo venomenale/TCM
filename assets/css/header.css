@@ -133,7 +133,6 @@
   gap: var(--space-2);
 }
 
-/* Chevron bouton parent */
 .nav__chevron {
   display: inline-block;
   width: 0;
@@ -149,7 +148,7 @@
   transform: rotate(180deg);
 }
 
-/* Dropdown --*/
+/* Dropdown */
 .nav__dropdown {
   position: absolute;
   top: calc(100% + var(--space-2));
@@ -292,7 +291,7 @@
 
 .search-bar__input::placeholder { color: var(--color-text-muted); }
 
-/* ---- Mobile Nav (overlay) ---- */
+/* ---- Mobile Nav (drawer from right) ---- */
 @media (max-width: 1023px) {
   .header__nav {
     display: block;
@@ -353,4 +352,23 @@
     font-size: var(--text-lg);
     border-bottom: 1px solid var(--color-border);
   }
+}
+
+/* ---- Nav overlay backdrop (mobile) ---- */
+.nav-overlay {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: calc(var(--z-overlay) - 1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-overlay.is-visible { opacity: 1; }
+
+@media (max-width: 1023px) {
+  .nav-overlay { display: block; pointer-events: none; }
+  .nav-overlay.is-visible { pointer-events: auto; }
 }

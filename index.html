@@ -99,9 +99,7 @@
     <!-- ═══════════════════════ HERO ═══════════════════════ -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__bg" aria-hidden="true"></div>
-      <!-- Lugia — PNG transparent, glow bleu, droite -->
       <img src="assets/img/lugia.png" alt="" class="hero__char hero__char--main" aria-hidden="true" draggable="false">
-      <!-- Pikachu — mascotte flottante -->
       <img src="assets/img/pikachu.png" alt="" class="hero__char hero__char--pika" aria-hidden="true" draggable="false">
 
       <div class="container hero__inner">
@@ -160,7 +158,6 @@
         <span class="franchise-ticker__dot">✦</span>
         <span class="franchise-ticker__item"><span>🗡️</span> Demon Slayer</span>
         <span class="franchise-ticker__dot">✦</span>
-        <!-- Dupliqué pour boucle seamless -->
         <span class="franchise-ticker__item"><span>⚡</span> Pokémon</span>
         <span class="franchise-ticker__dot">✦</span>
         <span class="franchise-ticker__item"><span>🃏</span> Yu-Gi-Oh!</span>
@@ -259,17 +256,21 @@
       </div>
     </section>
 
-    <!-- ══════════════ CHAR BANNER ══════════════ -->
-    <div class="char-banner" role="presentation">
-      <div class="char-banner__bg" aria-hidden="true"></div>
-      <img src="assets/img/rengoku.png" alt="" class="char-banner__img char-banner__img--left" loading="lazy" draggable="false" aria-hidden="true">
-      <div class="char-banner__content">
-        <p class="char-banner__eyebrow">Figurines collector &amp; Goodies</p>
-        <h2 class="char-banner__title">Demon Slayer · Dragon Ball<br><em>One Piece &amp; bien plus</em></h2>
-        <a href="catalogue.html?type=figurine" class="btn btn--accent btn--lg">Voir les figurines</a>
+    <!-- ══════════════ FIGURINES BANNER ══════════════ -->
+    <section class="figurines-banner" aria-labelledby="figurines-title">
+      <div class="figurines-banner__bg" aria-hidden="true"></div>
+      <div class="container figurines-banner__inner">
+        <div class="figurines-banner__content">
+          <p class="figurines-banner__tag"><span>🔥</span> Figurines collector &amp; Goodies</p>
+          <h2 class="figurines-banner__title" id="figurines-title">
+            Demon Slayer<br>Dragon Ball<br><em>One Piece &amp; bien plus</em>
+          </h2>
+          <p class="figurines-banner__sub">Des figurines officielles Banpresto, Funko Pop et collectibles rares — toutes les séries en boutique à Liège.</p>
+          <a href="catalogue.html?type=figurine" class="btn btn--accent btn--lg">Voir les figurines</a>
+        </div>
       </div>
-      <img src="assets/img/tanjiro.png" alt="" class="char-banner__img char-banner__img--right" loading="lazy" draggable="false" aria-hidden="true">
-    </div>
+      <img src="assets/img/rengoku.png" alt="" class="figurines-banner__char" loading="lazy" draggable="false" aria-hidden="true">
+    </section>
 
     <!-- ══════════════ NOUVEAUTÉS ══════════════ -->
     <section class="social-section" aria-labelledby="social-title">
@@ -436,7 +437,7 @@
     </div>
     <div class="footer__bottom">
       <div class="container footer__bottom-inner">
-        <p class="footer__legal">&copy; <span id="footer-year"></span> TCM Japanimation — Nhung TRIEU — BCE : [N° à compléter] — Rue de la Cathédrale 73, 4000 Liège</p>
+        <p class="footer__legal">&copy; <span id="footer-year"></span> TCM Japanimation — Nhung TRIEU — BCE : [N° à compléter] — Rue de la Cathédrale 73, 4000 Liège</p>
         <p class="footer__legal-links"><a href="mentions-legales.html">Mentions légales</a> &middot; <a href="mentions-legales.html#rgpd">RGPD</a></p>
       </div>
     </div>

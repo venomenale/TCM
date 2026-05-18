@@ -10,31 +10,44 @@ function initMobileNav() {
   const nav    = document.getElementById('main-nav');
   if (!burger || !nav) return;
 
+  const overlay = document.createElement('div');
+  overlay.className = 'nav-overlay';
+  overlay.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(overlay);
+
+  const open = () => {
+    burger.setAttribute('aria-expanded', 'true');
+    nav.classList.add('is-open');
+    overlay.classList.add('is-visible');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const close = () => {
+    burger.setAttribute('aria-expanded', 'false');
+    nav.classList.remove('is-open');
+    overlay.classList.remove('is-visible');
+    document.body.style.overflow = '';
+  };
+
   burger.addEventListener('click', () => {
-    const isOpen = burger.getAttribute('aria-expanded') === 'true';
-    burger.setAttribute('aria-expanded', String(!isOpen));
-    nav.classList.toggle('is-open', !isOpen);
-    document.body.style.overflow = isOpen ? '' : 'hidden';
+    burger.getAttribute('aria-expanded') === 'true' ? close() : open();
   });
 
-  // Fermer sur Escape
+  overlay.addEventListener('click', close);
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && nav.classList.contains('is-open')) {
-      burger.setAttribute('aria-expanded', 'false');
-      nav.classList.remove('is-open');
-      document.body.style.overflow = '';
+      close();
       burger.focus();
     }
   });
 
-  // Fermer en cliquant en dehors
   document.addEventListener('click', (e) => {
     if (nav.classList.contains('is-open') &&
         !nav.contains(e.target) &&
-        !burger.contains(e.target)) {
-      burger.setAttribute('aria-expanded', 'false');
-      nav.classList.remove('is-open');
-      document.body.style.overflow = '';
+        !burger.contains(e.target) &&
+        !overlay.contains(e.target)) {
+      close();
     }
   });
 }
@@ -47,7 +60,6 @@ function initDropdowns() {
       e.stopPropagation();
       const isExpanded = btn.getAttribute('aria-expanded') === 'true';
 
-      // Fermer tous les autres
       parentBtns.forEach((other) => {
         if (other !== btn) other.setAttribute('aria-expanded', 'false');
       });
@@ -55,7 +67,6 @@ function initDropdowns() {
       btn.setAttribute('aria-expanded', String(!isExpanded));
     });
 
-    // Clavier: flèches pour naviguer dans le dropdown
     btn.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowDown') {
         e.preventDefault();
@@ -69,14 +80,13 @@ function initDropdowns() {
     });
   });
 
-  // Fermer dropdowns en cliquant ailleurs
   document.addEventListener('click', () => {
     parentBtns.forEach((btn) => btn.setAttribute('aria-expanded', 'false'));
   });
 }
 
 function initSearchToggle() {
-  const toggle   = document.getElementById('search-toggle');
+  const toggle    = document.getElementById('search-toggle');
   const searchBar = document.getElementById('search-bar');
   const closeBtn  = document.getElementById('search-close');
   const input     = document.getElementById('global-search');
