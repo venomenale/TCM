@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tournois &amp; Événements — TCM Japanimation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tcm-styles.css">
+<link rel="stylesheet" href="assets/css/tournois-styles.css">
+<link rel="stylesheet" href="assets/css/cart.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="logo"><span class="dot"></span>TCM <em>Japanimation</em></a>
+  <ul class="nav-links">
+    <li><a href="catalogue.html">Catalogue</a></li>
+    <li><a href="index.html#licences">Licences</a></li>
+    <li><a href="index.html#figurines">Figurines</a></li>
+    <li><a href="tournois.html" style="color: var(--ink)">Tournois</a></li>
+    <li><a href="index.html#visit" class="pill">Boutique Liège</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer">
+  <a href="index.html">Accueil</a>
+  <a href="catalogue.html">Catalogue</a>
+  <a href="index.html#licences">Licences</a>
+  <a href="tournois.html">Tournois</a>
+  <a href="index.html#visit">Boutique Liège</a>
+</aside>
+
+<main class="tour-page wrap" data-screen-label="Tournois">
+
+  <header class="tour-hero">
+    <div class="tour-hero-inner">
+      <span class="eyebrow">Communauté · Liège</span>
+      <h1>Le hub des <em>tournois</em><br>&amp; événements TCG.</h1>
+      <p>Toutes les compétitions, journées de draft et soirées découvertes organisées chaque semaine dans notre boutique liégeoise.</p>
+      <div class="tour-stats">
+        <div class="tour-stat"><strong>14</strong><span>Tournois ce mois</span></div>
+        <div class="tour-stat"><strong>250+</strong><span>Joueurs réguliers</span></div>
+        <div class="tour-stat"><strong>5</strong><span>Jeux supportés</span></div>
+        <div class="tour-stat"><strong>3 ans</strong><span>Communauté active</span></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="tour-filters">
+    <div class="tour-filter-group">
+      <button class="tour-filter active">Tous</button>
+      <button class="tour-filter" style="color: oklch(88% 0.20 95)"><i></i> Pokémon</button>
+      <button class="tour-filter" style="color: oklch(72% 0.22 295)"><i></i> Yu-Gi-Oh!</button>
+      <button class="tour-filter" style="color: oklch(74% 0.20 30)"><i></i> One Piece</button>
+      <button class="tour-filter" style="color: oklch(78% 0.18 230)"><i></i> Dragon Ball</button>
+      <button class="tour-filter" style="color: oklch(82% 0.16 165)"><i></i> Lorcana</button>
+    </div>
+    <div class="tour-view-toggle"><button class="active">Timeline</button><button>Calendrier</button></div>
+  </div>
+
+  <div class="tour-month"><h2>Mai 2026 <span>· 5 événements</span></h2><div class="tour-month-line"></div></div>
+
+  <div class="tour-list">
+
+    <article class="tour-event" data-g="poke">
+      <div class="tour-date"><span class="day-label">Samedi</span><span class="day-num">24</span><span class="day-month">Mai 2026</span><span class="day-time">14h00</span></div>
+      <div class="tour-body">
+        <div class="tour-event-head"><span class="tour-game-badge">Pokémon TCG</span><span class="tour-format-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>Format Standard</span></div>
+        <h3>Twilight Masquerade Cup — Liège</h3>
+        <p class="tour-event-desc">Tournoi mensuel de référence sur l'extension Twilight Masquerade. Format Swiss 5 rondes + Top 8. Tous les niveaux acceptés.</p>
+        <div class="tour-details">
+          <span class="tour-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Boutique TCM · Liège</span>
+          <span class="tour-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>5h estimées</span>
+          <span class="tour-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>PAF <strong>10€</strong></span>
+        </div>
+        <div class="tour-prize">
+          <div class="tour-prize-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
+          <div class="tour-prize-content"><div class="tour-prize-label">Lots à gagner</div><div class="tour-prize-list"><strong>1er :</strong> 1 Display Twilight Masquerade · <strong>Top 4 :</strong> 1 ETB Paldean Fates · <strong>Tous :</strong> 3 boosters offerts</div></div>
+        </div>
+      </div>
+      <div class="tour-cta-col">
+        <div class="tour-spots"><strong>18 / 24 places</strong><span>6 places restantes</span><div class="tour-spots-bar"><div class="tour-spots-fill warn" style="width:75%"></div></div></div>
+        <button class="tour-reserve">Pré-réserver ma place <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+      </div>
+    </article>
+
+    <article class="tour-event" data-g="ygo">
+      <div class="tour-date"><span class="day-label">Mercredi</span><span class="day-num">28</span><span class="day-month">Mai 2026</span><span class="day-time">19h00</span></div>
+      <div class="tour-body">
+        <div class="tour-event-head"><span class="tour-game-badge">Yu-Gi-Oh!</span><span class="tour-format-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 8.5 22 9.3 17 14 18.2 21 12 17.8 5.8 21 7 14 2 9.3 9 8.5 12 2"/></svg>Format Avancé</span></div>
+        <h3>Duel Night — Phantom Nightmare</h3>
+        <p class="tour-event-desc">Soirée duels rapide après-boulot. 4 rondes Swiss en 3h. Format Advanced avec les dernières cartes restreintes.</p>
+        <div class="tour-details">
+          <span class="tour-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Boutique TCM · Liège</span>
+          <span class="tour-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>3h estimées</span>
+          <span class="tour-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>PAF <strong>5€</strong></span>
+        </div>
+        <div class="tour-prize">
+          <div class="tour-prize-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
+          <div class="tour-prize-content"><div class="tour-prize-label">Lots à gagner</div><div class="tour-prize-list"><strong>1er :</strong> 1 Méga-Tin Blue-Eyes · <strong>2e :</strong> Structure Deck Legacy · <strong>Tous :</strong> 1 booster Phantom Nightmare</div></div>
+        </div>
+      </div>
+      <div class="tour-cta-col">
+        <div class="tour-spots"><strong>12 / 16 places</strong><span>4 places restantes</span><div class="tour-spots-bar"><div class="tour-spots-fill warn" style="width:75%"></div></div></div>
+        <button class="tour-reserve">Pré-réserver ma place <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+      </div>
+    </article>
+
+    <article class="tour-event" data-g="op">
+      <div class="tour-date"><span class="day-label">Vendredi</span><span class="day-num">30</span><span class="day-month">Mai 2026</span><span class="day-time">18h30</span></div>
+      <div class="tour-body">
+        <div class="tour-event-head"><span class="tour-game-badge">One Piece TCG</span><span class="tour-format-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>Format Draft</span></div>
+        <h3>Draft Night OP-09 — Émerald Forest</h3>
+        <p class="tour-event-desc">Découvrez la nouvelle extension OP-09 en draft ! Chaque joueur reçoit 6 boosters, construit son deck sur place et affronte les autres en Swiss.</p>
+        <div class="tour-details">
+          <span class="tour-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Boutique TCM · Liège</span>
+          <span class="tour-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>4h estimées</span>
+          <span class="tour-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>PAF <strong>30€</strong> · 6 boosters inclus</span>
+        </div>
+        <div class="tour-prize">
+          <div class="tour-prize-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
+          <div class="tour-prize-content"><div class="tour-prize-label">Lots à gagner</div><div class="tour-prize-list"><strong>Top 4 :</strong> 1 booster OP-09 supplémentaire · <strong>1er :</strong> 1 Starter Deck Smoker · <strong>Tous :</strong> conservent les cartes draftées</div></div>
+        </div>
+      </div>
+      <div class="tour-cta-col">
+        <div class="tour-spots"><strong>14 / 16 places</strong><span>Stock limité</span><div class="tour-spots-bar"><div class="tour-spots-fill danger" style="width:87.5%"></div></div></div>
+        <button class="tour-reserve">Pré-réserver ma place <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+      </div>
+    </article>
+
+    <article class="tour-event" data-g="lor">
+      <div class="tour-date"><span class="day-label">Dimanche</span><span class="day-num">31</span><span class="day-month">Mai 2026</span><span class="day-time">14h00</span></div>
+      <div class="tour-body">
+        <div class="tour-event-head"><span class="tour-game-badge">Lorcana</span><span class="tour-format-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>Format Constructed</span></div>
+        <h3>Lorcana Sunday — Découverte Disney</h3>
+        <p class="tour-event-desc">Tournoi détente pour débutants et confirmés. Decks pré-construits disponibles à la location (5€).</p>
+        <div class="tour-details">
+          <span class="tour-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Boutique TCM · Liège</span>
+          <span class="tour-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>3h30 estimées</span>
+          <span class="tour-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>PAF <strong>Gratuit</strong></span>
+        </div>
+        <div class="tour-prize">
+          <div class="tour-prize-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
+          <div class="tour-prize-content"><div class="tour-prize-label">Lots à gagner</div><div class="tour-prize-list"><strong>Top 3 :</strong> 1 booster Lorcana · <strong>Surprise :</strong> 1 carte promo exclusive pour tous les participants</div></div>
+        </div>
+      </div>
+      <div class="tour-cta-col">
+        <div class="tour-spots"><strong>20 / 20 places</strong><span style="color: var(--rose)">COMPLET — Liste d'attente</span><div class="tour-spots-bar"><div class="tour-spots-fill danger" style="width:100%"></div></div></div>
+        <button class="tour-reserve full" disabled>Liste d'attente</button>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="tour-month"><h2>Juin 2026 <span>· 9 événements</span></h2><div class="tour-month-line"></div></div>
+
+  <div class="tour-list">
+
+    <article class="tour-event" data-g="dbz">
+      <div class="tour-date"><span class="day-label">Samedi</span><span class="day-num">07</span><span class="day-month">Juin 2026</span><span class="day-time">14h00</span></div>
+      <div class="tour-body">
+        <div class="tour-event-head"><span class="tour-game-badge">Dragon Ball</span><span class="tour-format-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 8.5 22 9.3 17 14 18.2 21 12 17.8 5.8 21 7 14 2 9.3 9 8.5 12 2"/></svg>Fusion World</span></div>
+        <h3>Fusion World Championship — Étape Liège</h3>
+        <p class="tour-event-desc">Étape qualificative belge du Fusion World Championship. Format Swiss 6 rondes + Top 8 single elim.</p>
+        <div class="tour-details">
+          <span class="tour-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Boutique TCM · Liège</span>
+          <span class="tour-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>6h estimées</span>
+          <span class="tour-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>PAF <strong>15€</strong></span>
+        </div>
+        <div class="tour-prize">
+          <div class="tour-prize-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
+          <div class="tour-prize-content"><div class="tour-prize-label">Lots à gagner</div><div class="tour-prize-list"><strong>1er :</strong> Qualification finale nationale + 1 Display · <strong>Top 8 :</strong> 1 playmate exclusif · <strong>Tous :</strong> 2 boosters offerts</div></div>
+        </div>
+      </div>
+      <div class="tour-cta-col">
+        <div class="tour-spots"><strong>8 / 32 places</strong><span>24 places restantes</span><div class="tour-spots-bar"><div class="tour-spots-fill" style="width:25%"></div></div></div>
+        <button class="tour-reserve">Pré-réserver ma place <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+      </div>
+    </article>
+
+    <article class="tour-event" data-g="poke">
+      <div class="tour-date"><span class="day-label">Mercredi</span><span class="day-num">11</span><span class="day-month">Juin 2026</span><span class="day-time">14h00</span></div>
+      <div class="tour-body">
+        <div class="tour-event-head"><span class="tour-game-badge">Pokémon TCG</span><span class="tour-format-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>Catégorie Junior</span></div>
+        <h3>Pokémon Junior Cup — Spécial moins de 14 ans</h3>
+        <p class="tour-event-desc">Tournoi détente pour les jeunes dresseurs. Goûter offert, ambiance bienveillante et arbitres dédiés aux explications.</p>
+        <div class="tour-details">
+          <span class="tour-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Boutique TCM · Liège</span>
+          <span class="tour-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>2h30 estimées</span>
+          <span class="tour-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>PAF <strong>Gratuit</strong></span>
+        </div>
+        <div class="tour-prize">
+          <div class="tour-prize-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
+          <div class="tour-prize-content"><div class="tour-prize-label">Lots à gagner</div><div class="tour-prize-list"><strong>1er :</strong> Coffret Tin Pikachu · <strong>Tous :</strong> 1 booster Pokémon + 1 carte promo Pikachu holo</div></div>
+        </div>
+      </div>
+      <div class="tour-cta-col">
+        <div class="tour-spots"><strong>5 / 16 places</strong><span>11 places restantes</span><div class="tour-spots-bar"><div class="tour-spots-fill" style="width:31%"></div></div></div>
+        <button class="tour-reserve">Pré-réserver ma place <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+      </div>
+    </article>
+
+  </div>
+
+  <section class="tour-community">
+    <div class="tour-community-info">
+      <span class="eyebrow">Rejoindre la communauté</span>
+      <h2>Plus qu'une boutique,<br>une vraie communauté.</h2>
+      <p>Discord actif, soirées thématiques, side-events lors des sorties d'extension. Toute la pop culture liégeoise se retrouve chez nous.</p>
+      <div class="tour-community-ctas">
+        <a href="#" class="btn btn-primary">Rejoindre le Discord →</a>
+        <a href="index.html#visit" class="btn btn-glass">Nous contacter</a>
+      </div>
+    </div>
+    <div class="tour-community-stats">
+      <div class="tour-com-stat"><strong>250+</strong><span>Membres Discord</span></div>
+      <div class="tour-com-stat"><strong>14</strong><span>Tournois / mois</span></div>
+      <div class="tour-com-stat"><strong>5</strong><span>Jeux supportés</span></div>
+      <div class="tour-com-stat"><strong>3 ans</strong><span>D'expérience</span></div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+const burger  = document.getElementById('burger');
+const drawer  = document.getElementById('drawer');
+const overlay = document.getElementById('overlay');
+function togDrawer(open) {
+  drawer.classList.toggle('on', open);
+  overlay.classList.toggle('on', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+burger.addEventListener('click', () => togDrawer(!drawer.classList.contains('on')));
+overlay.addEventListener('click', () => togDrawer(false));
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => togDrawer(false)));
+
+const filters = document.querySelectorAll('.tour-filter');
+const events  = document.querySelectorAll('.tour-event');
+filters.forEach(f => {
+  f.addEventListener('click', () => {
+    filters.forEach(x => x.classList.remove('active'));
+    f.classList.add('active');
+    const label = f.textContent.trim().toLowerCase();
+    events.forEach(ev => {
+      const g = ev.dataset.g;
+      const match = label === 'tous' ||
+        (label.includes('pokémon') && g === 'poke') ||
+        (label.includes('yu-gi') && g === 'ygo') ||
+        (label.includes('one piece') && g === 'op') ||
+        (label.includes('dragon') && g === 'dbz') ||
+        (label.includes('lorcana') && g === 'lor');
+      ev.style.display = match ? '' : 'none';
+    });
+    document.querySelectorAll('.tour-month').forEach((m, i, arr) => {
+      const list = m.nextElementSibling;
+      const visible = [...(list?.children || [])].some(e => e.style.display !== 'none');
+      m.style.display = visible ? '' : 'none';
+      if (list) list.style.display = visible ? '' : 'none';
+    });
+  });
+});
+
+document.querySelectorAll('.tour-view-toggle button').forEach(b => {
+  b.addEventListener('click', () => {
+    document.querySelectorAll('.tour-view-toggle button').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+  });
+});
+
+document.querySelectorAll('.tour-reserve:not(.full)').forEach(b => {
+  b.addEventListener('click', () => {
+    const card = b.closest('.tour-event');
+    const title = card.querySelector('h3').textContent.trim();
+    b.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Place réservée — ${title.split('—')[0].trim()}`;
+    b.style.background = 'var(--mint)';
+    b.style.color = '#0a1f1a';
+    b.disabled = true;
+  });
+});
+</script>
+<script src="assets/js/cart.js" defer></script>
+</body>
+</html>

@@ -1,162 +1,248 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="dark">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Produit | TCM Japanimation</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/header.css">
-  <link rel="stylesheet" href="assets/css/footer.css">
-  <link rel="stylesheet" href="assets/css/catalogue.css">
-  <link rel="stylesheet" href="assets/css/product.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Display Twilight Masquerade — TCM Japanimation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tcm-styles.css">
+<link rel="stylesheet" href="assets/css/produit-styles.css">
+<link rel="stylesheet" href="assets/css/cart.css">
 </head>
 <body>
 
-  <div id="rgpd-banner" class="rgpd-banner" role="dialog" aria-label="Consentement cookies" hidden>
-    <div class="rgpd-banner__inner">
-      <p class="rgpd-banner__text">Cookies strictement nécessaires uniquement. <a href="mentions-legales.html#rgpd">En savoir plus</a></p>
-      <div class="rgpd-banner__actions">
-        <button id="rgpd-accept" class="btn btn--primary btn--sm">Accepter</button>
-        <button id="rgpd-refuse" class="btn btn--ghost btn--sm">Refuser</button>
+<nav class="nav">
+  <a href="index.html" class="logo"><span class="dot"></span>TCM <em>Japanimation</em></a>
+  <ul class="nav-links">
+    <li><a href="catalogue.html">Catalogue</a></li>
+    <li><a href="index.html#licences">Licences</a></li>
+    <li><a href="index.html#figurines">Figurines</a></li>
+    <li><a href="tournois.html">Tournois</a></li>
+    <li><a href="index.html#visit" class="pill">Boutique Liège</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer">
+  <a href="index.html">Accueil</a>
+  <a href="catalogue.html">Catalogue</a>
+  <a href="index.html#licences">Licences</a>
+  <a href="tournois.html">Tournois</a>
+  <a href="index.html#visit">Boutique Liège</a>
+</aside>
+
+<main class="prod-page wrap" data-screen-label="Fiche Produit">
+
+  <nav class="prod-crumbs" aria-label="Fil d'Ariane">
+    <a href="index.html">Accueil</a><i></i>
+    <a href="catalogue.html">Catalogue</a><i></i>
+    <a href="catalogue.html?l=poke">Pokémon TCG</a><i></i>
+    <span class="current">Display Twilight Masquerade</span>
+  </nav>
+
+  <div class="prod-layout">
+
+    <div class="prod-stage" data-l="poke">
+      <div class="prod-stage-particles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="prod-visual">
+        <div class="prod-visual-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 8 12 3 3 8v8l9 5 9-5V8Z"/><path d="m3 8 9 5 9-5"/><path d="M12 13v8"/><path d="m16 6-8 5"/>
+          </svg>
+        </div>
+      </div>
+      <div class="prod-thumbs">
+        <button class="prod-thumb active" aria-label="Vue 1"><i></i></button>
+        <button class="prod-thumb" aria-label="Vue 2"><i></i></button>
+        <button class="prod-thumb" aria-label="Vue 3"><i></i></button>
+        <button class="prod-thumb" aria-label="Vue 4"><i></i></button>
       </div>
     </div>
+
+    <article class="prod-info">
+      <div class="prod-badges">
+        <span class="prod-badge licence" style="--halo: oklch(88% 0.20 95)">Pokémon TCG</span>
+        <span class="prod-badge new">Nouvelle extension</span>
+        <span class="prod-badge holo">Scarlet &amp; Violet</span>
+      </div>
+
+      <h1 class="prod-title">Display Twilight Masquerade</h1>
+      <p class="prod-subtitle">Le booster display officiel Pokémon Scarlet &amp; Violet — Twilight Masquerade. Contient 36 boosters scellés, l'extension la plus collectionnée de 2025. Cartes brillantes, nouvelles mécaniques de duel et inserts holographiques exclusifs.</p>
+
+      <div class="prod-price-row">
+        <div class="prod-price-main"><span>129,99 €</span></div>
+        <span class="prod-price-old">149,99 €</span>
+        <span class="prod-price-save">Économisez 13%</span>
+      </div>
+
+      <div class="prod-stock"><span class="pulse"></span><span><strong>4 en stock</strong> à la boutique de Liège</span></div>
+
+      <div class="prod-specs">
+        <div class="prod-spec"><span class="prod-spec-label">État</span><span class="prod-spec-val mint">Neuf scellé</span></div>
+        <div class="prod-spec"><span class="prod-spec-label">Édition</span><span class="prod-spec-val">First print</span></div>
+        <div class="prod-spec"><span class="prod-spec-label">Format</span><span class="prod-spec-val">36 boosters</span></div>
+        <div class="prod-spec"><span class="prod-spec-label">Référence</span><span class="prod-spec-val">SV6 — TCM</span></div>
+      </div>
+
+      <div class="prod-options">
+        <div class="prod-option-group">
+          <span class="prod-option-label">Langue</span>
+          <div class="prod-option-pills">
+            <button class="prod-pill active">🇫🇷 Français</button>
+            <button class="prod-pill">🇬🇧 Anglais</button>
+            <button class="prod-pill unavailable">🇯🇵 Japonais</button>
+          </div>
+        </div>
+        <div class="prod-option-group">
+          <span class="prod-option-label">Format de vente</span>
+          <div class="prod-option-pills">
+            <button class="prod-pill active">Display (36 boosters)</button>
+            <button class="prod-pill">Booster à l'unité — 4,99 €</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="prod-cta-row">
+        <div class="prod-qty">
+          <button id="qtyMinus" aria-label="Diminuer">−</button>
+          <span class="qty" id="qtyVal">1</span>
+          <button id="qtyPlus" aria-label="Augmenter">+</button>
+        </div>
+        <button class="prod-cta" data-cart-add data-name="Display Twilight Masquerade — Scarlet &amp; Violet" data-licence="Pokémon TCG" data-licence-key="poke" data-price="129.99">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.6"></circle><circle cx="18" cy="20" r="1.6"></circle><path d="M2 3h3l2.5 12.4a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 2-1.5L22 7H6"></path></svg>
+          <span>Ajouter au panier — 129,99 €</span>
+        </button>
+      </div>
+
+      <div class="prod-meta-row">
+        <button class="prod-meta-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Ajouter aux favoris</button>
+        <button class="prod-meta-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>Partager</button>
+        <button class="prod-meta-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>Demander conseil</button>
+      </div>
+    </article>
   </div>
 
-  <header class="site-header" id="site-header">
-    <div class="container header__inner">
-      <a href="index.html" class="header__logo" aria-label="TCM Japanimation — Accueil">
-        <span class="logo__icon" aria-hidden="true">⛩</span>
-        <span class="logo__text">TCM <em>Japanimation</em></span>
-      </a>
-      <div class="store-status" id="store-status" aria-live="polite">
-        <span class="store-status__dot" id="status-dot"></span>
-        <span class="store-status__label" id="status-label">Chargement…</span>
-      </div>
-      <nav class="header__nav" id="main-nav" aria-label="Navigation principale">
-        <ul class="nav__list" role="list">
-          <li class="nav__item nav__item--dropdown">
-            <button class="nav__link nav__link--parent" aria-expanded="false" aria-controls="menu-tcg2">Cartes TCG <span class="nav__chevron" aria-hidden="true"></span></button>
-            <ul class="nav__dropdown" id="menu-tcg2" role="list">
-              <li><a href="catalogue.html?licence=pokemon" class="nav__dropdown-link"><span class="licence-icon">🔵</span> Pokémon</a></li>
-              <li><a href="catalogue.html?licence=yugioh" class="nav__dropdown-link"><span class="licence-icon">⚡</span> Yu-Gi-Oh!</a></li>
-              <li><a href="catalogue.html?licence=onepiece" class="nav__dropdown-link"><span class="licence-icon">⚓</span> One Piece</a></li>
-              <li><a href="catalogue.html?licence=lorcana" class="nav__dropdown-link"><span class="licence-icon">✨</span> Lorcana</a></li>
-              <li><a href="catalogue.html?licence=dragonball" class="nav__dropdown-link"><span class="licence-icon">🐉</span> Dragon Ball</a></li>
-              <li><a href="catalogue.html?licence=magicthegathering" class="nav__dropdown-link"><span class="licence-icon">🔮</span> Magic: The Gathering</a></li>
-              <li><a href="catalogue.html?type=cartes" class="nav__dropdown-link nav__dropdown-link--all">Voir toutes les cartes →</a></li>
-            </ul>
-          </li>
-          <li class="nav__item nav__item--dropdown">
-            <button class="nav__link nav__link--parent" aria-expanded="false" aria-controls="menu-fig2">Figurines <span class="nav__chevron" aria-hidden="true"></span></button>
-            <ul class="nav__dropdown" id="menu-fig2" role="list">
-              <li><a href="catalogue.html?type=figurine&licence=dragonball" class="nav__dropdown-link"><span class="licence-icon">🐉</span> Dragon Ball</a></li>
-              <li><a href="catalogue.html?type=figurine&licence=naruto" class="nav__dropdown-link"><span class="licence-icon">🍥</span> Naruto</a></li>
-              <li><a href="catalogue.html?type=figurine&licence=onepiece" class="nav__dropdown-link"><span class="licence-icon">⚓</span> One Piece</a></li>
-              <li><a href="catalogue.html?type=figurine" class="nav__dropdown-link nav__dropdown-link--all">Voir toutes les figurines →</a></li>
-            </ul>
-          </li>
-          <li class="nav__item"><a href="catalogue.html?type=goodie" class="nav__link">Goodies</a></li>
-          <li class="nav__item"><a href="catalogue.html?disponibilite=precommande" class="nav__link nav__link--badge">Précommandes <span class="badge badge--accent">New</span></a></li>
-          <li class="nav__item"><a href="index.html#boutique" class="nav__link">La Boutique</a></li>
-        </ul>
-      </nav>
-      <div class="header__actions">
-        <button class="btn-icon" id="search-toggle" aria-label="Ouvrir la recherche" aria-expanded="false">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        </button>
-        <button class="btn-icon nav__burger" id="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
-          <span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span>
-        </button>
-      </div>
+  <section class="prod-tabs">
+    <div class="prod-tabs-nav" role="tablist">
+      <button class="prod-tab-btn active" data-tab="desc">Description</button>
+      <button class="prod-tab-btn" data-tab="specs">Détails techniques</button>
+      <button class="prod-tab-btn" data-tab="shop">Boutique &amp; livraison</button>
     </div>
-    <div class="search-bar" id="search-bar" hidden>
-      <div class="container">
-        <form class="search-bar__form" action="catalogue.html" method="get" role="search">
-          <label for="global-search" class="sr-only">Rechercher</label>
-          <input type="search" id="global-search" name="q" class="search-bar__input" placeholder="Rechercher…" autocomplete="off" maxlength="100">
-          <button type="submit" class="btn btn--primary">Rechercher</button>
-          <button type="button" id="search-close" class="btn-icon" aria-label="Fermer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
-          </button>
-        </form>
-      </div>
-    </div>
-  </header>
 
-  <main id="main-content" class="product-page">
-    <div class="container">
-      <div id="product-container">
-        <div class="product-loading">
-          <div class="product-loading__spinner"></div>
-          <p>Chargement du produit…</p>
+    <div class="prod-tab-panel active" data-panel="desc">
+      <p>Twilight Masquerade est la nouvelle extension Scarlet &amp; Violet du JCC Pokémon. <strong>Plus de 165 cartes inédites</strong>, incluant des Pokémon-ex puissants, des cartes Spéciales Illustrations rares, et l'introduction de la mécanique <strong>Tera-Pokémon Holo</strong>.</p>
+      <p>Chaque booster contient 10 cartes dont au minimum 1 brillante. Le display de 36 boosters garantit en moyenne 4 cartes Ultra Rare et 2 Spéciales Illustrations — idéal pour ouvrir entre amis lors des tournois hebdomadaires en boutique.</p>
+      <p>Vendu scellé d'origine. <strong>First Print officiel</strong> certifié par The Pokémon Company International.</p>
+    </div>
+
+    <div class="prod-tab-panel" data-panel="specs">
+      <p><strong>Référence interne :</strong> SV6 — TCM</p>
+      <p><strong>Date de sortie :</strong> 24 mai 2024 (Europe)</p>
+      <p><strong>Contenu :</strong> 36 boosters × 10 cartes</p>
+      <p><strong>Cartes par extension :</strong> 167 cartes de base + 100 cartes Secret</p>
+      <p><strong>Distributeur officiel :</strong> The Pokémon Company International</p>
+      <p><strong>Dimensions :</strong> 9 × 7 × 14 cm — Poids : 720 g</p>
+    </div>
+
+    <div class="prod-tab-panel" data-panel="shop">
+      <div class="prod-shop-info">
+        <div class="prod-shop-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <h5>Retrait à Liège</h5>
+          <p>Gratuit · Disponible sous 1h pendant les heures d'ouverture (Mar-Sam, 10h-18h30).</p>
+        </div>
+        <div class="prod-shop-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="14" height="11"></rect><polyline points="15 8 19 8 22 12 22 17 15 17"></polyline><circle cx="6" cy="20" r="2"></circle><circle cx="18" cy="20" r="2"></circle></svg>
+          <h5>Livraison Belgique</h5>
+          <p>Offerte dès 50€ d'achat. Livraison sous 48h via Bpost.</p>
+        </div>
+        <div class="prod-shop-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 5-3.5 8-9 8s-9-3-9-8 3.5-8 9-8 9 3 9 8z"/></svg>
+          <h5>Garantie Authenticité</h5>
+          <p>Tous nos produits sont des First Print officiels, distribués par TPCi.</p>
         </div>
       </div>
-
-      <section class="related-section" id="related-section" aria-labelledby="related-title">
-        <h2 class="section-title" id="related-title">Dans la même licence</h2>
-        <div class="products-grid" id="related-grid" role="list"></div>
-      </section>
     </div>
-  </main>
+  </section>
 
-  <footer class="site-footer" aria-label="Pied de page">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <a href="index.html" class="footer__logo">⛩ TCM <em>Japanimation</em></a>
-        <p class="footer__tagline">Rue de la Cathédrale 73, 4000 Liège.</p>
-        <div class="footer__social">
-          <a href="https://www.facebook.com/TCMYugiohJapananimation" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </a>
-          <a href="https://wa.me/3242222888" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-          </a>
-        </div>
-      </div>
-      <nav class="footer__nav" aria-label="Navigation secondaire">
-        <div class="footer__nav-col">
-          <h3 class="footer__nav-title">Catalogue</h3>
-          <ul role="list">
-            <li><a href="catalogue.html?type=cartes">Cartes TCG</a></li>
-            <li><a href="catalogue.html?type=figurine">Figurines</a></li>
-            <li><a href="catalogue.html?type=goodie">Goodies</a></li>
-            <li><a href="catalogue.html?disponibilite=precommande">Précommandes</a></li>
-          </ul>
-        </div>
-        <div class="footer__nav-col">
-          <h3 class="footer__nav-title">Licences</h3>
-          <ul role="list">
-            <li><a href="catalogue.html?licence=pokemon">Pokémon</a></li>
-            <li><a href="catalogue.html?licence=yugioh">Yu-Gi-Oh!</a></li>
-            <li><a href="catalogue.html?licence=onepiece">One Piece</a></li>
-            <li><a href="catalogue.html?licence=dragonball">Dragon Ball</a></li>
-          </ul>
-        </div>
-        <div class="footer__nav-col">
-          <h3 class="footer__nav-title">Infos</h3>
-          <ul role="list">
-            <li><a href="index.html#boutique">La boutique</a></li>
-            <li><a href="mentions-legales.html">Mentions légales</a></li>
-            <li><a href="mentions-legales.html#rgpd">RGPD</a></li>
-          </ul>
-        </div>
-      </nav>
+  <section class="prod-related">
+    <div class="prod-related-head">
+      <h2>Vous pourriez aussi aimer</h2>
+      <a href="catalogue.html?l=poke" class="btn btn-glass">Voir tout Pokémon →</a>
     </div>
-    <div class="footer__bottom">
-      <div class="container footer__bottom-inner">
-        <p class="footer__legal">&copy; <span id="footer-year"></span> TCM Japanimation — Nhung TRIEU — Rue de la Cathédrale 73, 4000 Liège</p>
-        <p class="footer__legal-links"><a href="mentions-legales.html">Mentions légales</a> &middot; <a href="mentions-legales.html#rgpd">RGPD</a></p>
-      </div>
+    <div class="prod-related-grid">
+      <a href="produit.html" class="arr-card" data-c="poke" style="text-decoration:none;color:inherit"><div class="arr-head"><span class="arr-licence">Pokémon TCG</span><span class="arr-sticker">Coffret</span></div><h4 class="arr-name">Coffret Premium Arceus VSTAR — Collector</h4><div class="arr-meta"><span>Coffret métal</span><i class="dot"></i><span>En stock</span></div><div class="arr-foot"><div class="arr-price">44,99 €</div><button class="arr-add" data-cart-add data-name="Coffret Premium Arceus VSTAR — Collector" data-licence="Pokémon TCG" data-licence-key="poke" data-price="44.99" onclick="event.preventDefault()">+</button></div></a>
+      <a href="produit.html" class="arr-card" data-c="poke" style="text-decoration:none;color:inherit"><div class="arr-head"><span class="arr-licence">Pokémon TCG</span><span class="arr-sticker">ETB</span></div><h4 class="arr-name">Elite Trainer Box — Paldean Fates</h4><div class="arr-meta"><span>10 boosters + extras</span><i class="dot"></i><span>En stock</span></div><div class="arr-foot"><div class="arr-price">54,99 €</div><button class="arr-add" data-cart-add data-name="Elite Trainer Box — Paldean Fates" data-licence="Pokémon TCG" data-licence-key="poke" data-price="54.99" onclick="event.preventDefault()">+</button></div></a>
+      <a href="produit.html" class="arr-card" data-c="poke" style="text-decoration:none;color:inherit"><div class="arr-head"><span class="arr-licence">Pokémon TCG</span><span class="arr-sticker">Booster</span></div><h4 class="arr-name">Booster Surging Sparks — Scarlet &amp; Violet</h4><div class="arr-meta"><span>10 cartes</span><i class="dot"></i><span>En stock</span></div><div class="arr-foot"><div class="arr-price">4,99 €</div><button class="arr-add" data-cart-add data-name="Booster Surging Sparks — Scarlet &amp; Violet" data-licence="Pokémon TCG" data-licence-key="poke" data-price="4.99" onclick="event.preventDefault()">+</button></div></a>
+      <a href="produit.html" class="arr-card" data-c="poke" style="text-decoration:none;color:inherit"><div class="arr-head"><span class="arr-licence">Pokémon TCG</span><span class="arr-sticker">Promo</span></div><h4 class="arr-name">Coffret Tin — Pikachu Holo Promo</h4><div class="arr-meta"><span>3 boosters + promo</span><i class="dot"></i><span>En stock</span></div><div class="arr-foot"><div class="arr-price">19,99 €</div><button class="arr-add" data-cart-add data-name="Coffret Tin — Pikachu Holo Promo" data-licence="Pokémon TCG" data-licence-key="poke" data-price="19.99" onclick="event.preventDefault()">+</button></div></a>
     </div>
-  </footer>
+  </section>
 
-  <script src="assets/js/data/products.js"></script>
-  <script src="assets/js/produit.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/nav.js"></script>
-  <script src="assets/js/rgpd.js"></script>
+</main>
+
+<script>
+const burger  = document.getElementById('burger');
+const drawer  = document.getElementById('drawer');
+const overlay = document.getElementById('overlay');
+function togDrawer(open) {
+  drawer.classList.toggle('on', open);
+  overlay.classList.toggle('on', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+burger.addEventListener('click', () => togDrawer(!drawer.classList.contains('on')));
+overlay.addEventListener('click', () => togDrawer(false));
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => togDrawer(false)));
+
+document.querySelectorAll('.prod-thumb').forEach(t => {
+  t.addEventListener('click', () => {
+    document.querySelectorAll('.prod-thumb').forEach(x => x.classList.remove('active'));
+    t.classList.add('active');
+  });
+});
+
+document.querySelectorAll('.prod-option-pills').forEach(group => {
+  group.querySelectorAll('.prod-pill:not(.unavailable)').forEach(pill => {
+    pill.addEventListener('click', () => {
+      group.querySelectorAll('.prod-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+    });
+  });
+});
+
+let qty = 1;
+const qtyVal = document.getElementById('qtyVal');
+const cta = document.querySelector('.prod-cta');
+const basePrice = 129.99;
+function updateQty(n) {
+  qty = Math.max(1, Math.min(99, qty + n));
+  qtyVal.textContent = qty;
+  const total = (basePrice * qty).toFixed(2).replace('.', ',');
+  cta.querySelector('span').textContent = `Ajouter au panier — ${total} €`;
+}
+document.getElementById('qtyMinus').addEventListener('click', () => updateQty(-1));
+document.getElementById('qtyPlus').addEventListener('click',  () => updateQty(+1));
+
+cta.addEventListener('click', e => {
+  for (let i = 1; i < qty; i++) {
+    setTimeout(() => {
+      const evt = new Event('click', { bubbles: true });
+      Object.defineProperty(evt, 'target', { value: cta });
+      cta.dispatchEvent(evt);
+    }, 0);
+  }
+});
+
+document.querySelectorAll('.prod-tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const tab = btn.dataset.tab;
+    document.querySelectorAll('.prod-tab-btn').forEach(b => b.classList.toggle('active', b === btn));
+    document.querySelectorAll('.prod-tab-panel').forEach(p => p.classList.toggle('active', p.dataset.panel === tab));
+  });
+});
+</script>
+<script src="assets/js/cart.js" defer></script>
 </body>
 </html>

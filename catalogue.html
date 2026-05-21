@@ -1,211 +1,212 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="dark">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Catalogue TCM Japanimation — Cartes TCG, figurines, displays et goodies. Pokémon, Yu-Gi-Oh!, One Piece, Dragon Ball et plus à Liège.">
-  <title>Catalogue | TCM Japanimation</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/header.css">
-  <link rel="stylesheet" href="assets/css/footer.css">
-  <link rel="stylesheet" href="assets/css/catalogue.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catalogue — TCM Japanimation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tcm-styles.css">
+<link rel="stylesheet" href="assets/css/catalogue-styles.css">
+<link rel="stylesheet" href="assets/css/cart.css">
 </head>
 <body>
 
-  <div id="rgpd-banner" class="rgpd-banner" role="dialog" aria-label="Consentement cookies" hidden>
-    <div class="rgpd-banner__inner">
-      <p class="rgpd-banner__text">Cookies strictement nécessaires uniquement. <a href="mentions-legales.html#rgpd">En savoir plus</a></p>
-      <div class="rgpd-banner__actions">
-        <button id="rgpd-accept" class="btn btn--primary btn--sm">Accepter</button>
-        <button id="rgpd-refuse" class="btn btn--ghost btn--sm">Refuser</button>
-      </div>
-    </div>
-  </div>
+<nav class="nav">
+  <a href="index.html" class="logo"><span class="dot"></span>TCM <em>Japanimation</em></a>
+  <ul class="nav-links">
+    <li><a href="catalogue.html" style="color: var(--ink)">Catalogue</a></li>
+    <li><a href="index.html#licences">Licences</a></li>
+    <li><a href="index.html#figurines">Figurines</a></li>
+    <li><a href="tournois.html">Tournois</a></li>
+    <li><a href="index.html#visit" class="pill">Boutique Liège</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
 
-  <header class="site-header" id="site-header">
-    <div class="container header__inner">
-      <a href="index.html" class="header__logo" aria-label="TCM Japanimation — Accueil">
-        <span class="logo__icon" aria-hidden="true">⛩</span>
-        <span class="logo__text">TCM <em>Japanimation</em></span>
-      </a>
-      <div class="store-status" id="store-status" aria-live="polite">
-        <span class="store-status__dot" id="status-dot"></span>
-        <span class="store-status__label" id="status-label">Chargement…</span>
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer">
+  <a href="index.html">Accueil</a>
+  <a href="catalogue.html">Catalogue</a>
+  <a href="index.html#licences">Licences</a>
+  <a href="index.html#figurines">Figurines</a>
+  <a href="tournois.html">Tournois</a>
+  <a href="index.html#visit">Boutique Liège</a>
+</aside>
+
+<main class="cat-page wrap" data-screen-label="01 Catalogue">
+  <header class="cat-head">
+    <div class="cat-head-top">
+      <div>
+        <h1 class="cat-title">Le <em>catalogue</em> complet.</h1>
+        <p class="cat-sub">Cartes, boosters, displays et figurines — tout l'univers manga &amp; gaming disponible à Liège.</p>
       </div>
-      <nav class="header__nav" id="main-nav" aria-label="Navigation principale">
-        <ul class="nav__list" role="list">
-          <li class="nav__item nav__item--dropdown">
-            <button class="nav__link nav__link--parent" aria-expanded="false" aria-controls="menu-tcg">Cartes TCG <span class="nav__chevron" aria-hidden="true"></span></button>
-            <ul class="nav__dropdown" id="menu-tcg" role="list">
-              <li><a href="catalogue.html?licence=pokemon" class="nav__dropdown-link"><span class="licence-icon">🔵</span> Pokémon</a></li>
-              <li><a href="catalogue.html?licence=yugioh" class="nav__dropdown-link"><span class="licence-icon">⚡</span> Yu-Gi-Oh!</a></li>
-              <li><a href="catalogue.html?licence=onepiece" class="nav__dropdown-link"><span class="licence-icon">⚓</span> One Piece</a></li>
-              <li><a href="catalogue.html?licence=lorcana" class="nav__dropdown-link"><span class="licence-icon">✨</span> Lorcana</a></li>
-              <li><a href="catalogue.html?licence=dragonball" class="nav__dropdown-link"><span class="licence-icon">🐉</span> Dragon Ball</a></li>
-              <li><a href="catalogue.html?licence=magicthegathering" class="nav__dropdown-link"><span class="licence-icon">🔮</span> Magic: The Gathering</a></li>
-              <li><a href="catalogue.html?type=cartes" class="nav__dropdown-link nav__dropdown-link--all">Voir toutes les cartes →</a></li>
-            </ul>
-          </li>
-          <li class="nav__item nav__item--dropdown">
-            <button class="nav__link nav__link--parent" aria-expanded="false" aria-controls="menu-fig">Figurines <span class="nav__chevron" aria-hidden="true"></span></button>
-            <ul class="nav__dropdown" id="menu-fig" role="list">
-              <li><a href="catalogue.html?type=figurine&amp;licence=dragonball" class="nav__dropdown-link"><span class="licence-icon">🐉</span> Dragon Ball</a></li>
-              <li><a href="catalogue.html?type=figurine&amp;licence=naruto" class="nav__dropdown-link"><span class="licence-icon">🍥</span> Naruto</a></li>
-              <li><a href="catalogue.html?type=figurine&amp;licence=onepiece" class="nav__dropdown-link"><span class="licence-icon">⚓</span> One Piece</a></li>
-              <li><a href="catalogue.html?type=figurine" class="nav__dropdown-link nav__dropdown-link--all">Voir toutes les figurines →</a></li>
-            </ul>
-          </li>
-          <li class="nav__item"><a href="catalogue.html?type=goodie" class="nav__link">Goodies</a></li>
-          <li class="nav__item"><a href="catalogue.html?disponibilite=precommande" class="nav__link nav__link--badge">Précommandes <span class="badge badge--accent">New</span></a></li>
-          <li class="nav__item"><a href="index.html#boutique" class="nav__link">La Boutique</a></li>
-        </ul>
-      </nav>
-      <div class="header__actions">
-        <button class="btn-icon" id="search-toggle" aria-label="Ouvrir la recherche" aria-expanded="false">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        </button>
-        <button class="btn-icon nav__burger" id="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="main-nav">
-          <span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span>
-        </button>
-      </div>
+      <div class="cat-count" id="catCount"><strong>847</strong> références</div>
     </div>
-    <div class="search-bar" id="search-bar" hidden>
-      <div class="container">
-        <form class="search-bar__form" action="catalogue.html" method="get" role="search">
-          <label for="global-search" class="sr-only">Rechercher</label>
-          <input type="search" id="global-search" name="q" class="search-bar__input" placeholder="Rechercher une carte, une figurine…" autocomplete="off" maxlength="100">
-          <button type="submit" class="btn btn--primary">Rechercher</button>
-          <button type="button" id="search-close" class="btn-icon" aria-label="Fermer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
-          </button>
-        </form>
-      </div>
+
+    <div class="cat-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg>
+      <input type="search" id="catSearchInput" placeholder="Rechercher un produit, une carte, une licence…" aria-label="Recherche">
+      <button class="cat-search-clear" id="catSearchClear" title="Effacer" aria-label="Effacer" style="display:none">✕</button>
+      <button class="btn btn-primary">Rechercher</button>
+    </div>
+
+    <div class="cat-chips">
+      <span class="chip-label">Suggestions :</span>
+      <a class="chip" data-l="poke"><i></i> Booster Twilight Masquerade</a>
+      <a class="chip" data-l="ygo"><i></i> Méga-Tin Blue-Eyes</a>
+      <a class="chip" data-l="op"><i></i> One Piece OP-09</a>
+      <a class="chip" data-l="dbz"><i></i> Vegeta Grandista</a>
     </div>
   </header>
 
-  <main id="main-content" class="catalogue-page">
-    <div class="catalogue-topbar">
-      <div class="container catalogue-topbar__inner">
-        <div>
-          <h1 class="catalogue-title">Catalogue</h1>
-          <p class="catalogue-count" id="products-count">Chargement…</p>
-        </div>
-        <div class="catalogue-controls">
-          <div class="cat-search-wrap">
-            <svg class="cat-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-            <label for="catalogue-search" class="sr-only">Rechercher dans le catalogue</label>
-            <input type="search" id="catalogue-search" class="cat-search-input" placeholder="Rechercher…" autocomplete="off" maxlength="80">
-          </div>
-          <select id="sort-select" class="sort-select" aria-label="Trier par">
-            <option value="">Par défaut</option>
-            <option value="price-asc">Prix croissant</option>
-            <option value="price-desc">Prix décroissant</option>
-            <option value="name-asc">A → Z</option>
-          </select>
-        </div>
-      </div>
-    </div>
+  <div class="cat-layout">
 
-    <div class="container catalogue-layout">
-
-      <aside class="filter-sidebar" id="filter-sidebar" aria-label="Filtres produits">
-        <div class="filter-sidebar__header">
-          <h2 class="filter-sidebar__title">Filtres</h2>
-          <button class="btn btn--ghost btn--sm" id="filter-clear-btn" type="button">Effacer</button>
-        </div>
-        <form id="filter-form" novalidate>
-          <div class="filter-group">
-            <h3 class="filter-group__title">Licence</h3>
-            <div class="filter-group__list" id="filter-licences"></div>
-          </div>
-          <div class="filter-group">
-            <h3 class="filter-group__title">Type de produit</h3>
-            <div class="filter-group__list" id="filter-types"></div>
-          </div>
-          <div class="filter-group">
-            <h3 class="filter-group__title">Disponibilité</h3>
-            <div class="filter-group__list" id="filter-dispo"></div>
-          </div>
-        </form>
-        <div class="filter-sidebar__footer">
-          <button class="btn btn--primary" id="drawer-apply-btn" type="button">Voir les résultats</button>
-        </div>
-      </aside>
-
-      <div class="filter-backdrop" id="filter-backdrop" hidden></div>
-
-      <div class="catalogue-main">
-        <div class="active-filters-bar" id="active-filters-bar" hidden></div>
-        <div class="products-grid" id="products-grid" role="list" aria-live="polite" aria-label="Produits"></div>
+    <aside class="cat-sidebar" id="catSidebar">
+      <div class="cat-sidebar-head">
+        <h3>Filtres</h3>
+        <button id="resetFilters">Tout effacer</button>
       </div>
 
-    </div>
-  </main>
+      <div class="filter-group">
+        <span class="filter-title">Licences</span>
+        <label class="filter-check" data-l="poke"><input type="checkbox" checked><span class="box"></span><span class="label"><i class="dot"></i>Pokémon</span><span class="count">243</span></label>
+        <label class="filter-check" data-l="ygo"><input type="checkbox"><span class="box"></span><span class="label"><i class="dot"></i>Yu-Gi-Oh!</span><span class="count">178</span></label>
+        <label class="filter-check" data-l="op"><input type="checkbox"><span class="box"></span><span class="label"><i class="dot"></i>One Piece TCG</span><span class="count">112</span></label>
+        <label class="filter-check" data-l="dbz"><input type="checkbox"><span class="box"></span><span class="label"><i class="dot"></i>Dragon Ball</span><span class="count">94</span></label>
+        <label class="filter-check" data-l="ds"><input type="checkbox"><span class="box"></span><span class="label"><i class="dot"></i>Demon Slayer</span><span class="count">68</span></label>
+        <label class="filter-check" data-l="mint"><input type="checkbox"><span class="box"></span><span class="label"><i class="dot"></i>Accessoires</span><span class="count">152</span></label>
+      </div>
 
-  <button class="mobile-filter-btn" id="mobile-filter-btn" aria-label="Ouvrir les filtres">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
-    Filtrer
-    <span class="mobile-filter-badge" id="mobile-filter-count" hidden>0</span>
-  </button>
+      <div class="filter-group">
+        <span class="filter-title">Catégories</span>
+        <label class="filter-check"><input type="checkbox"><span class="box"></span><span class="label">Boosters</span><span class="count">186</span></label>
+        <label class="filter-check"><input type="checkbox"><span class="box"></span><span class="label">Displays</span><span class="count">42</span></label>
+        <label class="filter-check"><input type="checkbox"><span class="box"></span><span class="label">Cartes à l'unité</span><span class="count">328</span></label>
+        <label class="filter-check"><input type="checkbox"><span class="box"></span><span class="label">Coffrets &amp; Tins</span><span class="count">74</span></label>
+        <label class="filter-check"><input type="checkbox"><span class="box"></span><span class="label">Figurines</span><span class="count">96</span></label>
+        <label class="filter-check"><input type="checkbox"><span class="box"></span><span class="label">Playmates &amp; Sleeves</span><span class="count">68</span></label>
+        <label class="filter-check"><input type="checkbox"><span class="box"></span><span class="label">Mangas &amp; Artbooks</span><span class="count">53</span></label>
+      </div>
 
-  <footer class="site-footer" aria-label="Pied de page">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <a href="index.html" class="footer__logo">⛩ TCM <em>Japanimation</em></a>
-        <p class="footer__tagline">Rue de la Cathédrale 73, 4000 Liège.</p>
-        <div class="footer__social">
-          <a href="https://www.facebook.com/share/1Gh6BBLN89/?mibextid=wwXIfr" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </a>
-          <a href="https://wa.me/3242222888" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-          </a>
+      <div class="filter-group">
+        <span class="filter-title">Disponibilité</span>
+        <label class="filter-check"><input type="checkbox" checked><span class="box"></span><span class="label">En stock à Liège</span><span class="count">624</span></label>
+        <label class="filter-check"><input type="checkbox"><span class="box"></span><span class="label">En précommande</span><span class="count">87</span></label>
+        <label class="filter-check"><input type="checkbox"><span class="box"></span><span class="label">Stock limité</span><span class="count">42</span></label>
+      </div>
+
+      <div class="filter-group filter-price">
+        <span class="filter-title">Prix maximum</span>
+        <div class="price-display"><span>5 €</span><strong id="priceVal">150 €</strong></div>
+        <input type="range" id="priceRange" min="5" max="500" step="5" value="150">
+      </div>
+    </aside>
+
+    <section class="cat-main">
+      <div class="cat-toolbar">
+        <div class="cat-toolbar-left">
+          <button class="cat-mobile-filters" id="openFilters">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="7" y1="12" x2="20" y2="12"></line><line x1="10" y1="18" x2="20" y2="18"></line></svg>
+            Filtres <span class="badge">2</span>
+          </button>
+          <span class="cat-active-filter">Pokémon <button aria-label="Retirer">✕</button></span>
+          <span class="cat-active-filter">En stock <button aria-label="Retirer">✕</button></span>
+        </div>
+        <div class="cat-sort">
+          <label for="sortSel">Trier</label>
+          <select id="sortSel"><option>Pertinence</option><option>Prix croissant</option><option>Prix décroissant</option><option>Plus récents</option><option>Plus populaires</option></select>
         </div>
       </div>
-      <nav class="footer__nav" aria-label="Navigation secondaire">
-        <div class="footer__nav-col">
-          <h3 class="footer__nav-title">Catalogue</h3>
-          <ul role="list">
-            <li><a href="catalogue.html?type=cartes">Cartes TCG</a></li>
-            <li><a href="catalogue.html?type=figurine">Figurines</a></li>
-            <li><a href="catalogue.html?type=goodie">Goodies</a></li>
-            <li><a href="catalogue.html?disponibilite=precommande">Précommandes</a></li>
-          </ul>
-        </div>
-        <div class="footer__nav-col">
-          <h3 class="footer__nav-title">Licences</h3>
-          <ul role="list">
-            <li><a href="catalogue.html?licence=pokemon">Pokémon</a></li>
-            <li><a href="catalogue.html?licence=yugioh">Yu-Gi-Oh!</a></li>
-            <li><a href="catalogue.html?licence=onepiece">One Piece</a></li>
-            <li><a href="catalogue.html?licence=dragonball">Dragon Ball</a></li>
-          </ul>
-        </div>
-        <div class="footer__nav-col">
-          <h3 class="footer__nav-title">Infos</h3>
-          <ul role="list">
-            <li><a href="index.html#boutique">La boutique</a></li>
-            <li><a href="mentions-legales.html">Mentions légales</a></li>
-            <li><a href="mentions-legales.html#rgpd">RGPD</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <div class="footer__bottom">
-      <div class="container footer__bottom-inner">
-        <p class="footer__legal">&copy; <span id="footer-year"></span> TCM Japanimation — Nhung TRIEU — BCE : [N° à compléter] — Rue de la Cathédrale 73, 4000 Liège</p>
-        <p class="footer__legal-links"><a href="mentions-legales.html">Mentions légales</a> &middot; <a href="mentions-legales.html#rgpd">RGPD</a></p>
-      </div>
-    </div>
-  </footer>
 
-  <script src="assets/js/data/products.js"></script>
-  <script src="assets/js/catalogue.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/nav.js"></script>
-  <script src="assets/js/rgpd.js"></script>
+      <div class="cat-grid">
+        <article class="arr-card" data-c="poke"><div class="arr-head"><span class="arr-licence">Pokémon TCG</span><span class="arr-sticker">Nouveau</span></div><h4 class="arr-name">Display Twilight Masquerade — Scarlet &amp; Violet</h4><div class="arr-meta"><span>36 boosters</span><i class="dot"></i><span>En stock</span></div><div class="arr-foot"><div class="arr-price">129,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+        <article class="arr-card" data-c="poke"><div class="arr-head"><span class="arr-licence">Pokémon TCG</span><span class="arr-sticker">Coffret</span></div><h4 class="arr-name">Coffret Premium Arceus VSTAR — Collector</h4><div class="arr-meta"><span>Coffret métal</span><i class="dot"></i><span>En stock</span></div><div class="arr-foot"><div class="arr-price">44,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+        <article class="arr-card" data-c="ygo"><div class="arr-head"><span class="arr-licence">Yu-Gi-Oh!</span><span class="arr-sticker">Restock</span></div><h4 class="arr-name">Méga-Tin 2025 Blue-Eyes Alternative Ultimate</h4><div class="arr-meta"><span>3 boosters + promo</span><i class="dot"></i><span>Stock limité</span></div><div class="arr-foot"><div class="arr-price"><del>39,99</del> 31,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+        <article class="arr-card" data-c="op"><div class="arr-head"><span class="arr-licence">One Piece TCG</span><span class="arr-sticker">Précommande</span></div><h4 class="arr-name">Booster Box OP-09 Émerald Forest</h4><div class="arr-meta"><span>24 boosters</span><i class="dot"></i><span>Mai 2026</span></div><div class="arr-foot"><div class="arr-price">89,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+        <article class="arr-card" data-c="dbz"><div class="arr-head"><span class="arr-licence">Dragon Ball</span><span class="arr-sticker">Nouveau</span></div><h4 class="arr-name">Banpresto Grandista — Vegeta Royal Saiyan</h4><div class="arr-meta"><span>Figurine 28cm</span><i class="dot"></i><span>En stock</span></div><div class="arr-foot"><div class="arr-price">74,90 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+        <article class="arr-card" data-c="ds"><div class="arr-head"><span class="arr-licence">Demon Slayer</span><span class="arr-sticker">Exclu</span></div><h4 class="arr-name">Figurine SH Figuarts Rengoku — Flame Breathing</h4><div class="arr-meta"><span>Édition 2025</span><i class="dot"></i><span>En stock</span></div><div class="arr-foot"><div class="arr-price">59,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+        <article class="arr-card" data-c="poke"><div class="arr-head"><span class="arr-licence">Pokémon TCG</span><span class="arr-sticker">Booster</span></div><h4 class="arr-name">Booster Surging Sparks — Scarlet &amp; Violet</h4><div class="arr-meta"><span>10 cartes</span><i class="dot"></i><span>En stock</span></div><div class="arr-foot"><div class="arr-price">4,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+        <article class="arr-card" data-c="mint"><div class="arr-head"><span class="arr-licence">Accessoires</span><span class="arr-sticker">Best-seller</span></div><h4 class="arr-name">Playmate Premium Ultra-Pro — Édition TCM</h4><div class="arr-meta"><span>60×35 cm</span><i class="dot"></i><span>En stock</span></div><div class="arr-foot"><div class="arr-price">24,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+        <article class="arr-card" data-c="ygo"><div class="arr-head"><span class="arr-licence">Yu-Gi-Oh!</span><span class="arr-sticker">Précommande</span></div><h4 class="arr-name">Structure Deck — Cyber Strike Legacy</h4><div class="arr-meta"><span>43 cartes</span><i class="dot"></i><span>Juin 2026</span></div><div class="arr-foot"><div class="arr-price">18,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+        <article class="arr-card" data-c="poke"><div class="arr-head"><span class="arr-licence">Pokémon TCG</span><span class="arr-sticker">ETB</span></div><h4 class="arr-name">Elite Trainer Box — Paldean Fates</h4><div class="arr-meta"><span>10 boosters + extras</span><i class="dot"></i><span>En stock</span></div><div class="arr-foot"><div class="arr-price">54,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+        <article class="arr-card" data-c="op"><div class="arr-head"><span class="arr-licence">One Piece TCG</span><span class="arr-sticker">Starter</span></div><h4 class="arr-name">Starter Deck ST-19 — Smoker</h4><div class="arr-meta"><span>51 cartes</span><i class="dot"></i><span>En stock</span></div><div class="arr-foot"><div class="arr-price">14,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+        <article class="arr-card" data-c="dbz"><div class="arr-head"><span class="arr-licence">Dragon Ball</span><span class="arr-sticker">SH Figuarts</span></div><h4 class="arr-name">SH Figuarts — Goku Ultra Instinct</h4><div class="arr-meta"><span>14 cm</span><i class="dot"></i><span>Stock limité</span></div><div class="arr-foot"><div class="arr-price">82,50 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+        <article class="arr-card" data-c="mint"><div class="arr-head"><span class="arr-licence">Accessoires</span><span class="arr-sticker">Sleeves</span></div><h4 class="arr-name">Sleeves Premium Ultra-Pro — 100 pcs</h4><div class="arr-meta"><span>66×91 mm</span><i class="dot"></i><span>En stock</span></div><div class="arr-foot"><div class="arr-price">8,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+        <article class="arr-card" data-c="ygo"><div class="arr-head"><span class="arr-licence">Yu-Gi-Oh!</span><span class="arr-sticker">Booster</span></div><h4 class="arr-name">Booster Phantom Nightmare</h4><div class="arr-meta"><span>7 cartes</span><i class="dot"></i><span>En stock</span></div><div class="arr-foot"><div class="arr-price">3,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+        <article class="arr-card" data-c="poke"><div class="arr-head"><span class="arr-licence">Pokémon TCG</span><span class="arr-sticker">Promo</span></div><h4 class="arr-name">Coffret Tin — Pikachu Holo Promo</h4><div class="arr-meta"><span>3 boosters + promo</span><i class="dot"></i><span>En stock</span></div><div class="arr-foot"><div class="arr-price">19,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+        <article class="arr-card" data-c="op"><div class="arr-head"><span class="arr-licence">One Piece TCG</span><span class="arr-sticker">Booster</span></div><h4 class="arr-name">Booster Paramount War — OP02</h4><div class="arr-meta"><span>6 cartes</span><i class="dot"></i><span>En stock</span></div><div class="arr-foot"><div class="arr-price">3,49 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+        <article class="arr-card" data-c="ds"><div class="arr-head"><span class="arr-licence">Demon Slayer</span><span class="arr-sticker">Figma</span></div><h4 class="arr-name">Figma Tanjiro Kamado — Pillar Training</h4><div class="arr-meta"><span>15 cm</span><i class="dot"></i><span>Précommande</span></div><div class="arr-foot"><div class="arr-price">68,00 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+        <article class="arr-card" data-c="dbz"><div class="arr-head"><span class="arr-licence">Dragon Ball</span><span class="arr-sticker">Fusion World</span></div><h4 class="arr-name">Booster Awakened Pulse — Fusion World</h4><div class="arr-meta"><span>12 cartes</span><i class="dot"></i><span>En stock</span></div><div class="arr-foot"><div class="arr-price">4,49 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+        <article class="arr-card" data-c="poke"><div class="arr-head"><span class="arr-licence">Pokémon TCG</span><span class="arr-sticker">Mini-Tin</span></div><h4 class="arr-name">Mini-Tin Sword &amp; Shield — Astral Radiance</h4><div class="arr-meta"><span>2 boosters</span><i class="dot"></i><span>En stock</span></div><div class="arr-foot"><div class="arr-price">12,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+        <article class="arr-card" data-c="mint"><div class="arr-head"><span class="arr-licence">Accessoires</span><span class="arr-sticker">Deck Box</span></div><h4 class="arr-name">Deck Box Premium — Édition Limitée Liège</h4><div class="arr-meta"><span>100 cartes</span><i class="dot"></i><span>Exclu boutique</span></div><div class="arr-foot"><div class="arr-price">17,50 €</div><button class="arr-add" aria-label="Ajouter">+</button></div></article>
+      </div>
+
+      <div class="cat-loadmore"><button class="btn btn-glass">Charger plus de références (827 restantes) ↓</button></div>
+    </section>
+  </div>
+</main>
+
+<script>
+const burger  = document.getElementById('burger');
+const drawer  = document.getElementById('drawer');
+const overlay = document.getElementById('overlay');
+function togDrawer(open) {
+  drawer.classList.toggle('on', open);
+  overlay.classList.toggle('on', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+burger.addEventListener('click', () => togDrawer(!drawer.classList.contains('on')));
+overlay.addEventListener('click', () => { togDrawer(false); togMobileFilters(false) });
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => togDrawer(false)));
+
+const searchInput = document.getElementById('catSearchInput');
+const searchClear = document.getElementById('catSearchClear');
+searchInput.addEventListener('input', () => { searchClear.style.display = searchInput.value ? 'grid' : 'none' });
+searchClear.addEventListener('click', () => { searchInput.value = ''; searchClear.style.display = 'none'; searchInput.focus() });
+
+const priceRange = document.getElementById('priceRange');
+const priceVal   = document.getElementById('priceVal');
+priceRange.addEventListener('input', () => { const v = +priceRange.value; priceVal.textContent = v >= 500 ? '500+ €' : `${v} €` });
+
+const sidebar = document.getElementById('catSidebar');
+const openFiltersBtn = document.getElementById('openFilters');
+function togMobileFilters(open) {
+  sidebar.classList.toggle('is-mobile', open || window.innerWidth <= 900);
+  sidebar.classList.toggle('on', open);
+  overlay.classList.toggle('on', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+  if (window.innerWidth <= 900) { sidebar.style.display = open ? 'flex' : 'none' }
+}
+openFiltersBtn.addEventListener('click', () => togMobileFilters(true));
+
+function syncSidebarVisibility() {
+  if (window.innerWidth <= 900) {
+    sidebar.style.display = sidebar.classList.contains('on') ? 'flex' : 'none';
+    sidebar.classList.add('is-mobile');
+  } else {
+    sidebar.style.display = '';
+    sidebar.classList.remove('is-mobile', 'on');
+    overlay.classList.remove('on');
+  }
+}
+syncSidebarVisibility();
+window.addEventListener('resize', syncSidebarVisibility);
+
+document.getElementById('resetFilters').addEventListener('click', () => {
+  document.querySelectorAll('.filter-check input').forEach(c => c.checked = false);
+});
+
+document.querySelectorAll('.cat-active-filter button').forEach(b => {
+  b.addEventListener('click', e => {
+    e.stopPropagation();
+    b.parentElement.style.transition = 'opacity 0.2s';
+    b.parentElement.style.opacity = '0';
+    setTimeout(() => b.parentElement.remove(), 200);
+  });
+});
+</script>
+<script src="assets/js/cart.js" defer></script>
 </body>
 </html>
