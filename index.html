@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TCM Japanimation — Boutique Pop Culture · Liège</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tcm-styles.css">
+<link rel="stylesheet" href="assets/css/cart.css">
+<script>
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "haloIntensity": 65,
+  "accent": "yellow",
+  "popout": 70
+}/*EDITMODE-END*/;
+</script>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <a href="#home" class="logo">
+    <span class="dot"></span>
+    TCM <em>Japanimation</em>
+  </a>
+  <ul class="nav-links">
+    <li><a href="catalogue.html">Catalogue</a></li>
+    <li><a href="#licences">Licences</a></li>
+    <li><a href="#figurines">Figurines</a></li>
+    <li><a href="tournois.html">Tournois</a></li>
+    <li><a href="#visit" class="pill">Boutique Liège</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer">
+  <a href="catalogue.html">Catalogue</a>
+  <a href="#licences">Licences</a>
+  <a href="#figurines">Figurines</a>
+  <a href="tournois.html">Tournois</a>
+  <a href="#visit">Boutique Liège</a>
+</aside>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="home" data-screen-label="01 Hero">
+  <img src="assets/img/manga.png" alt="" class="hero-art" aria-hidden="true">
+  <img src="assets/img/pikachu.png" alt="" class="hero-float-1" aria-hidden="true">
+  <img src="assets/img/salameche.png" alt="" class="hero-float-2" aria-hidden="true">
+
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-pulse"><i></i> Boutique ouverte · Liège, Belgique</div>
+      <h1>
+        <span class="word-1">L'univers</span>
+        <span class="word-2">Pop Culture</span>
+        <span class="word-3">à portée de main.</span>
+      </h1>
+      <p class="hero-sub">
+        Cartes à collectionner, boosters, figurines premium et coffrets collectors.
+        Pokémon · Yu-Gi-Oh! · One Piece · Dragon Ball — tout l'univers manga &amp; gaming.
+      </p>
+      <div class="hero-ctas">
+        <a href="#licences" class="btn btn-primary">Explorer les licences →</a>
+        <a href="#visit" class="btn btn-glass">Visiter la boutique</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>4+</strong><span>Licences TCG</span></div>
+        <div class="hero-stat"><strong>800+</strong><span>Références</span></div>
+        <div class="hero-stat"><strong>6j/7</strong><span>Boutique ouverte</span></div>
+        <div class="hero-stat"><strong>Liège</strong><span>Belgique</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LICENCES ═══ -->
+<section class="licences" id="licences" data-screen-label="02 Licences">
+  <div class="wrap">
+    <div class="sec-head rev">
+      <span class="eyebrow">Univers disponibles</span>
+      <h2>Toutes vos licences<br>préférées sous un toit.</h2>
+      <p>Cartes, boosters, figurines et accessoires — tout l'univers manga &amp; gaming dans notre boutique liégeoise.</p>
+    </div>
+
+    <div class="licences-grid">
+
+      <article class="lic-card rev" data-l="poke">
+        <img src="assets/img/lugia.png" alt="" class="lic-art" aria-hidden="true">
+        <div class="lic-content">
+          <span class="lic-tag">TCG · Figurines · Goodies</span>
+          <div class="lic-body">
+            <h3 class="lic-title">Pokémon</h3>
+            <p class="lic-desc">Boosters, Displays, coffrets Dresseur d'Élite et cartes promo. La licence n°1 en stock permanent.</p>
+            <a href="catalogue.html?licence=pokemon" class="lic-cta">Découvrir <span>→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="lic-card rev" data-l="ygo">
+        <img src="assets/img/yugi.png" alt="" class="lic-art" aria-hidden="true">
+        <div class="lic-content">
+          <span class="lic-tag">TCG · Cartes · Duel</span>
+          <div class="lic-body">
+            <h3 class="lic-title">Yu-Gi-Oh!</h3>
+            <p class="lic-desc">Decks de structure, boosters, cartes Secret Rare et accessoires de duel premium.</p>
+            <a href="catalogue.html?licence=yugioh" class="lic-cta">Découvrir <span>→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="lic-card rev" data-l="op">
+        <img src="assets/img/luffy.png" alt="" class="lic-art" aria-hidden="true">
+        <div class="lic-content">
+          <span class="lic-tag">TCG · Figurines</span>
+          <div class="lic-body">
+            <h3 class="lic-title">One Piece</h3>
+            <p class="lic-desc">Boosters One Piece TCG, figurines Grandista et tout l'univers des Mugiwara.</p>
+            <a href="catalogue.html?licence=onepiece" class="lic-cta">Découvrir <span>→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="lic-card rev" data-l="dbz">
+        <img src="assets/img/vegeta.png" alt="" class="lic-art" aria-hidden="true">
+        <div class="lic-content">
+          <span class="lic-tag">TCG · Figurines · Collector</span>
+          <div class="lic-body">
+            <h3 class="lic-title">Dragon Ball</h3>
+            <p class="lic-desc">Figurines Banpresto, S.H.Figuarts et cartes Dragon Ball Fusion World.</p>
+            <a href="catalogue.html?licence=dragonball" class="lic-cta">Découvrir <span>→</span></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ARRIVAGES ═══ -->
+<section class="arrivages" id="arrivages" data-screen-label="03 Arrivages">
+  <img src="assets/img/arceus.png"   alt="" class="amb amb-1" aria-hidden="true">
+  <img src="assets/img/exodia.png"   alt="" class="amb amb-2" aria-hidden="true">
+  <img src="assets/img/tanjiro.png"  alt="" class="amb amb-3" aria-hidden="true">
+  <img src="assets/img/kaiba.png"    alt="" class="amb amb-4" aria-hidden="true">
+
+  <div class="wrap">
+    <div class="sec-head rev">
+      <span class="eyebrow">Cette semaine</span>
+      <h2>Arrivages &amp; restocks.</h2>
+      <p>Les sorties les plus attendues, disponibles directement en boutique.</p>
+    </div>
+
+    <div class="arrivages-grid">
+
+      <article class="arr-card rev" data-c="poke">
+        <div class="arr-head"><span class="arr-licence">Pokémon TCG</span><span class="arr-sticker">Nouveau</span></div>
+        <h4 class="arr-name">Display Twilight Masquerade — Scarlet &amp; Violet</h4>
+        <div class="arr-meta"><span>36 boosters</span><i class="dot"></i><span>En stock</span></div>
+        <div class="arr-foot"><div class="arr-price">129,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div>
+      </article>
+
+      <article class="arr-card rev" data-c="ygo">
+        <div class="arr-head"><span class="arr-licence">Yu-Gi-Oh!</span><span class="arr-sticker">Restock</span></div>
+        <h4 class="arr-name">Méga-Tin 2025 Blue-Eyes Alternative Ultimate Dragon</h4>
+        <div class="arr-meta"><span>3 boosters + promo</span><i class="dot"></i><span>Stock limité</span></div>
+        <div class="arr-foot"><div class="arr-price"><del>39,99</del> 31,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div>
+      </article>
+
+      <article class="arr-card rev" data-c="ds">
+        <div class="arr-head"><span class="arr-licence">Demon Slayer</span><span class="arr-sticker">Exclu</span></div>
+        <h4 class="arr-name">Figurine SH Figuarts Rengoku — Flame Breathing</h4>
+        <div class="arr-meta"><span>Édition 2025</span><i class="dot"></i><span>En stock</span></div>
+        <div class="arr-foot"><div class="arr-price">59,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div>
+      </article>
+
+      <article class="arr-card rev" data-c="op">
+        <div class="arr-head"><span class="arr-licence">One Piece TCG</span><span class="arr-sticker">Précommande</span></div>
+        <h4 class="arr-name">Booster Box OP-09 — Émerald Forest</h4>
+        <div class="arr-meta"><span>24 boosters</span><i class="dot"></i><span>Mai 2026</span></div>
+        <div class="arr-foot"><div class="arr-price">89,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div>
+      </article>
+
+      <article class="arr-card rev" data-c="poke">
+        <div class="arr-head"><span class="arr-licence">Pokémon TCG</span><span class="arr-sticker">Coffret</span></div>
+        <h4 class="arr-name">Coffret Premium Arceus VSTAR — Édition Collector</h4>
+        <div class="arr-meta"><span>Coffret métal</span><i class="dot"></i><span>En stock</span></div>
+        <div class="arr-foot"><div class="arr-price">44,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div>
+      </article>
+
+      <article class="arr-card rev" data-c="dbz">
+        <div class="arr-head"><span class="arr-licence">Dragon Ball</span><span class="arr-sticker">Nouveau</span></div>
+        <h4 class="arr-name">Banpresto Grandista — Vegeta Royal Saiyan</h4>
+        <div class="arr-meta"><span>Figurine 28cm</span><i class="dot"></i><span>En stock</span></div>
+        <div class="arr-foot"><div class="arr-price">74,90 €</div><button class="arr-add" aria-label="Ajouter">+</button></div>
+      </article>
+
+      <article class="arr-card rev" data-c="mint">
+        <div class="arr-head"><span class="arr-licence">Accessoires</span><span class="arr-sticker">Best-seller</span></div>
+        <h4 class="arr-name">Playmate Premium Ultra-Pro — Édition TCM</h4>
+        <div class="arr-meta"><span>60×35 cm</span><i class="dot"></i><span>En stock</span></div>
+        <div class="arr-foot"><div class="arr-price">24,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div>
+      </article>
+
+      <article class="arr-card rev" data-c="ygo">
+        <div class="arr-head"><span class="arr-licence">Yu-Gi-Oh!</span><span class="arr-sticker">Précommande</span></div>
+        <h4 class="arr-name">Structure Deck — Cyber Strike Legacy</h4>
+        <div class="arr-meta"><span>43 cartes</span><i class="dot"></i><span>Juin 2026</span></div>
+        <div class="arr-foot"><div class="arr-price">18,99 €</div><button class="arr-add" aria-label="Ajouter">+</button></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FIGURINES ═══ -->
+<section class="figurines" id="figurines" data-screen-label="04 Figurines">
+  <div class="wrap">
+    <div class="sec-head rev">
+      <span class="eyebrow">Collection premium</span>
+      <h2>Figurines &amp; statuettes.</h2>
+      <p>Des pièces de collection exceptionnelles — disponibles et sur commande en boutique.</p>
+    </div>
+
+    <div class="fig-grid">
+
+      <article class="fig-card rev" data-f="dbz">
+        <img src="assets/img/vegeta.png" alt="" class="fig-art" aria-hidden="true">
+        <div class="fig-content">
+          <span class="eyebrow">Dragon Ball</span>
+          <h3>Vegeta,<br>Prince Saiyan</h3>
+          <p>Statuettes résine, S.H.Figuarts, Banpresto — éditions limitées et exclusivités boutique.</p>
+          <a href="#visit" class="btn btn-primary">Voir en boutique →</a>
+        </div>
+      </article>
+
+      <article class="fig-card rev" data-f="ygo">
+        <img src="assets/img/magicien.png" alt="" class="fig-art" aria-hidden="true">
+        <div class="fig-content">
+          <span class="eyebrow">Yu-Gi-Oh!</span>
+          <h3>Dark Magician<br>Collection.</h3>
+          <p>Figurines collector, boîtes premium, playmates et accessoires de duel haut de gamme.</p>
+          <a href="#visit" class="btn btn-glass">Voir en boutique →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VISIT ═══ -->
+<section class="visit" id="visit" data-screen-label="05 Visit">
+  <img src="assets/img/akaza.png" alt="" class="visit-art" aria-hidden="true">
+  <div class="wrap">
+    <div class="visit-card rev">
+      <div class="visit-info">
+        <span class="eyebrow">Boutique physique</span>
+        <h2>Venez nous rendre<br>visite à Liège.</h2>
+        <p>Une équipe passionnée vous accueille 6 jours sur 7. Tournois hebdomadaires, conseils experts et bonne humeur garantie.</p>
+        <div class="visit-ctas">
+          <a href="mailto:contact@tcm-japanimation.be" class="btn btn-primary">Nous contacter →</a>
+          <a href="#" class="btn btn-glass">Voir sur la carte</a>
+        </div>
+      </div>
+      <div class="visit-stats">
+        <div class="v-stat"><strong>Liège</strong><span>Belgique</span></div>
+        <div class="v-stat"><strong>Mar → Sam</strong><span>10h — 18h30</span></div>
+        <div class="v-stat"><strong>Tournois</strong><span>Chaque semaine</span></div>
+        <div class="v-stat"><strong>4 licences</strong><span>TCG premium</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <h3>TCM <em>Japanimation</em></h3>
+        <p>Votre boutique spécialisée Pop Culture à Liège. TCG, figurines, mangas et produits dérivés pour les collectionneurs passionnés.</p>
+        <div class="foot-addr">
+          <strong>Boutique</strong>
+          <span>Liège, Belgique</span>
+          <span>Mardi – Samedi · 10h – 18h30</span>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>TCG</h4>
+        <a href="#">Pokémon</a><a href="#">Yu-Gi-Oh!</a><a href="#">One Piece TCG</a><a href="#">Dragon Ball</a><a href="#">Lorcana</a>
+      </div>
+      <div class="foot-col">
+        <h4>Figurines</h4>
+        <a href="#">Dragon Ball</a><a href="#">One Piece</a><a href="#">Demon Slayer</a><a href="#">Naruto</a><a href="#">Funko Pop</a>
+      </div>
+      <div class="foot-col">
+        <h4>Boutique</h4>
+        <a href="#">Nous contacter</a><a href="#">Tournois</a><a href="#">Événements</a><a href="#">Instagram</a><a href="#">Mentions légales</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 TCM Japanimation · Liège</span>
+      <span>Boutique physique · Pas de vente en ligne</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ TWEAKS PANEL (edit mode only) ═══ -->
+<div class="tweaks-panel" id="tweaksPanel">
+  <div class="tweaks-title">
+    Tweaks
+    <button class="tw-close" id="twClose" title="Fermer">✕</button>
+  </div>
+  <div class="tw-row">
+    <label>Intensité des artworks (halos)</label>
+    <input type="range" id="twHalo" min="0" max="100" step="5" value="65">
+  </div>
+  <div class="tw-row">
+    <label>Couleur d'accent</label>
+    <div class="tw-opts">
+      <button class="tw-btn active" data-accent="yellow">Pikachu</button>
+      <button class="tw-btn" data-accent="rose">Rose</button>
+      <button class="tw-btn" data-accent="azure">Azur</button>
+      <button class="tw-btn" data-accent="mint">Menthe</button>
+    </div>
+  </div>
+  <div class="tw-row">
+    <label>Pop-out au survol</label>
+    <input type="range" id="twPop" min="0" max="100" step="5" value="70">
+  </div>
+</div>
+
+<script>
+/* ════════ TWEAKS ════════ */
+const panel   = document.getElementById('tweaksPanel');
+const twClose = document.getElementById('twClose');
+const twHalo  = document.getElementById('twHalo');
+const twPop   = document.getElementById('twPop');
+
+window.addEventListener('message', e => {
+  if (!e.data) return;
+  if (e.data.type === '__activate_edit_mode')   panel.classList.add('show');
+  if (e.data.type === '__deactivate_edit_mode') panel.classList.remove('show');
+});
+window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+
+twClose.addEventListener('click', () => {
+  panel.classList.remove('show');
+  window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*');
+});
+
+const accents = {
+  yellow: { '--accent': 'oklch(88% 0.20 95)',  '--accent-ink': '#1a0f2e' },
+  rose:   { '--accent': 'oklch(78% 0.22 12)',  '--accent-ink': '#1a0f2e' },
+  azure:  { '--accent': 'oklch(78% 0.18 230)', '--accent-ink': '#0a1428' },
+  mint:   { '--accent': 'oklch(82% 0.16 165)', '--accent-ink': '#0a1f1a' }
+};
+function applyAccent(name) {
+  const t = accents[name];
+  if (!t) return;
+  Object.entries(t).forEach(([k, v]) => document.documentElement.style.setProperty(k, v));
+}
+
+(function applyDefaults() {
+  const d = TWEAK_DEFAULTS;
+  twHalo.value = d.haloIntensity;
+  document.documentElement.style.setProperty('--halo-opacity', d.haloIntensity / 100);
+  twPop.value = d.popout;
+  document.documentElement.style.setProperty('--pop-scale', 1 + d.popout * 0.003);
+  const activeBtn = document.querySelector(`[data-accent="${d.accent}"]`);
+  if (activeBtn) {
+    document.querySelectorAll('[data-accent]').forEach(b => b.classList.remove('active'));
+    activeBtn.classList.add('active');
+    applyAccent(d.accent);
+  }
+})();
+
+twHalo.addEventListener('input', () => {
+  document.documentElement.style.setProperty('--halo-opacity', twHalo.value / 100);
+  window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { haloIntensity: +twHalo.value } }, '*');
+});
+
+document.querySelectorAll('[data-accent]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-accent]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    applyAccent(btn.dataset.accent);
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { accent: btn.dataset.accent } }, '*');
+  });
+});
+
+twPop.addEventListener('input', () => {
+  const scale = 1 + twPop.value * 0.003;
+  document.documentElement.style.setProperty('--pop-scale', scale);
+  window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { popout: +twPop.value } }, '*');
+});
+
+/* ════════ DRAWER ════════ */
+const burger  = document.getElementById('burger');
+const drawer  = document.getElementById('drawer');
+const overlay = document.getElementById('overlay');
+function togDrawer(open) {
+  drawer.classList.toggle('on', open);
+  overlay.classList.toggle('on', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+burger.addEventListener('click', () => togDrawer(!drawer.classList.contains('on')));
+overlay.addEventListener('click', () => togDrawer(false));
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => togDrawer(false)));
+
+/* ════════ SCROLL REVEAL ════════ */
+document.documentElement.classList.add('ready');
+const revEls = document.querySelectorAll('.rev');
+const revObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('vis');
+      revObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+const groups = {};
+revEls.forEach(el => {
+  const key = el.parentElement;
+  groups[key] = groups[key] || [];
+  groups[key].push(el);
+});
+Object.values(groups).forEach(els => {
+  els.forEach((el, i) => { el.style.transitionDelay = `${i * 0.07}s` });
+});
+revEls.forEach(el => revObs.observe(el));
+
+/* ════════ HERO PARALLAX ════════ */
+const heroArt = document.querySelector('.hero-art');
+const f1 = document.querySelector('.hero-float-1');
+const f2 = document.querySelector('.hero-float-2');
+if (window.matchMedia('(pointer: fine)').matches) {
+  document.addEventListener('mousemove', e => {
+    const x = (e.clientX / window.innerWidth  - 0.5);
+    const y = (e.clientY / window.innerHeight - 0.5);
+    if (heroArt) heroArt.style.transform = `translate(calc(-50% + ${x * 14}px), calc(-50% + ${y * 9}px))`;
+    if (f1) f1.style.transform = `translate(${x * -24}px, ${y * -16}px)`;
+    if (f2) f2.style.transform = `translate(${x *  24}px, ${y *  16}px)`;
+  }, { passive: true });
+}
+</script>
+<script src="assets/js/cart.js" defer></script>
+</body>
+</html>

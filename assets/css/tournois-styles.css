@@ -1,0 +1,475 @@
+/* ════════════════════════════════════════════════════════════════
+   TCM TOURNOIS — Events / Community page (extends tcm-styles.css)
+   ════════════════════════════════════════════════════════════════ */
+
+.tour-page { padding: 110px 0 80px; position: relative; overflow: hidden }
+
+.tour-hero {
+  position: relative;
+  padding: 28px 0 64px;
+  text-align: center;
+}
+.tour-hero::before {
+  content: ''; position: absolute; inset: -20px 0 0;
+  background:
+    radial-gradient(ellipse 50% 70% at 30% 0%, oklch(78% 0.22 12 / 0.18), transparent 65%),
+    radial-gradient(ellipse 50% 70% at 70% 30%, oklch(72% 0.22 295 / 0.16), transparent 65%);
+  pointer-events: none;
+}
+.tour-hero-inner {
+  position: relative; z-index: 1;
+  max-width: 760px; margin: 0 auto;
+}
+.tour-hero h1 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+  font-weight: 600; line-height: 1.02;
+  letter-spacing: -0.025em;
+  margin: 16px 0 18px;
+  text-wrap: balance;
+}
+.tour-hero h1 em {
+  background: linear-gradient(120deg, var(--yellow) 0%, var(--coral) 50%, var(--rose) 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-style: normal;
+}
+.tour-hero p {
+  color: var(--muted); font-size: 1.05rem;
+  line-height: 1.7; max-width: 560px;
+  margin: 0 auto;
+}
+
+.tour-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin: 38px auto 0;
+  max-width: 820px;
+}
+.tour-stat {
+  background: var(--glass);
+  border: 1px solid var(--glass-line);
+  border-radius: var(--r);
+  padding: 20px 18px;
+  text-align: center;
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+}
+.tour-stat strong {
+  display: block;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.7rem; font-weight: 600;
+  letter-spacing: -0.025em; color: var(--accent);
+  margin-bottom: 2px;
+}
+.tour-stat span {
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted);
+}
+.tour-stat:nth-child(1) strong { color: var(--yellow) }
+.tour-stat:nth-child(2) strong { color: var(--rose) }
+.tour-stat:nth-child(3) strong { color: var(--mint) }
+.tour-stat:nth-child(4) strong { color: var(--azure) }
+
+.tour-filters {
+  margin: 64px 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 18px; flex-wrap: wrap;
+  padding: 14px 18px;
+  background: var(--glass);
+  border: 1px solid var(--glass-line);
+  border-radius: 100px;
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+}
+.tour-filter-group {
+  display: flex; gap: 6px; flex-wrap: wrap;
+}
+.tour-filter {
+  padding: 9px 18px; border-radius: 100px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--muted); font-family: inherit;
+  font-size: 0.85rem; font-weight: 600;
+  cursor: pointer; transition: var(--ease);
+  display: inline-flex; align-items: center; gap: 8px;
+  white-space: nowrap;
+}
+.tour-filter:hover { color: var(--ink) }
+.tour-filter.active {
+  background: var(--accent); color: var(--accent-ink);
+  border-color: transparent;
+  box-shadow: 0 6px 18px color-mix(in oklch, var(--accent) 35%, transparent);
+}
+.tour-filter i {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: currentColor; opacity: 0.7;
+}
+.tour-view-toggle {
+  display: flex; gap: 4px;
+  background: rgba(13, 10, 26, 0.55);
+  border-radius: 100px;
+  padding: 4px;
+}
+.tour-view-toggle button {
+  padding: 8px 14px; border-radius: 100px;
+  background: transparent; border: none; color: var(--muted);
+  cursor: pointer; font-family: inherit;
+  font-size: 0.8rem; font-weight: 600;
+  transition: var(--ease);
+}
+.tour-view-toggle button.active {
+  background: var(--glass-strong); color: var(--ink);
+}
+
+.tour-month {
+  display: flex; align-items: center; gap: 16px;
+  margin: 48px 0 24px;
+}
+.tour-month h2 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.6rem; font-weight: 500;
+  letter-spacing: -0.02em; color: var(--ink);
+  white-space: nowrap;
+  display: flex; align-items: baseline; gap: 12px;
+}
+.tour-month h2 span {
+  color: var(--muted); font-size: 0.9rem;
+  font-weight: 500;
+}
+.tour-month-line {
+  flex: 1; height: 1px;
+  background: linear-gradient(to right, var(--glass-line-2) 0%, transparent 100%);
+}
+
+.tour-list { display: grid; gap: 18px }
+
+.tour-event {
+  position: relative;
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr) auto;
+  gap: 28px; align-items: stretch;
+  background: var(--glass);
+  border: 1px solid var(--glass-line);
+  border-radius: var(--r-lg);
+  padding: 24px;
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  transition: var(--ease);
+  overflow: hidden;
+}
+.tour-event:hover {
+  border-color: var(--glass-line-2);
+  transform: translateY(-4px);
+}
+.tour-event::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  opacity: 0; transition: opacity var(--ease);
+  background: radial-gradient(ellipse 60% 100% at 0% 50%, var(--ev-halo, transparent) 0%, transparent 55%);
+}
+.tour-event:hover::before { opacity: 0.45 }
+
+.tour-event[data-g=poke] { --ev-halo: oklch(88% 0.20 95 / 0.45) }
+.tour-event[data-g=ygo]  { --ev-halo: oklch(72% 0.22 295 / 0.45) }
+.tour-event[data-g=op]   { --ev-halo: oklch(74% 0.20 30 / 0.45) }
+.tour-event[data-g=dbz]  { --ev-halo: oklch(78% 0.18 230 / 0.45) }
+.tour-event[data-g=lor]  { --ev-halo: oklch(82% 0.16 165 / 0.45) }
+
+.tour-date {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 2px;
+  background: rgba(13, 10, 26, 0.55);
+  border: 1px solid var(--glass-line);
+  border-radius: var(--r);
+  padding: 18px 12px;
+  text-align: center;
+  min-height: 132px;
+}
+.tour-date .day-label {
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--ev-halo-solid, var(--muted));
+}
+.tour-event[data-g=poke] .tour-date .day-label { color: oklch(88% 0.20 95) }
+.tour-event[data-g=ygo]  .tour-date .day-label { color: oklch(72% 0.22 295) }
+.tour-event[data-g=op]   .tour-date .day-label { color: oklch(74% 0.20 30) }
+.tour-event[data-g=dbz]  .tour-date .day-label { color: oklch(78% 0.18 230) }
+.tour-event[data-g=lor]  .tour-date .day-label { color: oklch(82% 0.16 165) }
+
+.tour-date .day-num {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2.4rem; font-weight: 600;
+  letter-spacing: -0.04em; color: var(--ink);
+  line-height: 1;
+}
+.tour-date .day-month {
+  font-size: 0.78rem; font-weight: 600;
+  color: var(--muted); text-transform: capitalize;
+  margin-top: 2px;
+}
+.tour-date .day-time {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--glass-line);
+  font-size: 0.82rem; font-weight: 700;
+  color: var(--ink); width: 100%;
+}
+
+.tour-body {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+.tour-event-head {
+  display: flex; align-items: center; gap: 10px;
+  flex-wrap: wrap;
+}
+.tour-game-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 12px; border-radius: 100px;
+  font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.13em; text-transform: uppercase;
+  background: rgba(13, 10, 26, 0.55);
+  border: 1px solid;
+  white-space: nowrap;
+}
+.tour-event[data-g=poke] .tour-game-badge { color: oklch(88% 0.20 95); border-color: color-mix(in oklch, oklch(88% 0.20 95) 40%, transparent) }
+.tour-event[data-g=ygo]  .tour-game-badge { color: oklch(72% 0.22 295); border-color: color-mix(in oklch, oklch(72% 0.22 295) 40%, transparent) }
+.tour-event[data-g=op]   .tour-game-badge { color: oklch(74% 0.20 30); border-color: color-mix(in oklch, oklch(74% 0.20 30) 40%, transparent) }
+.tour-event[data-g=dbz]  .tour-game-badge { color: oklch(78% 0.18 230); border-color: color-mix(in oklch, oklch(78% 0.18 230) 40%, transparent) }
+.tour-event[data-g=lor]  .tour-game-badge { color: oklch(82% 0.16 165); border-color: color-mix(in oklch, oklch(82% 0.16 165) 40%, transparent) }
+
+.tour-format-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 12px; border-radius: 100px;
+  font-size: 0.7rem; font-weight: 600;
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-line);
+  color: var(--muted);
+}
+.tour-format-badge svg { width: 12px; height: 12px }
+
+.tour-event h3 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  font-weight: 500; line-height: 1.15;
+  letter-spacing: -0.02em; color: var(--ink);
+  text-wrap: balance;
+}
+.tour-event-desc {
+  color: var(--muted); font-size: 0.92rem;
+  line-height: 1.65; max-width: 620px;
+}
+
+.tour-details {
+  display: flex; align-items: center; gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+  padding-top: 14px;
+  border-top: 1px solid var(--glass-line);
+}
+.tour-detail {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.85rem; color: var(--muted);
+}
+.tour-detail svg {
+  width: 16px; height: 16px;
+  color: var(--ink); opacity: 0.7;
+  flex-shrink: 0;
+}
+.tour-detail strong { color: var(--ink); font-weight: 600 }
+
+.tour-prize {
+  margin-top: 10px;
+  padding: 14px 18px;
+  background: linear-gradient(110deg,
+    color-mix(in oklch, var(--yellow) 14%, transparent),
+    color-mix(in oklch, var(--coral) 14%, transparent));
+  border: 1px solid color-mix(in oklch, var(--yellow) 35%, transparent);
+  border-radius: var(--r);
+  display: flex; align-items: flex-start; gap: 14px;
+}
+.tour-prize-icon {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--yellow), var(--coral));
+  display: grid; place-items: center;
+  color: #1a0f2e; flex-shrink: 0;
+  box-shadow: 0 0 18px color-mix(in oklch, var(--yellow) 50%, transparent);
+}
+.tour-prize-icon svg { width: 18px; height: 18px }
+.tour-prize-content { min-width: 0; flex: 1 }
+.tour-prize-label {
+  font-size: 0.65rem; font-weight: 800;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 4px;
+}
+.tour-prize-list {
+  font-size: 0.9rem; color: var(--ink);
+  line-height: 1.55;
+}
+.tour-prize-list strong { color: var(--yellow); font-weight: 700 }
+
+.tour-cta-col {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column;
+  align-items: stretch; justify-content: space-between;
+  gap: 12px; min-width: 200px;
+}
+.tour-spots {
+  text-align: right;
+  font-size: 0.78rem; color: var(--muted);
+}
+.tour-spots strong {
+  font-family: 'Fredoka', sans-serif;
+  display: block; font-size: 1.05rem;
+  font-weight: 500; color: var(--ink);
+  letter-spacing: -0.015em;
+  margin-bottom: 4px;
+}
+.tour-spots-bar {
+  height: 6px; border-radius: 100px;
+  background: rgba(13, 10, 26, 0.5);
+  border: 1px solid var(--glass-line);
+  overflow: hidden;
+  margin-top: 6px;
+}
+.tour-spots-fill {
+  height: 100%; border-radius: 100px;
+  background: linear-gradient(90deg, var(--mint), var(--azure));
+  transition: width 0.6s ease;
+}
+.tour-spots-fill.warn { background: linear-gradient(90deg, var(--yellow), var(--coral)) }
+.tour-spots-fill.danger { background: linear-gradient(90deg, var(--coral), var(--rose)) }
+
+.tour-reserve {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 8px; padding: 14px 22px;
+  border-radius: 100px; border: none;
+  background: var(--accent); color: var(--accent-ink);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.92rem; font-weight: 700;
+  cursor: pointer; transition: var(--ease);
+  box-shadow: 0 8px 24px color-mix(in oklch, var(--accent) 35%, transparent);
+  text-decoration: none;
+  position: relative; overflow: hidden;
+}
+.tour-reserve::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(110deg, transparent 25%, rgba(255,255,255,0.4) 50%, transparent 75%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+.tour-reserve:hover::after { transform: translateX(100%) }
+.tour-reserve:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px color-mix(in oklch, var(--accent) 55%, transparent);
+}
+.tour-reserve.full {
+  background: var(--glass-strong); color: var(--muted);
+  border: 1px solid var(--glass-line);
+  box-shadow: none; cursor: not-allowed;
+}
+.tour-reserve.full:hover { transform: none }
+.tour-reserve.full::after { display: none }
+
+.tour-community {
+  margin-top: 90px;
+  padding: 56px clamp(28px, 5vw, 64px);
+  background: rgba(13, 10, 26, 0.55);
+  border: 1px solid var(--glass-line-2);
+  border-radius: var(--r-xl);
+  backdrop-filter: blur(28px); -webkit-backdrop-filter: blur(28px);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px; align-items: center;
+  position: relative; overflow: hidden;
+}
+.tour-community::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 50% 80% at 100% 50%, oklch(72% 0.22 295 / 0.18), transparent 65%),
+    radial-gradient(ellipse 50% 60% at 0% 100%, oklch(78% 0.22 12 / 0.16), transparent 65%);
+}
+.tour-community-info { position: relative; z-index: 1 }
+.tour-community h2 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 600; letter-spacing: -0.025em;
+  margin-bottom: 14px;
+}
+.tour-community p {
+  color: var(--muted); font-size: 1rem;
+  line-height: 1.7; max-width: 480px;
+  margin-bottom: 26px;
+}
+.tour-community-ctas { display: flex; gap: 12px; flex-wrap: wrap }
+.tour-community-stats {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.tour-com-stat {
+  background: var(--glass);
+  border: 1px solid var(--glass-line);
+  border-radius: var(--r);
+  padding: 24px;
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.tour-com-stat strong {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2.2rem; font-weight: 600;
+  letter-spacing: -0.025em;
+  display: block; margin-bottom: 4px;
+}
+.tour-com-stat:nth-child(1) strong { color: var(--yellow) }
+.tour-com-stat:nth-child(2) strong { color: var(--rose) }
+.tour-com-stat:nth-child(3) strong { color: var(--mint) }
+.tour-com-stat:nth-child(4) strong { color: var(--azure) }
+.tour-com-stat span {
+  font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+@media (max-width: 1020px) {
+  .tour-event {
+    grid-template-columns: 110px minmax(0, 1fr);
+  }
+  .tour-cta-col {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center; justify-content: space-between;
+    padding-top: 14px;
+    border-top: 1px solid var(--glass-line);
+  }
+  .tour-spots { text-align: left; flex: 1; max-width: 280px }
+  .tour-community {
+    grid-template-columns: 1fr; padding: 44px 28px;
+  }
+}
+@media (max-width: 680px) {
+  .tour-stats { grid-template-columns: repeat(2, 1fr) }
+  .tour-event {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .tour-date {
+    flex-direction: row; min-height: 0;
+    padding: 12px 16px; gap: 14px;
+  }
+  .tour-date .day-time {
+    border-top: none; border-left: 1px solid var(--glass-line);
+    padding-top: 0; padding-left: 14px;
+    margin-top: 0; width: auto;
+  }
+  .tour-date .day-num { font-size: 1.6rem }
+  .tour-cta-col { flex-direction: column; align-items: stretch }
+  .tour-spots { text-align: left; max-width: none }
+  .tour-community-stats { grid-template-columns: 1fr 1fr }
+  .tour-filters { flex-direction: column; align-items: stretch; border-radius: var(--r) }
+  .tour-view-toggle { align-self: flex-end }
+}
